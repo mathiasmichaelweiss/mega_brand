@@ -313,3 +313,24 @@ a:first-child {
     margin-top: 20px;
     margin-bottom: 29px;
 }
+
+.current__shops-container {}
+
+.current__shop {
+    display: flex;
+    align-items: center;
+    margin-bottom: 33px;
+}
+
+.street {
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 21px;
+    width: 195px;
+}
+
+.current__sale {
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 21px;
+}

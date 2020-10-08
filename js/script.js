@@ -28,14 +28,65 @@ nav.forEach(item => {
     });
 });
 
-// menu__burger-active
+// Shop Class
 
-/* .nav__position {
-    position: relative;
-    left: 110%;
+class Shop {
+    constructor(street, currentSale, id, parentSelector) {
+        this.id = id;
+        this.street = street;
+        this.currentSale = currentSale;
+        this.parent = document.querySelector(parentSelector);
+
+    }
+
+    render() {
+        const elem = document.createElement('div');
+
+        elem.classList.add('current__shop');
+        elem.id = this.id;
+
+        elem.innerHTML = `
+            <div class="street">${this.street}</div>
+            <div class="current__sale">${this.currentSale}</div>
+        `;
+
+        this.parent.append(elem);
+    }
 }
 
-.nav__position-active{
-    position: relative;
-    left: 0%;
-} */
+new Shop(
+    "Ул. Пушкина, 61 стр. 1",
+    "50%",
+    "pyschkina",
+    ".current__shops-container"
+).render();
+
+new Shop(
+    "Ул. Ленина, 163а ТЦ “Гранд”",
+    "50%",
+    "lenina",
+    ".current__shops-container"
+).render();
+
+new Shop(
+    "Ул. Лыткина, 3",
+    "50%",
+    "lytkia",
+    ".current__shops-container"
+).render();
+
+new Shop(
+    "Ул. Иркутский тракт, 155",
+    "10%",
+    "irkytzkiy",
+    ".current__shops-container"
+).render();
+
+new Shop(
+    "Ул. Мир, 50",
+    "10%",
+    "mir",
+    ".current__shops-container"
+).render();
+
+const shopSelector = document.createElement('div');
