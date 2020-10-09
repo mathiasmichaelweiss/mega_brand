@@ -85,6 +85,25 @@ h6 {
 
 /* ______________________ */
 
+/* Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff transparent;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0) inset;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6AC97C;
+    border-radius: 8px;
+    border: 2px solid #fff;
+}
+
+/* ______________________ */
+
 body {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
@@ -115,7 +134,7 @@ a:first-child {
 
 .logo_header {
     position: absolute;
-    background-image: url(/img/logo_single.png);
+    background-image: url(../img/logo_single.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 100%;
@@ -150,7 +169,7 @@ a:first-child {
 }
 
 .city__text {
-    background-image: url(/img/city_line.svg);
+    background-image: url(../img/city_line.svg);
     background-repeat: repeat-x;
     background-position: 50% 80%;
 }
@@ -169,7 +188,7 @@ a:first-child {
 }
 
 .nav__mouseover {
-    background-image: url(/img/city_line.svg);
+    background-image: url(../img/city_line.svg);
     background-repeat: repeat-x;
     background-position: 50% 80%;
 }
@@ -339,13 +358,14 @@ a:first-child {
     color: #fff;
     background: rgba(45, 179, 70, 0.8);
     box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.02);
+    position: relative;
 }
 
 .street {
     font-weight: 600;
     font-size: 14px;
     margin-left: 21px;
-    width: 195px;
+    width: 207px;
 }
 
 .current__sale {

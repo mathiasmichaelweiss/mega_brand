@@ -114,6 +114,7 @@ new Shop(
 // Activate shops und scroll
 
 const activeShop = document.querySelectorAll('.current__shop'),
+    containerForScroll = document.querySelector('.forscroll'),
     shopsContainer = document.querySelector('.shops__window'),
     shopContainerInner = document.querySelector('.current__shops-container');
 
