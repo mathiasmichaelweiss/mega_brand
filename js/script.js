@@ -89,4 +89,51 @@ new Shop(
     ".current__shops-container"
 ).render();
 
-const shopSelector = document.createElement('div');
+new Shop(
+    "Ул. Пушкина, 68",
+    "90%",
+    "pyshkina",
+    ".current__shops-container"
+).render();
+
+new Shop(
+    "Ул. Жукова, 68/2",
+    "90%",
+    "pyshkina",
+    ".current__shops-container"
+).render();
+
+new Shop(
+    "Ул. Красных фонарей, 12к2",
+    "96%",
+    "pyshkina",
+    ".current__shops-container"
+).render();
+
+
+// Activate shops und scroll
+
+const activeShop = document.querySelectorAll('.current__shop'),
+    shopsContainer = document.querySelector('.shops__window'),
+    shopContainerInner = document.querySelector('.current__shops-container');
+
+if (shopContainerInner.style.height >= shopsContainer.style.height) {
+    shopContainerInner.style.overflowY = 'scroll';
+}
+
+function activateShop(elem) {
+    elem.forEach((item, i) => {
+        item.addEventListener('click', (e) => {
+
+            for (i = 0; i < elem.length; i++) {
+                if (elem[i].classList.contains('current__shop-active')) {
+                    elem[i].classList.remove('current__shop-active');
+                }
+                item.classList.add('current__shop-active');
+
+            }
+        });
+    });
+}
+
+activateShop(activeShop);

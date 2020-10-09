@@ -89,8 +89,8 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 600;
     font-size: 14px;
-    width: 100%;
     color: #1D1D1D;
+    overflow-x: hidden;
 }
 
 a {
@@ -102,15 +102,13 @@ a:first-child {
     margin-left: 0;
 }
 
+
 .container {
-    display: flex;
-    justify-content: center;
-    margin: 0 15px 0 15px;
-    width: 100%;
+    overflow: hidden;
 }
 
 .header__inner {
-    padding: 40px 0 140px 0;
+    padding: 40px 15px 140px 15px;
     width: 100%;
     border: 0;
 }
@@ -167,7 +165,7 @@ a:first-child {
 }
 
 .container__nav {
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .nav__mouseover {
@@ -180,14 +178,14 @@ a:first-child {
     position: relative;
     left: -110%;
     opacity: 0;
-    transition: left 1s linear, opacity 1s;
+    transition: left 1s linear, opacity 0.7s;
 }
 
 .nav__position-active {
     position: relative;
     left: 0%;
     opacity: 1;
-    transition: left 1s linear, opacity 1s;
+    transition: left 1s linear, opacity 0.7s;
 }
 
 .menu__burger {
@@ -259,26 +257,35 @@ a:first-child {
 
 /* Slider and shops menu */
 
-.slider {
-    position: absolute;
-
-    width: 100%;
-    height: 440px;
-    background-image: url(/img/musterbild.jpg);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-}
-
 .container__slider {
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 440px;
 }
 
-.slider__inner {}
+.wrapper {
+    width: 1440px;
+    height: 440px;
+    /* overflow: hidden; */
+}
 
-.slider__item {}
+.slider__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.slide {
+    width: 100%;
+    height: 440px;
+
+}
+
+.slide img {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .shops__window {
     position: absolute;
@@ -289,6 +296,7 @@ a:first-child {
     margin-bottom: 75px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
+
 }
 
 .shop__titles {
@@ -311,15 +319,26 @@ a:first-child {
 .shops__window-line {
     border: 1px solid #EEF0F7;
     margin-top: 20px;
-    margin-bottom: 29px;
+    margin-bottom: 10px;
 }
 
-.current__shops-container {}
+.current__shops-container {
+    height: 257px;
+    overflow: hidden;
+}
 
 .current__shop {
     display: flex;
     align-items: center;
-    margin-bottom: 33px;
+    margin-bottom: 17px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.current__shop-active {
+    color: #fff;
+    background: rgba(45, 179, 70, 0.8);
+    box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.02);
 }
 
 .street {
