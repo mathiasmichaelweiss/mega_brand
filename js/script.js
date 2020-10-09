@@ -125,7 +125,7 @@ if (shopContainerInner.style.height >= shopsContainer.style.height) {
 function activateShop(elem) {
     elem.forEach((item, i) => {
         item.addEventListener('click', (e) => {
-
+            e.preventDefault();
             for (i = 0; i < elem.length; i++) {
                 if (elem[i].classList.contains('current__shop-active')) {
                     elem[i].classList.remove('current__shop-active');
