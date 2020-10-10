@@ -173,8 +173,6 @@ h2 {
     margin-right: 9px;
 }
 
-.personal__area-text {}
-
 .city__container {
     display: flex;
     justify-content: left;
@@ -260,7 +258,7 @@ h2 {
     display: block;
     background-color: rgba(45, 180, 70, 1);
     width: 35px;
-    height: 5px;
+    height: 4px;
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
 }
 
