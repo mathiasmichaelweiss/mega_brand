@@ -109,13 +109,16 @@ body {
     font-weight: 600;
     font-size: 14px;
     color: #1D1D1D;
-    width: 100%;
-    overflow-x: hidden;
+
+}
+
+header {
+    justify-content: center;
 }
 
 a {
     color: #1d1d1d;
-    margin-left: 33px;
+    margin-left: 16.2px;
 }
 
 a:first-child {
@@ -130,14 +133,14 @@ h2 {
 
 
 .container {
-    width: 1440px;
+    max-width: 1440px;
     height: auto;
     margin: 0 auto;
 }
 
 .small__container {
-    width: 981px;
-    /* width: 1132px; */
+    max-width: 981px;
+
     height: auto;
     margin: 0 auto;
 }
@@ -145,15 +148,14 @@ h2 {
 .header__inner {
     display: flex;
     padding: 40px 0px 140px 0px;
-    width: 1440px;
 }
 
 .logo_header {
-    position: absolute;
+    margin-left: 16%;
     background-image: url(../img/logo_single.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    width: 1440px;
+    width: 34px;
     height: 45px;
 }
 
@@ -161,8 +163,7 @@ h2 {
     top: 45px;
     display: flex;
     justify-content: left;
-    width: 1131.95px;
-    margin: 0 auto;
+    max-width: 1131.95px;
     flex-direction: column;
 
 
@@ -231,7 +232,7 @@ h2 {
     position: relative;
     background-color: rgba(45, 180, 70, 1);
     width: 35px;
-    height: 3px;
+    height: 4px;
     margin-bottom: 10px;
     transition: background-color 0.2s ease-in 0.2s;
 }
@@ -244,7 +245,7 @@ h2 {
     display: block;
     background-color: rgba(45, 180, 70, 1);
     width: 35px;
-    height: 3px;
+    height: 4px;
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
 }
 
@@ -256,7 +257,7 @@ h2 {
     display: block;
     background-color: rgba(45, 180, 70, 1);
     width: 35px;
-    height: 3px;
+    height: 4px;
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
 }
 
@@ -390,8 +391,6 @@ h2 {
 
 .text__column-container {
     display: flex;
-
-
 }
 
 .calendar__inner {
