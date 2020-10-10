@@ -138,3 +138,24 @@ function activateShop(elem) {
 }
 
 activateShop(activeShop);
+
+// calendar
+
+const calendarItem = document.querySelectorAll('.calendar__item'),
+    calendarPercent = document.querySelectorAll('.percent');
+
+calendarItem.forEach(item => {
+
+    item.addEventListener('mouseover', (e) => {
+        if (e.target.classList.contains("percent")) {
+            e.target.style.color = "#1D1D1D";
+        }
+    });
+
+    item.addEventListener('mouseout', (e) => {
+        if (e.target.classList.contains("percent")) {
+            e.target.style.color = "";
+        }
+    });
+
+});

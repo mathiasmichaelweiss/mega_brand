@@ -159,8 +159,23 @@ h2 {
     height: 45px;
 }
 
+.personal__area {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 35.8%;
+    cursor: pointer;
+    height: 18px;
+}
+
+.personal__area-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 9px;
+}
+
+.personal__area-text {}
+
 .city__container {
-    top: 45px;
     display: flex;
     justify-content: left;
     max-width: 1131.95px;
@@ -245,7 +260,7 @@ h2 {
     display: block;
     background-color: rgba(45, 180, 70, 1);
     width: 35px;
-    height: 4px;
+    height: 5px;
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
 }
 
@@ -298,7 +313,7 @@ h2 {
 }
 
 .wrapper {
-    width: 1440px;
+    max-width: 1440px;
     height: 440px;
     /* overflow: hidden; */
 }
@@ -408,7 +423,7 @@ h2 {
 }
 
 .calendar__text {
-    width: 280px;
+    max-width: 280px;
     height: 170px;
 }
 
@@ -424,6 +439,7 @@ h2 {
     font-size: 18px;
     color: #1d1d1d;
     margin-bottom: 16px;
+    margin-right: 50px;
 }
 
 .calendar__column-first {
@@ -432,7 +448,9 @@ h2 {
 }
 
 .calendar__column-second {
+    max-width: 981px;
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
@@ -442,7 +460,12 @@ h2 {
 }
 
 .calendar__item {
-    margin-right: 20.8px;
+    margin-right: 21px;
+    cursor: default;
+}
+
+.minus__margin {
+    margin-right: 0px;
 }
 
 .correct__calendar-item {
@@ -469,14 +492,13 @@ h2 {
     margin-bottom: 14px;
 }
 
-.procent {
+.percent {
     font-family: Fjalla One;
     font-weight: normal;
     font-size: 63px;
     margin-bottom: 9px;
 
     color: rgba(29, 29, 29, 0.7);
-
 }
 
 .new__delivery {
