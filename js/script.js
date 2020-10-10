@@ -159,3 +159,99 @@ calendarItem.forEach(item => {
     });
 
 });
+
+// class news
+
+class News {
+    constructor(id, newsLatter, title, date, text, parentSelector) {
+        this.id = id;
+        this.newsLatter = newsLatter;
+        this.title = title;
+        this.date = date;
+        this.text = text;
+        this.parent = document.querySelector(parentSelector);
+
+    }
+
+    render() {
+        const elem = document.createElement('div');
+
+        elem.classList.add('news__item-block');
+        this.newsLatter = this.title[0];
+        elem.id = this.id;
+
+        elem.innerHTML = `
+            <div class="news__item">
+                <div class="item__cirlce">
+            <p class="news__latter">${this.newsLatter}</p>
+                </div>
+                <div class="news__content">
+                    <div class="news__item-title">${this.title}</div>
+                    <div class="news__date">${this.date}</div>
+                    <p class="news__item-text">${this.text}</p>
+                </div>
+            </div>
+            <div class="news__item-line"></div>
+        `;
+
+        this.parent.append(elem);
+
+    }
+}
+
+new News(
+    "r",
+    "",
+    "Розыгрыш",
+    "12.10.20",
+    "Стартовал розыгрыш в нашем аккаунте Instagram.",
+    ".container__news",
+    ".item__cirlce",
+    "'#1d1d1d'"
+).render();
+
+new News(
+    "o",
+    "",
+    "Открытие",
+    "12.10.20",
+    "Стартовал розыгрыш в нашем аккаунте Instagram.",
+    ".container__news"
+).render();
+
+new News(
+    "ch",
+    "",
+    "Часы работы",
+    "12.10.20",
+    "Стартовал розыгрыш в нашем аккаунте Instagram.",
+    ".container__news"
+).render();
+
+new News(
+    "o",
+    "",
+    "Открытие",
+    "12.10.20",
+    "Стартовал розыгрыш в нашем аккаунте Instagram.",
+    ".container__news"
+).render();
+
+new News(
+    "r",
+    "",
+    "Розыгрыш",
+    "12.10.20",
+    "Стартовал розыгрыш в нашем аккаунте Instagram.",
+    ".container__news"
+).render();
+
+/* console.log(document.querySelector('.item__cirlce').style.backgroundColor = '#1d1d1d'); */
+
+const circle = document.querySelectorAll('.item__cirlce');
+
+console.log(circle);
+
+circle.forEach(item => {
+    item.style.backgroundColor = '#1d1d1d';
+});
