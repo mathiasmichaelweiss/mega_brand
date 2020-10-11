@@ -128,22 +128,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
     addScroll(shopContainerInner, shopsContainer);
 
-    function activateShop(elem) {
+    function activateElem(elem, activeClass) {
         elem.forEach((item, i) => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
                 for (i = 0; i < elem.length; i++) {
-                    if (elem[i].classList.contains('current__shop-active')) {
-                        elem[i].classList.remove('current__shop-active');
+                    if (elem[i].classList.contains(activeClass)) {
+                        elem[i].classList.remove(activeClass);
                     }
-                    item.classList.add('current__shop-active');
+                    item.classList.add(activeClass);
 
                 }
             });
         });
     }
 
-    activateShop(activeShop);
+    activateElem(activeShop, 'current__shop-active');
 
     // calendar
 
@@ -187,17 +187,18 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.id = this.id;
 
             elem.innerHTML = `
-            <div class="news__item">
-                <div class="item__cirlce">
-            <p class="news__latter">${this.newsLatter}</p>
-                </div>
-                <div class="news__content">
-                    <div class="news__item-title">${this.title}</div>
-                    <div class="news__date">${this.date}</div>
-                    <p class="news__item-text">${this.text}</p>
+            <div class="container__news__item">
+                <div class="news__item">
+                    <div class="item__cirlce">
+                        <p class="news__latter">${this.newsLatter}</p>
+                    </div>
+                    <div class="news__content">
+                        <div class="news__item-title">${this.title}</div>
+                        <div class="news__date">${this.date}</div>
+                        <p class="news__item-text">${this.text}</p>
+                    </div>
                 </div>
             </div>
-            <div class="news__item-line"></div>
         `;
 
             this.parent.append(elem);
@@ -221,7 +222,7 @@ window.addEventListener('DOMContentLoaded', () => {
         "",
         "Открытие",
         "12.10.20",
-        "Стартовал розыгрыш в нашем аккаунте Instagram.",
+        'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток".',
         ".container__news"
     ).render();
 
@@ -230,7 +231,7 @@ window.addEventListener('DOMContentLoaded', () => {
         "",
         "Часы работы",
         "12.10.20",
-        "Стартовал розыгрыш в нашем аккаунте Instagram.",
+        "Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00 ",
         ".container__news"
     ).render();
 
@@ -239,7 +240,7 @@ window.addEventListener('DOMContentLoaded', () => {
         "",
         "Открытие",
         "12.10.20",
-        "Стартовал розыгрыш в нашем аккаунте Instagram.",
+        "Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.",
         ".container__news"
     ).render();
 
@@ -248,13 +249,36 @@ window.addEventListener('DOMContentLoaded', () => {
         "",
         "Розыгрыш",
         "12.10.20",
-        "Стартовал розыгрыш в нашем аккаунте Instagram.",
+        "Стартовал розыгрыш  в нашем Instagram. Главный приз сертификат на 10 000 рублей! ",
         ".container__news"
     ).render();
+
+
+    const newsScroll = document.querySelector('.news__block-scroll'),
+        newsCointainer = document.querySelector('.container__news'),
+        itemBlock = document.querySelectorAll('.container__news__item'),
+        newsItemTitle = document.querySelectorAll('.news__item-title'),
+        newsItemText = document.querySelectorAll('.news__item-text'),
+        newsTitle = document.querySelector('.news__title'),
+        newsText = document.querySelector('.news__text'),
+        newsSubtitle = document.querySelector('.news__subtitle-text');
+
 
     function changeElemColor(index, color) {
         document.querySelectorAll('.item__cirlce')[index].style.backgroundColor = color;
     }
+
+    function changeNewsContent(elemTitle, elemText, elemSubtitle, elemSubtitleContent) {
+        itemBlock.forEach(item => {
+            item.addEventListener('click', (e) => {
+                elemText.textContent = newsItemText[0].textContent;
+                elemTitle.textContent = elemSubtitleContent;
+                elemSubtitle.textContent = newsItemTitle[0].textContent;
+            });
+        });
+    }
+
+    changeNewsContent(newsTitle, newsText, newsSubtitle, 'Instagram розыгрыш');
 
     changeElemColor(0, '#E30613');
     changeElemColor(1, '#E25011');
@@ -262,9 +286,8 @@ window.addEventListener('DOMContentLoaded', () => {
     changeElemColor(3, '#0BBBEF');
     changeElemColor(4, '#2DB346');
 
-    const newsScrall = document.querySelector('.news__block-scroll'),
-    newsCointainer = document.querySelector('.container__news');
+    addScroll(newsScroll, newsCointainer);
 
-    addScroll(newsScrall, newsCointainer);
+    activateElem(itemBlock, 'container__news__item-active');
 
 });
