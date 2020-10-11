@@ -661,14 +661,17 @@ h2 {
 
 .news__content {
     display: flex;
+    justify-content: flex-end;
     flex-wrap: wrap;
-    width: 163px;
+    max-width: 163px;
+    height: 67px;
 }
 
 .news__item-title {
+    width: 119.98px;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 16px;
     margin-bottom: 5px;
 
@@ -676,19 +679,20 @@ h2 {
 }
 
 .news__date {
-    width: 50px;
+    width: 43px;
     height: 10px;
-    margin-top: 5px;
-    margin-left: 28.6px;
+    margin-top: 4px;
+
 
     font-style: normal;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 11px;
     line-height: 16px;
 
 
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     letter-spacing: 0.01em;
 
     color: #616161;
@@ -706,11 +710,12 @@ h2 {
 
 .news__item-line {
     border: 1px solid #EEF0F7;
-    margin-top: 13px;
+    margin-top: 26px;
     margin-bottom: 13px;
 }
 
 .news__sub {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     font-style: normal;
