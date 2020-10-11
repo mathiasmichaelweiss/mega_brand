@@ -169,17 +169,36 @@ window.addEventListener('DOMContentLoaded', () => {
     // class news
 
     class News {
-        constructor(id, newsLatter, title, date, text, parentSelector) {
+        constructor(id, newsLatter, title, date, text, parentSelector, newsTitle) {
             this.id = id;
             this.newsLatter = newsLatter;
             this.title = title;
             this.date = date;
             this.text = text;
             this.parent = document.querySelector(parentSelector);
+            this.newsTitle = newsTitle;
 
         }
 
         render() {
+            // news in left side
+            const leftElem = document.createElement('div');
+            leftElem.classList.add('left__block');
+
+            leftElem.innerHTML = `
+
+            <div class="news__subtitle-container">
+                    <p class="news__subtitle-text">${this.title}</p>
+                </div>
+                <div class="news__title">${this.newsTitle}</div>
+                <div class="news__text">
+                    <p>${this.text}</p>
+            </div>
+            <button class="more__about">Подробности</button>
+
+            `;
+
+            // news in right side
             const elem = document.createElement('div');
 
             elem.classList.add('news__item-block');
