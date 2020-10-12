@@ -309,4 +309,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     activateElem(itemBlock, 'container__news__item-active');
 
+
+    // Project photos
+
+    const photoScrall = document.querySelector('.photo__scrall'),
+        projectsCatalog = document.querySelector('.project__catalog');
+
+    addScroll(photoScrall, projectsCatalog);
+
 });
