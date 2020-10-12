@@ -384,7 +384,7 @@ h2 {
 .current__shop {
     display: flex;
     align-items: center;
-    margin-bottom: 17px;
+    margin-bottom: 10px;
     height: 35px;
     cursor: pointer;
 }
@@ -428,11 +428,11 @@ h2 {
 }
 
 .calendar__title {
-    margin-top: 238px;
+    margin-top: 180px;
 }
 
 .title__line {
-    margin-bottom: 79px;
+    margin-bottom: 81px;
 }
 
 .calendar__text {
@@ -531,7 +531,7 @@ h2 {
     background: rgba(29, 29, 29, 0.7) url(../img/news/img_1.jpg);
     background-blend-mode: darken;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 81px;
     color: #fff;
 }
 
