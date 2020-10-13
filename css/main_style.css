@@ -109,7 +109,6 @@ body {
     font-weight: 600;
     font-size: 14px;
     color: #1D1D1D;
-
 }
 
 header {
@@ -885,7 +884,7 @@ h2 {
     padding-bottom: 23px;
     margin: 0 auto;
     max-width: 1440px;
-    margin-bottom: 40px;
+    margin-bottom: 134px;
     background: rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago.jpg);
     background-blend-mode: soft-light;
 
@@ -1016,3 +1015,103 @@ h2 {
     height: 21px;
     margin-bottom: 1.5%;
 }
+
+/* Footer */
+
+.footer__container {
+    display: flex;
+    height: 98px;
+    margin-bottom: 134px;
+}
+
+.first__block__footer {
+    min-width: 174px;
+    border-right: 1px solid #C4C4C4;
+    margin-right: 28px;
+}
+
+.fbf__title {
+    max-width: 152px;
+    margin-bottom: 2px;
+
+    color: #616161;
+}
+
+.shop__name {
+    margin-bottom: 40px;
+}
+
+.rights {
+    max-width: 175px;
+
+    color: #616161;
+}
+
+.second__block__footer {
+    border-right: 1px solid #C4C4C4;
+    margin-right: 28px;
+}
+
+.mbf {
+    margin-bottom: 14px;
+    margin-right: 28px;
+}
+
+.f__home {}
+
+.f__shops {}
+
+.f__eco {}
+
+.f_drawing {}
+
+
+.third__block__footer {
+    border-right: 1px solid #C4C4C4;
+    margin-right: 28px;
+}
+
+.f__volunteering {}
+
+.mbf {}
+
+.f__charity {}
+
+.f__news {}
+
+.tbf__triple__block {
+    display: flex;
+}
+
+.f__contacts {}
+
+.f__about {}
+
+.f__chavo {}
+
+.tbf__triple__block {}
+
+.fifth__block__footer {
+    display: flex;
+    align-items: flex-end;
+}
+
+.footer__social {
+    display: flex;
+}
+
+.social__media__icon {
+    margin-left: 17px;
+}
+
+.vk {
+    margin-left: 58px;
+}
+
+.ok {}
+
+.facebook {}
+
+.inst {}
+
+.youtube {}
