@@ -876,9 +876,6 @@ h2 {
 
 /* charity */
 
-
-.charity__title {}
-
 .bg__chairty {
     padding-top: 57px;
     padding-bottom: 23px;
@@ -929,8 +926,6 @@ h2 {
     display: flex;
     align-items: flex-end;
 }
-
-.doing__item:last-child {}
 
 .big__num {
     font-family: Fjalla One;
@@ -1057,39 +1052,14 @@ h2 {
     margin-right: 28px;
 }
 
-.f__home {}
-
-.f__shops {}
-
-.f__eco {}
-
-.f_drawing {}
-
-
 .third__block__footer {
     border-right: 1px solid #C4C4C4;
     margin-right: 28px;
 }
 
-.f__volunteering {}
-
-.mbf {}
-
-.f__charity {}
-
-.f__news {}
-
 .tbf__triple__block {
     display: flex;
 }
-
-.f__contacts {}
-
-.f__about {}
-
-.f__chavo {}
-
-.tbf__triple__block {}
 
 .fifth__block__footer {
     display: flex;
@@ -1108,10 +1078,3 @@ h2 {
     margin-left: 58px;
 }
 
-.ok {}
-
-.facebook {}
-
-.inst {}
-
-.youtube {}
