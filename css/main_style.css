@@ -126,7 +126,7 @@ a:first-child {
 }
 
 h2 {
-    font-weight: bold;
+    font-weight: 400;
     font-size: 27px;
     margin-bottom: 13px;
 }
@@ -632,6 +632,7 @@ h2 {
     background-color: #F7F7F7;
 }
 
+
 .news__item {
     display: flex;
     flex-wrap: wrap;
@@ -874,4 +875,144 @@ h2 {
     width: 145%;
 }
 
-/* nth-child(3n+3) */
+/* charity */
+
+
+.charity__title {}
+
+.bg__chairty {
+    padding-top: 57px;
+    padding-bottom: 23px;
+    margin: 0 auto;
+    max-width: 1440px;
+    margin-bottom: 40px;
+    background: rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago.jpg);
+    background-blend-mode: soft-light;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+
+    color: #fff;
+}
+
+.chairty__titles {
+    display: flex;
+}
+
+.doing__title {
+    margin-bottom: 24.4px;
+    width: 50%;
+}
+
+.cooperation__title {
+    width: 50%;
+}
+
+.bg__line {
+    height: 76px;
+    background: rgba(45, 179, 70, 0.5);
+    margin-bottom: 12px;
+}
+
+.doing__small {
+    display: flex;
+}
+
+
+.small__container .doing__small {
+    display: flex;
+}
+
+.doing__item {
+    width: 50%;
+    padding-top: 8px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.doing__item:last-child {}
+
+.big__num {
+    font-family: Fjalla One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+}
+
+.doing__text {
+    max-width: 280px;
+    padding-bottom: 0.55%;
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.slider__dots {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 37px;
+}
+
+.slider__dot {
+    height: 13px;
+    width: 13px;
+    margin-left: 17px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.slider__dot:first-child {
+    margin-left: 0px;
+}
+
+.active__dot {
+    background: #FFFFFF;
+}
+
+.cooperation__item {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.cooperation__partners-item {
+    margin-bottom: 1%;
+}
+
+#cooperation__item-right {
+    margin-left: 52px;
+}
+
+.cooperation__text {
+    max-width: 280px;
+    padding-bottom: 2%;
+    margin-left: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.cooperation__text:last-child {
+    margin-top: 10px;
+    padding-bottom: 3px;
+}
+
+#join {
+    align-self: center;
+}
+
+#join h2 {
+    margin-bottom: 0;
+}
+
+#join__to {
+    max-width: 100%;
+    width: 100%;
+}
+
+.open__window {
+    margin-left: 5%;
+    height: 21px;
+    margin-bottom: 1.5%;
+}
