@@ -352,9 +352,20 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.visibility = "hidden";
             modal.style.transition = "all 0.8s ease";
         });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.code === 'Escape') { // 
+                modal.style.opacity = "0";
+                modal.style.visibility = "hidden";
+                modal.style.transition = "all 0.8s ease";
+            }
+        });
+
     }
 
     closeOpenModal(regModal, openRegModal, closeRegModal, regModalBody, regBtn);
+
+
 
     console.log(regModalBody);
 
