@@ -322,9 +322,10 @@ window.addEventListener('DOMContentLoaded', () => {
     const regModal = document.querySelector('.reg'),
         closeRegModal = document.querySelector('.close'),
         openRegModal = document.querySelector('.personal__area'),
-        regModalBody = document.querySelector('.reg__body');
+        regModalBody = document.querySelector('.reg__body'),
+        regBtn = document.querySelector('.reg__btn');
 
-    function closeOpenModal(modal, ModalBody, openBtn, closeBtn, closeOnBody) {
+    function closeOpenModal(modal, openBtn, closeBtn, closeOnBody, btn) {
         openBtn.addEventListener('click', () => {
             modal.style.opacity = "1";
             modal.style.visibility = "visible";
@@ -345,9 +346,15 @@ window.addEventListener('DOMContentLoaded', () => {
             modal.style.visibility = "hidden";
             modal.style.transition = "all 0.8s ease";
         });
+
+        btn.addEventListener('click', () => {
+            modal.style.opacity = "0";
+            modal.style.visibility = "hidden";
+            modal.style.transition = "all 0.8s ease";
+        });
     }
 
-    closeOpenModal(regModal, regModalBody, openRegModal, closeRegModal, regModalBody);
+    closeOpenModal(regModal, openRegModal, closeRegModal, regModalBody, regBtn);
 
     console.log(regModalBody);
 
