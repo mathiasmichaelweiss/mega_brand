@@ -1269,7 +1269,7 @@ label.checktext::before {
 input[type="checkbox"]:checked+label::before {
     content: '';
     background-size: 100%;
-    background-image: url(/img/icons/checked.svg);
+    background-image: url(../img/icons/checked.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: #2DB346;
