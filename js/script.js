@@ -321,13 +321,23 @@ window.addEventListener('DOMContentLoaded', () => {
     // reg modal
     const regModal = document.querySelector('.reg'),
         closeRegModal = document.querySelector('.close'),
-        openRegModal = document.querySelector('.personal__area');
+        openRegModal = document.querySelector('.personal__area'),
+        regModalBody = document.querySelector('.reg__body');
 
-    function closeOpenModal(modal, openBtn, closeBtn) {
+    function closeOpenModal(modal, ModalBody, openBtn, closeBtn, closeOnBody) {
         openBtn.addEventListener('click', () => {
             modal.style.opacity = "1";
             modal.style.visibility = "visible";
             modal.style.transition = "all 0.8s ease";
+        });
+
+        closeOnBody.addEventListener('click', (e) => {
+            if (e.target.getAttribute('data-close') == '1') {
+                modal.style.opacity = "0";
+                modal.style.visibility = "hidden";
+                modal.style.transition = "all 0.8s ease";
+            }
+            console.log(e.target);
         });
 
         closeBtn.addEventListener('click', () => {
@@ -337,6 +347,8 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    closeOpenModal(regModal, openRegModal, closeRegModal);
+    closeOpenModal(regModal, regModalBody, openRegModal, closeRegModal, regModalBody);
+
+    console.log(regModalBody);
 
 });
