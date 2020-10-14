@@ -317,4 +317,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
     addScroll(photoScrall, projectsCatalog);
 
+
+    // reg modal
+    const regModal = document.querySelector('.reg'),
+        closeRegModal = document.querySelector('.close'),
+        openRegModal = document.querySelector('.personal__area');
+
+    function closeOpenModal(modal, openBtn, closeBtn) {
+        openBtn.addEventListener('click', () => {
+            modal.style.opacity = "1";
+            modal.style.visibility = "visible";
+            modal.style.transition = "all 0.8s ease";
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.opacity = "0";
+            modal.style.visibility = "hidden";
+            modal.style.transition = "all 0.8s ease";
+        });
+    }
+
+    closeOpenModal(regModal, openRegModal, closeRegModal);
+
 });
