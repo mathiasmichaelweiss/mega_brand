@@ -24,7 +24,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="logo_header"></div>
+                    <div class="logo_header">
+                        <div class="m-logo">
+                            <div class="egabrand"></div>
+                        </div>
+                    </div>
                     <div class="personal__area">
                         <img src="img/personal_area_icon.svg" alt="" class="personal__area-icon">
                         <div class="personal__area-text">Личный кабинет</div>
@@ -39,16 +43,16 @@
                     </div>
                     <div class="container__nav">
                         <div class="nav  nav__position">
-                            <a href="">Главная</a>
-                            <a href="">Магазины</a>
-                            <a href="">Экомода</a>
-                            <a href="">Розыгрыши</a>
-                            <a href="">Волонтерство</a>
-                            <a href="">Благотворительность</a>
-                            <a href="">Новости</a>
-                            <a href="">Контакты</a>
-                            <a href="">О нас</a>
-                            <a href="">Ч.А.В.О</a>
+                            <a class="nav-mouse" href="">Главная</a>
+                            <a class="nav-mouse" href="">Магазины</a>
+                            <a class="nav-mouse" href="">Экомода</a>
+                            <a class="nav-mouse" href="">Розыгрыши</a>
+                            <a class="nav-mouse" href="">Волонтерство</a>
+                            <a class="nav-mouse" href="">Благотворительность</a>
+                            <a class="nav-mouse" href="">Новости</a>
+                            <a class="nav-mouse" href="">Контакты</a>
+                            <a class="nav-mouse" href="">О нас</a>
+                            <a class="nav-mouse" href="">Ч.А.В.О</a>
                         </div>
                     </div>
                 </div>
@@ -552,22 +556,22 @@
                     </div>
                     <div class="reg__content-right">
                         <div class="reg__enter__reg">
-                            <div class="reg__enter">
+                            <div class="reg__enter  change__modal__to-enter">
                                 <p class="p__reg">Вход</p>
                             </div>
-                            <div class="reg__reg">
+                            <div class="reg__reg  change__modal__to-reg">
                                 <p class="p__reg">Регистрация</p>
                             </div>
                         </div>
                         <div class="enter__reg-double">
-                            <p class="reg__double">Регистрация/</p>
-                            <p class="enter">Вход</p>
+                            <p class="reg__double  change__modal__to-reg">Регистрация/</p>
+                            <p class="enter  change__modal__to-enter">Вход</p>
                         </div>
 
                         <form action="">
                             <div class="reg__item">
                                 <label for="" class="enter__data">Логин</label>
-                                <input type="text" id="login" placeholder="введите свой логин">
+                                <input type="text" id="new-login" placeholder="введите свой логин">
                             </div>
 
                             <div class="reg__item">
@@ -576,8 +580,15 @@
                             </div>
 
                             <div class="reg__item">
+
                                 <label for="" class="enter__data">Пароль</label>
-                                <input type="password" id="password" placeholder="введите свой пароль">
+
+                                <div class="view">
+                                    <input type="password" id="new-password" placeholder="введите свой пароль">
+                                    <div class="img-view  view-reg"></div>
+                                </div>
+                
+
                             </div>
 
                             <div class="terms__subscr">
@@ -603,6 +614,80 @@
                             </div>
 
                             <button class="reg__btn">Зарегестрироваться</button>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- enter form -->
+
+    <div class="small__container">
+        <div class="enter__form" id="modal">
+            <div class="enter__body" data-close="1">
+                <div class="all__reg__content">
+                    <div class="reg__content-left">
+                        <a href="#" class="close">
+                            <div class="close__body">
+                                <img src="img/icons/close.svg" alt="" class="close__btn">
+                            </div>
+                        </a>
+                        <div class="ttl__body">
+                            <div class="reg__left__title">
+                                <h2>ЛЕГКО</h2>
+                            </div>
+                            <div class="reg__left__text">
+                                <p class="rl__text">Отслеживай накопленные
+                                    на бонусной карте баллы</p>
+                                <p class="rl__text">Узнавай первый о розыгрышах
+                                    и акциях</p>
+                                <p class="rl__text">Получай персональные
+                                    предложения</p>
+                                <p class="rl__text">Узнай о своей своем вкладе
+                                    в благотворительсноть</p>
+                            </div>
+                            <div class="white__logo">
+                                <!-- <object data="img/icons/white__logo.svg" type="image/svg+xml" width="34"
+                                    height="45"></object> -->
+                                <img src="img/white_logo.png" alt="" id="white__logo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="reg__content-right">
+                        <div class="reg__enter__reg  rer-enter">
+                            <div class="enter__enter  change__modal__to-enter">
+                                <p class="p__enter">Вход</p>
+                            </div>
+                            <div class="enter__reg  change__modal__to-reg">
+                                <p class="p__enter">Регистрация</p>
+                            </div>
+                        </div>
+                        <div class="enter__reg-double">
+                            <p class="reg__double  reg__doungle-enter  change__modal__to-reg">Регистрация/</p>
+                            <p class="enter  enter-enter  change__modal__to-enter">Вход</p>
+                        </div>
+
+                        <form action="">
+                            <div class="reg__item">
+                                <label for="" class="enter__data">Логин</label>
+                                <input type="text" id="login" placeholder="введите свой логин">
+                            </div>
+
+                            <div class="reg__item">
+
+                                <label for="" class="enter__data">Пароль</label>
+
+                                <div class="view">
+                                    <input type="password" id="password-enter" placeholder="введите пароль для входа">
+                                    <div class="img-view  view-enter"></div>
+                                </div>
+                            </div>
+
+                            <button class="reg__btn">Войти</button>
                     </div>
                     </form>
 

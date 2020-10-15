@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const burgerIcon = document.querySelector('.burger__icon'),
         burgerLocation = document.querySelector('.menu__burger'),
         burgerTitle = document.querySelector('.title__menu-burger'),
-        nav = document.querySelectorAll('a'),
+        nav = document.querySelectorAll('.nav-mouse'),
         navActivate = document.querySelector('.nav');
 
 
@@ -320,17 +320,30 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // reg modal
     const regModal = document.querySelector('.reg'),
-        closeRegModal = document.querySelector('.close'),
+        enterModal = document.querySelector('.enter__form'),
+        closeRegModal = document.querySelectorAll('.close'),
         openRegModal = document.querySelector('.personal__area'),
         regModalBody = document.querySelector('.reg__body'),
-        regBtn = document.querySelector('.reg__btn');
+        enterModalBody = document.querySelector('.enter__body'),
+        regBtn = document.querySelectorAll('.reg__btn'),
+        viewPassBtn = document.querySelector('.view-reg'),
+        viewBtnEnter = document.querySelector('.view-enter'),
+        passInput = document.querySelector('#new-password'),
+        passInputEnter = document.querySelector('#password-enter');
 
-    function closeOpenModal(modal, openBtn, closeBtn, closeOnBody, btn) {
+    console.log(viewPassBtn);
+
+
+
+    function openModal(modal, openBtn) {
         openBtn.addEventListener('click', () => {
             modal.style.opacity = "1";
             modal.style.visibility = "visible";
             modal.style.transition = "all 0.8s ease";
         });
+    }
+
+    function closeModal(modal, closeBtn, closeOnBody, btn) {
 
         closeOnBody.addEventListener('click', (e) => {
             if (e.target.getAttribute('data-close') == '1') {
@@ -338,19 +351,23 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.style.visibility = "hidden";
                 modal.style.transition = "all 0.8s ease";
             }
-            console.log(e.target);
+
         });
 
-        closeBtn.addEventListener('click', () => {
-            modal.style.opacity = "0";
-            modal.style.visibility = "hidden";
-            modal.style.transition = "all 0.8s ease";
+        closeBtn.forEach(item => {
+            item.addEventListener('click', () => {
+                modal.style.opacity = "0";
+                modal.style.visibility = "hidden";
+                modal.style.transition = "all 0.8s ease";
+            });
         });
 
-        btn.addEventListener('click', () => {
-            modal.style.opacity = "0";
-            modal.style.visibility = "hidden";
-            modal.style.transition = "all 0.8s ease";
+        btn.forEach(item => {
+            item.addEventListener('click', () => {
+                modal.style.opacity = "0";
+                modal.style.visibility = "hidden";
+                modal.style.transition = "all 0.8s ease";
+            });
         });
 
         document.addEventListener('keydown', (e) => {
@@ -360,13 +377,61 @@ window.addEventListener('DOMContentLoaded', () => {
                 modal.style.transition = "all 0.8s ease";
             }
         });
+    }
+
+    openModal(regModal, openRegModal);
+    closeModal(regModal, closeRegModal, regModalBody, regBtn);
+    closeModal(enterModal, closeRegModal, enterModalBody, regBtn);
+
+    /* viewPassBtn
+    passInput */
+    function viewPass(btn, input) {
+        btn.addEventListener('click', () => {
+            if (input.getAttribute('type') == 'password') {
+                input.setAttribute('type', 'text');
+                btn.style.backgroundImage = 'url(../img/icons/view2.svg)';
+                btn.style.opacity = '1';
+            } else {
+                input.setAttribute('type', 'password');
+                btn.style.backgroundImage = 'url(../img/icons/view.svg)';
+                btn.style.opacity = '0.5';
+            }
+
+        });
+    }
+
+
+    viewPass(viewPassBtn, passInput);
+    viewPass(viewBtnEnter, passInputEnter);
+
+    const SwitchRegBtn = document.querySelectorAll('.change__modal__to-reg'),
+        SwitchRegBtn2 = document.querySelectorAll('.change__modal__to-enter');
+
+    function switchRegEnter(btn, btn2, modal, modal2) {
+        btn.forEach(item => {
+            item.addEventListener('click', () => {
+                modal.style.opacity = "0";
+                modal.style.visibility = "hidden";
+
+                modal2.style.opacity = "1";
+                modal2.style.visibility = "visible";
+
+            });
+        });
+
+        btn2.forEach(item => {
+            item.addEventListener('click', () => {
+                modal2.style.opacity = "0";
+                modal2.style.visibility = "hidden";
+
+                modal.style.opacity = "1";
+                modal.style.visibility = "visible";
+            });
+        });
 
     }
 
-    closeOpenModal(regModal, openRegModal, closeRegModal, regModalBody, regBtn);
+    switchRegEnter(SwitchRegBtn, SwitchRegBtn2, enterModal, regModal);
 
-
-
-    console.log(regModalBody);
 
 });
