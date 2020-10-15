@@ -331,9 +331,6 @@ window.addEventListener('DOMContentLoaded', () => {
         passInput = document.querySelector('#new-password'),
         passInputEnter = document.querySelector('#password-enter');
 
-    console.log(viewPassBtn);
-
-
 
     function openModal(modal, openBtn) {
         openBtn.addEventListener('click', () => {
@@ -344,7 +341,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function closeModal(modal, closeBtn, closeOnBody, btn) {
-
         closeOnBody.addEventListener('click', (e) => {
             if (e.target.getAttribute('data-close') == '1') {
                 modal.style.opacity = "0";
@@ -412,9 +408,11 @@ window.addEventListener('DOMContentLoaded', () => {
             item.addEventListener('click', () => {
                 modal.style.opacity = "0";
                 modal.style.visibility = "hidden";
+                modal.style.transition = "";
 
                 modal2.style.opacity = "1";
                 modal2.style.visibility = "visible";
+                modal2.style.transition = "";
 
             });
         });
@@ -423,9 +421,12 @@ window.addEventListener('DOMContentLoaded', () => {
             item.addEventListener('click', () => {
                 modal2.style.opacity = "0";
                 modal2.style.visibility = "hidden";
+                modal2.style.transition = "";
 
                 modal.style.opacity = "1";
                 modal.style.visibility = "visible";
+                modal.style.transition = "";
+
             });
         });
 
