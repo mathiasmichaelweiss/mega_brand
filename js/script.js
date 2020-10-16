@@ -121,7 +121,7 @@ window.addEventListener('DOMContentLoaded', () => {
         "90%",
         "6",
         ".current__shops-container",
-        'img/slider_img/slide_1.jpg',
+        'img/slider_img/slide_6.jpg',
         '.slider__inner'
     ).render();
 
@@ -130,7 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
         "90%",
         "7",
         ".current__shops-container",
-        'img/slider_img/slide_2.jpg',
+        'img/slider_img/slide_7.jpg',
         '.slider__inner'
     ).render();
 
@@ -139,7 +139,7 @@ window.addEventListener('DOMContentLoaded', () => {
         "10%",
         "8",
         ".current__shops-container",
-        'img/slider_img/slide_3.jpg',
+        'img/slider_img/slide_8.jpg',
         '.slider__inner'
     ).render();
 
