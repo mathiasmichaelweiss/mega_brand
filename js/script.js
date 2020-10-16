@@ -33,11 +33,13 @@ window.addEventListener('DOMContentLoaded', () => {
     // Shop Class
 
     class Shop {
-        constructor(street, currentSale, id, parentSelector) {
+        constructor(street, currentSale, id, parentSelector, slideImage, slideParent) {
             this.id = id;
             this.street = street;
             this.currentSale = currentSale;
             this.parent = document.querySelector(parentSelector);
+            this.slideImage = slideImage;
+            this.sParent = document.querySelector(slideParent);
 
         }
 
@@ -50,66 +52,95 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.innerHTML = `
             <div class="street">${this.street}</div>
             <div class="current__sale">${this.currentSale}</div>
-        `;
+             `;
 
-            this.parent.append(elem);
+            this.parent.append(elem)
+
+            const slide = document.createElement('div');
+
+            slide.classList.add('slide');
+            slide.id = elem.id;
+
+            slide.innerHTML = `
+            <img src="${this.slideImage}" alt="">
+            `;
+
+            this.sParent.append(slide);
+
         }
+
     }
 
     new Shop(
         "Ул. Пушкина, 61 стр. 1",
         "50%",
         "pyschkina",
-        ".current__shops-container"
+        ".current__shops-container",
+        'img/slider_img/slide_1.jpg',
+        '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Ленина, 163а ТЦ “Гранд”",
         "50%",
         "lenina",
-        ".current__shops-container"
+        ".current__shops-container",
+        'img/slider_img/slide_1.jpg',
+        '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Лыткина, 3",
         "50%",
         "lytkia",
-        ".current__shops-container"
+        ".current__shops-container",
+        'img/slider_img/slide_1.jpg',
+        '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Иркутский тракт, 155",
         "10%",
         "irkytzkiy",
-        ".current__shops-container"
+        ".current__shops-container",
+        'img/slider_img/slide_1.jpg',
+        '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Мир, 50",
         "10%",
         "mir",
-        ".current__shops-container"
+        ".current__shops-container",
+        'img/slider_img/slide_1.jpg',
+        '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Пушкина, 68",
         "90%",
         "pyshkina",
-        ".current__shops-container"
+        ".current__shops-container",
+        'img/slider_img/slide_1.jpg',
+        '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Жукова, 68/2",
         "90%",
         "pyshkina",
-        ".current__shops-container"
+        ".current__shops-container",
+        'img/slider_img/slide_1.jpg',
+        '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Красных фонарей, 12к2",
         "96%",
         "pyshkina",
-        ".current__shops-container"
+        ".current__shops-container",
+        'img/slider_img/slide_1.jpg',
+        '.slider__inner'
     ).render();
 
 
@@ -144,6 +175,24 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     activateElem(activeShop, 'current__shop-active');
+
+    // slider
+
+    const currentShop = document.querySelectorAll('.current__shop'),
+        wapper = document.querySelector('.wrapper'),
+        slideGround = document.querySelector('.slider__inner'),
+        slides = document.querySelectorAll('.slide');
+
+    let slideIndex = 1;
+
+    function showSlides(n) {
+        if (n < 1) {
+            slideIndex = slides.length;
+        } else if (n > slides.length) {
+            slideIndex = 1;
+        }
+    }
+
 
     // calendar
 
