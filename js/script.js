@@ -385,11 +385,11 @@ window.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             if (input.getAttribute('type') == 'password') {
                 input.setAttribute('type', 'text');
-                btn.style.backgroundImage = 'url(/img/icons/view2.svg)';
+                btn.style.backgroundImage = 'url(img/icons/view2.svg)';
                 btn.style.opacity = '1';
             } else {
                 input.setAttribute('type', 'password');
-                btn.style.backgroundImage = 'url(/img/icons/view.svg)';
+                btn.style.backgroundImage = 'url(img/icons/view.svg)';
                 btn.style.opacity = '0.5';
             }
 
