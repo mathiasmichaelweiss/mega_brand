@@ -50,11 +50,11 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.id = this.id;
 
             elem.innerHTML = `
-            <div class="street">${this.street}</div>
-            <div class="current__sale">${this.currentSale}</div>
-             `;
+            <p class="street">${this.street}</p>
+            <p class="current__sale">${this.currentSale}</p>
+            `;
 
-            this.parent.append(elem)
+            this.parent.append(elem);
 
             const slide = document.createElement('div');
 
@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', () => {
     new Shop(
         "Ул. Пушкина, 61 стр. 1",
         "50%",
-        "pyschkina",
+        "1",
         ".current__shops-container",
         'img/slider_img/slide_1.jpg',
         '.slider__inner'
@@ -83,43 +83,43 @@ window.addEventListener('DOMContentLoaded', () => {
     new Shop(
         "Ул. Ленина, 163а ТЦ “Гранд”",
         "50%",
-        "lenina",
+        "2",
         ".current__shops-container",
-        'img/slider_img/slide_1.jpg',
+        'img/slider_img/slide_2.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Лыткина, 3",
         "50%",
-        "lytkia",
+        "3",
         ".current__shops-container",
-        'img/slider_img/slide_1.jpg',
+        'img/slider_img/slide_3.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Иркутский тракт, 155",
         "10%",
-        "irkytzkiy",
+        "4",
         ".current__shops-container",
-        'img/slider_img/slide_1.jpg',
+        'img/slider_img/slide_4.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Мир, 50",
         "10%",
-        "mir",
+        "5",
         ".current__shops-container",
-        'img/slider_img/slide_1.jpg',
+        'img/slider_img/slide_5.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Пушкина, 68",
         "90%",
-        "pyshkina",
+        "6",
         ".current__shops-container",
         'img/slider_img/slide_1.jpg',
         '.slider__inner'
@@ -128,18 +128,18 @@ window.addEventListener('DOMContentLoaded', () => {
     new Shop(
         "Ул. Жукова, 68/2",
         "90%",
-        "pyshkina",
+        "7",
         ".current__shops-container",
-        'img/slider_img/slide_1.jpg',
+        'img/slider_img/slide_2.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
         "Ул. Красных фонарей, 12к2",
-        "96%",
-        "pyshkina",
+        "10%",
+        "8",
         ".current__shops-container",
-        'img/slider_img/slide_1.jpg',
+        'img/slider_img/slide_3.jpg',
         '.slider__inner'
     ).render();
 
@@ -179,20 +179,58 @@ window.addEventListener('DOMContentLoaded', () => {
     // slider
 
     const currentShop = document.querySelectorAll('.current__shop'),
-        wapper = document.querySelector('.wrapper'),
+        wrapper = document.querySelector('.wrapper'),
         slideGround = document.querySelector('.slider__inner'),
-        slides = document.querySelectorAll('.slide');
+        slides = document.querySelectorAll('.slide'),
+        next = document.querySelector('.next'),
+        prev = document.querySelector('.prev'),
+        width = window.getComputedStyle(wrapper).width,
+        street = document.querySelectorAll('.street'),
+        sale = document.querySelectorAll('.current__sale');
 
-    let slideIndex = 1;
 
-    function showSlides(n) {
-        if (n < 1) {
-            slideIndex = slides.length;
-        } else if (n > slides.length) {
-            slideIndex = 1;
-        }
+    let slideIndex = 1,
+        offset = 0;
+
+
+    slideGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
+    slideGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
+    slideGround.style.transition = '0.5s all'; // Плавное переключение слайдов
+
+    wrapper.style.overflow = 'hidden';
+
+    // Устанавливаем всем слайдерам одинаковую ширину
+    slides.forEach(slide => {
+        slide.style.width = width;
+    });
+
+    for (let i = 0; i < slides.length; i++) {
+        currentShop[i].setAttribute('data-slide-to', i + 1);
     }
 
+    for (let i = 0; i < slides.length; i++) {
+        street[i].setAttribute('data-slide-to', i + 1);
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        sale[i].setAttribute('data-slide-to', i + 1);
+    }
+
+    function removeNumbers(str) {
+        return +str.replace(/\D/g, '');
+    }
+
+    currentShop.forEach(shop => {
+
+        shop.addEventListener('click', (e) => {
+            const slideTo = e.target.getAttribute('data-slide-to');
+
+            slideIndex = slideTo;
+            offset = removeNumbers(width) * (slideTo - 1);
+            slideGround.style.transform = `translateX(-${offset}px)`;
+
+        });
+    });
 
     // calendar
 
