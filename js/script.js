@@ -190,8 +190,6 @@ window.addEventListener('DOMContentLoaded', () => {
     let slideIndex = 1,
         offset = 0;
 
-    console.log(width);
-
 
     slideGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
     slideGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
@@ -204,17 +202,15 @@ window.addEventListener('DOMContentLoaded', () => {
         slide.style.width = width;
     });
 
-    for (let i = 0; i < slides.length; i++) {
-        currentShop[i].setAttribute('data-slide-to', i + 1);
+    function addDataAtribute(n) {
+        for (let i = 0; i < slides.length; i++) {
+            n[i].setAttribute('data-slide-to', i + 1);
+        }
     }
 
-    for (let i = 0; i < slides.length; i++) {
-        street[i].setAttribute('data-slide-to', i + 1);
-    }
-
-    for (let i = 0; i < slides.length; i++) {
-        sale[i].setAttribute('data-slide-to', i + 1);
-    }
+    addDataAtribute(currentShop);
+    addDataAtribute(street);
+    addDataAtribute(sale);
 
     function removeNumbers(str) {
         return +str.replace(/\D/g, '');
@@ -228,6 +224,7 @@ window.addEventListener('DOMContentLoaded', () => {
             slideIndex = slideTo;
             offset = removeNumbers(width) * (slideTo - 1);
             slideGround.style.transform = `translateX(-${offset}px)`;
+
 
         });
     });
@@ -256,7 +253,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // class news
 
     class News {
-        constructor(id, newsLatter, title, date, text, parentSelector, newsTitle) {
+        constructor(id, newsLatter, title, date, text, parentSelector, newsTitle, leftSideSelector, activeClass, subtitleColor) {
             this.id = id;
             this.newsLatter = newsLatter;
             this.title = title;
@@ -264,6 +261,9 @@ window.addEventListener('DOMContentLoaded', () => {
             this.text = text;
             this.parent = document.querySelector(parentSelector);
             this.newsTitle = newsTitle;
+            this.leftParent = document.querySelector(leftSideSelector);
+            this.activeClass = activeClass;
+            this.subtitleColor = subtitleColor;
 
         }
 
@@ -271,6 +271,8 @@ window.addEventListener('DOMContentLoaded', () => {
             // news in left side
             const leftElem = document.createElement('div');
             leftElem.classList.add('left__block');
+
+            leftElem.id = this.id;
 
             leftElem.innerHTML = `
 
@@ -285,6 +287,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
             `;
 
+            this.leftParent.prepend(leftElem);
+
             // news in right side
             const elem = document.createElement('div');
 
@@ -293,7 +297,7 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.id = this.id;
 
             elem.innerHTML = `
-            <div class="container__news__item">
+            <div class="container__news__item ${this.activeClass}">
                 <div class="news__item">
                     <div class="item__cirlce">
                         <p class="news__latter">${this.newsLatter}</p>
@@ -317,10 +321,11 @@ window.addEventListener('DOMContentLoaded', () => {
         "",
         "Розыгрыш",
         "12.10.20",
-        "Стартовал розыгрыш в нашем аккаунте Instagram.",
+        'Стартовал розыгрыш в нашем аккаунте Instagram.',
         ".container__news",
-        ".item__cirlce",
-        "'#1d1d1d'"
+        "Instagram розыгрыш",
+        ".lb__container-inner",
+        "container__news__item-active"
     ).render();
 
     new News(
@@ -329,7 +334,9 @@ window.addEventListener('DOMContentLoaded', () => {
         "Открытие",
         "12.10.20",
         'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток".',
-        ".container__news"
+        ".container__news",
+        "Новый отдел на Лыткина!",
+        ".lb__container-inner"
     ).render();
 
     new News(
@@ -338,7 +345,9 @@ window.addEventListener('DOMContentLoaded', () => {
         "Часы работы",
         "12.10.20",
         "Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00 ",
-        ".container__news"
+        ".container__news",
+        "Новый график на Ленина",
+        ".lb__container-inner"
     ).render();
 
     new News(
@@ -347,7 +356,9 @@ window.addEventListener('DOMContentLoaded', () => {
         "Открытие",
         "12.10.20",
         "Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.",
-        ".container__news"
+        ".container__news",
+        "Открылся новый магазин!",
+        ".lb__container-inner"
     ).render();
 
     new News(
@@ -356,35 +367,94 @@ window.addEventListener('DOMContentLoaded', () => {
         "Розыгрыш",
         "12.10.20",
         "Стартовал розыгрыш  в нашем Instagram. Главный приз сертификат на 10 000 рублей! ",
-        ".container__news"
+        ".container__news",
+        "Instagram розыгрыш! ура",
+        ".lb__container-inner"
     ).render();
+
 
 
     const newsScroll = document.querySelector('.news__block-scroll'),
         newsCointainer = document.querySelector('.container__news'),
-        itemBlock = document.querySelectorAll('.container__news__item'),
-        newsItemTitle = document.querySelectorAll('.news__item-title'),
-        newsItemText = document.querySelectorAll('.news__item-text'),
-        newsTitle = document.querySelector('.news__title'),
-        newsText = document.querySelector('.news__text'),
-        newsSubtitle = document.querySelector('.news__subtitle-text');
+        itemBlock = document.querySelectorAll('.container__news__item');
 
+    // tab content
+
+    function slidesNewsContent() {
+
+        const news = document.querySelectorAll('.left__block'),
+            currentNews = document.querySelectorAll('.news__item-block'),
+            wrapper = document.querySelector('.left__block-container'),
+            newsGround = document.querySelector('.lb__container-inner'),
+            width = window.getComputedStyle(wrapper).width,
+            containerNews = document.querySelectorAll('.container__news__item'),
+            newsItem = document.querySelectorAll('.news__item'),
+            itemCircle = document.querySelectorAll('.item__cirlce'),
+            newsLatter = document.querySelectorAll('.news__latter'),
+            newsContent = document.querySelectorAll('.news__content'),
+            newsItemTitle = document.querySelectorAll('.news__item-title'),
+            newsDate = document.querySelectorAll('.news__date'),
+            newsItemText = document.querySelectorAll('.news__item-text'),
+            bg = document.querySelector('.news__bg');
+
+        let contentIndex = 1,
+            offset = 0;
+
+        newsGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
+        newsGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
+        newsGround.style.transition = '0.5s all'; // Плавное переключение слайдов
+
+        wrapper.style.overflow = 'hidden';
+
+        const bgImage = [
+            "img/news/img_3.jpg",
+            "img/news/img_1.jpg",
+            "img/news/img_2.jpg",
+            "img/news/img_1.jpg",
+            "img/news/img_3.jpg",
+        ];
+
+        news.forEach(slide => {
+            slide.style.width = width.replace('px', '') - '50.609' + 'px';
+        });
+
+        function addDataAtribute(n) {
+            for (let i = 0; i < news.length; i++) {
+                n[i].setAttribute('data-slide-to', i + 1);
+            }
+        }
+
+        addDataAtribute(currentNews);
+        addDataAtribute(containerNews);
+        addDataAtribute(newsItem);
+        addDataAtribute(itemCircle);
+        addDataAtribute(newsLatter);
+        addDataAtribute(newsContent);
+        addDataAtribute(newsItemTitle);
+        addDataAtribute(newsDate);
+        addDataAtribute(newsItemText);
+
+        currentNews.forEach(news => {
+
+            news.addEventListener('click', (e) => {
+                const slideTo = e.target.getAttribute('data-slide-to');
+                const widthInNum = +width.slice(0, width.length - 5) - 50;
+
+                contentIndex = slideTo;
+                offset = widthInNum * (slideTo - 1);
+                newsGround.style.transform = `translateX(-${offset}px)`;
+
+            });
+        });
+
+    }
+    slidesNewsContent();
 
     function changeElemColor(index, color) {
         document.querySelectorAll('.item__cirlce')[index].style.backgroundColor = color;
     }
 
-    function changeNewsContent(elemTitle, elemText, elemSubtitle, elemSubtitleContent) {
-        itemBlock.forEach(item => {
-            item.addEventListener('click', (e) => {
-                elemText.textContent = newsItemText[0].textContent;
-                elemTitle.textContent = elemSubtitleContent;
-                elemSubtitle.textContent = newsItemTitle[0].textContent;
-            });
-        });
-    }
 
-    changeNewsContent(newsTitle, newsText, newsSubtitle, 'Instagram розыгрыш');
 
     changeElemColor(0, '#E30613');
     changeElemColor(1, '#E25011');
