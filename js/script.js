@@ -178,56 +178,60 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // slider
 
-    const currentShop = document.querySelectorAll('.current__shop'),
-        wrapper = document.querySelector('.wrapper'),
-        slideGround = document.querySelector('.slider__inner'),
-        slides = document.querySelectorAll('.slide'),
-        width = window.getComputedStyle(wrapper).width,
-        street = document.querySelectorAll('.street'),
-        sale = document.querySelectorAll('.current__sale');
+    function mainSlider() {
+        const currentShop = document.querySelectorAll('.current__shop'),
+            wrapper = document.querySelector('.wrapper'),
+            slideGround = document.querySelector('.slider__inner'),
+            slides = document.querySelectorAll('.slide'),
+            width = window.getComputedStyle(wrapper).width,
+            street = document.querySelectorAll('.street'),
+            sale = document.querySelectorAll('.current__sale');
 
 
-    let slideIndex = 1,
-        offset = 0;
+        let slideIndex = 1,
+            offset = 0;
 
 
-    slideGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
-    slideGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
-    slideGround.style.transition = '0.5s all'; // Плавное переключение слайдов
+        slideGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
+        slideGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
+        slideGround.style.transition = '0.5s all'; // Плавное переключение слайдов
 
-    wrapper.style.overflow = 'hidden';
+        wrapper.style.overflow = 'hidden';
 
-    // Устанавливаем всем слайдерам одинаковую ширину
-    slides.forEach(slide => {
-        slide.style.width = width;
-    });
-
-    function addDataAtribute(n) {
-        for (let i = 0; i < slides.length; i++) {
-            n[i].setAttribute('data-slide-to', i + 1);
-        }
-    }
-
-    addDataAtribute(currentShop);
-    addDataAtribute(street);
-    addDataAtribute(sale);
-
-    function removeNumbers(str) {
-        return +str.replace(/\D/g, '');
-    }
-
-    currentShop.forEach(shop => {
-
-        shop.addEventListener('click', (e) => {
-            const slideTo = e.target.getAttribute('data-slide-to');
-
-            slideIndex = slideTo;
-            offset = removeNumbers(width) * (slideTo - 1);
-            slideGround.style.transform = `translateX(-${offset}px)`;
-
-
+        // Устанавливаем всем слайдерам одинаковую ширину
+        slides.forEach(slide => {
+            slide.style.width = width;
         });
-    });
+
+        function addDataAtribute(n) {
+            for (let i = 0; i < slides.length; i++) {
+                n[i].setAttribute('data-slide-to', i + 1);
+            }
+        }
+
+        addDataAtribute(currentShop);
+        addDataAtribute(street);
+        addDataAtribute(sale);
+
+        function removeNumbers(str) {
+            return +str.replace(/\D/g, '');
+        }
+
+        currentShop.forEach(shop => {
+
+            shop.addEventListener('click', (e) => {
+                e.preventDefault();
+                const slideTo = e.target.getAttribute('data-slide-to');
+
+                slideIndex = slideTo;
+                offset = removeNumbers(width) * (slideTo - 1);
+                slideGround.style.transform = `translateX(-${offset}px)`;
+
+
+            });
+        });
+    }
+    mainSlider();
 
     // calendar
 
@@ -400,7 +404,7 @@ window.addEventListener('DOMContentLoaded', () => {
         let contentIndex = 1,
             offset = 0;
 
-        newsGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
+        newsGround.style.width = 100 * news.length + '%'; // Размер ширины блока со всеми слайдами
         newsGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
         newsGround.style.transition = '0.5s all'; // Плавное переключение слайдов
 
