@@ -335,15 +335,8 @@ h2 {
 
 .wrapper {
     width: 100%;
-    /* max-width: 1440px; */
     height: 440px;
-    /* overflow: hidden; */
-}
 
-.slider__inner {
-    /* display: flex; */
-    /* flex-direction: column;
-    align-items: flex-end; */
 }
 
 .slide {
@@ -1143,8 +1136,6 @@ h2 {
     color: #fff;
 }
 
-.close {}
-
 .close__body {
     width: 22px;
     height: 22px;
@@ -1163,7 +1154,6 @@ h2 {
     margin-top: 20%;
 }
 
-.ttl__body {}
 
 .reg__left__title {
     text-align: center;
@@ -1279,7 +1269,6 @@ h2 {
     margin-bottom: 13px;
 }
 
-.terms__subscr {}
 
 .reg__terms {
     margin-bottom: 9px;
@@ -1369,32 +1358,6 @@ input[type="checkbox"]:checked+label::before {
     justify-content: center;
 }
 
-.all__reg__content {}
-
-.reg__content-left {}
-
-.close {}
-
-.close__body {}
-
-.close__btn {}
-
-.ttl__body {}
-
-.reg__left__title {}
-
-.reg__left__text {}
-
-.rl__text {}
-
-.white__logo {}
-
-.reg__content-right {}
-
-.reg__enter__reg {}
-
-.rer-enter {}
-
 .enter__enter {
     width: 55px;
     display: flex;
@@ -1422,11 +1385,6 @@ input[type="checkbox"]:checked+label::before {
     text-align: center;
 }
 
-
-.enter__reg-double {}
-
-.reg__double {}
-
 .reg__doungle-enter {
     color: #D6D6D6;
 
@@ -1438,10 +1396,6 @@ input[type="checkbox"]:checked+label::before {
 
     cursor: pointer;
 }
-
-.reg__item {}
-
-.enter__data {}
 
 .view-enter {
     background-repeat: no-repeat;
@@ -1460,5 +1414,3 @@ input[type="checkbox"]:checked+label::before {
     height: 20px;
     cursor: pointer;
 }
-
-.reg__btn {}

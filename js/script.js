@@ -182,8 +182,6 @@ window.addEventListener('DOMContentLoaded', () => {
         wrapper = document.querySelector('.wrapper'),
         slideGround = document.querySelector('.slider__inner'),
         slides = document.querySelectorAll('.slide'),
-        next = document.querySelector('.next'),
-        prev = document.querySelector('.prev'),
         width = window.getComputedStyle(wrapper).width,
         street = document.querySelectorAll('.street'),
         sale = document.querySelectorAll('.current__sale');
@@ -191,6 +189,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     let slideIndex = 1,
         offset = 0;
+
+    console.log(width);
 
 
     slideGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
