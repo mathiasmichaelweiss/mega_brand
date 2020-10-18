@@ -255,210 +255,229 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     // class news
+    class NewsTab {
+        constructor(image, subTitle, newsTitle, text, parentSelector) {
+            this.image = image;
+            this.subTitle = subTitle;
+            this.newsTitle = newsTitle;
+            this.text = text;
+            this.parent = document.querySelector(parentSelector);
+        }
 
-    class News {
-        constructor(id, newsLatter, title, date, text, parentSelector, newsTitle, leftSideSelector, activeClass, subtitleColor) {
-            this.id = id;
+        render() {
+            const elem = document.createElement('div');
+            elem.classList.add('tabcontent');
+
+            elem.innerHTML = `
+                    <div class="darkbg-container">
+                    <div class="darkbg"></div>
+                    <img src="${this.image}">
+                    </div>
+                    <div class="tabcontent__descr">
+                        <div class="news__subtitle-container">
+                            <p class="news__subtitle-text">${this.subTitle}</p>
+                        </div>
+                        <div class="news__title">${this.newsTitle}</div>
+                        <div class="news__text">
+                            <p>${this.text}</p>
+                        </div>
+                        <button class="more__about">Подробности</button>
+                    </div>
+            `;
+
+            this.parent.prepend(elem);
+        }
+    }
+
+    class NewsMenuItem {
+        constructor(newsLatter, title, date, text, parentSelector, activeClass) {
             this.newsLatter = newsLatter;
             this.title = title;
             this.date = date;
             this.text = text;
             this.parent = document.querySelector(parentSelector);
-            this.newsTitle = newsTitle;
-            this.leftParent = document.querySelector(leftSideSelector);
             this.activeClass = activeClass;
-            this.subtitleColor = subtitleColor;
 
         }
-
         render() {
-            // news in left side
-            const leftElem = document.createElement('div');
-            leftElem.classList.add('left__block');
-
-            leftElem.id = this.id;
-
-            leftElem.innerHTML = `
-
-            <div class="news__subtitle-container">
-                    <p class="news__subtitle-text">${this.title}</p>
-                </div>
-                <div class="news__title">${this.newsTitle}</div>
-                <div class="news__text">
-                    <p>${this.text}</p>
-            </div>
-            <button class="more__about">Подробности</button>
-
-            `;
-
-            this.leftParent.prepend(leftElem);
-
-            // news in right side
             const elem = document.createElement('div');
 
-            elem.classList.add('news__item-block');
+            elem.classList.add('tabheader__item');
             this.newsLatter = this.title[0];
-            elem.id = this.id;
+            elem.classList.add(this.activeClass);
 
             elem.innerHTML = `
-            <div class="container__news__item ${this.activeClass}">
-                <div class="news__item">
-                    <div class="item__cirlce">
-                        <p class="news__latter">${this.newsLatter}</p>
+                    <div class="news__item">
+                        <div class="item__cirlce">
+                            <p class="news__latter">${this.newsLatter}</p>
+                        </div>
+                        <div class="news__content-title__date">
+                            <div class="news__item-title">${this.title}</div>
+                            <div class="news__date">${this.date}</div>
+                        </div>
+                        <div class="news__content-text">
+                            <p class="news__item-text">${this.text}</p>
+                        </div>
                     </div>
-                    <div class="news__content">
-                        <div class="news__item-title">${this.title}</div>
-                        <div class="news__date">${this.date}</div>
-                        <p class="news__item-text">${this.text}</p>
-                    </div>
-                </div>
-            </div>
-        `;
+            `;
 
             this.parent.append(elem);
-
         }
     }
 
-    new News(
-        "r",
+    new NewsTab(
+        "img/news/img_3.jpg",
+        "Розыгрыш",
+        "Instagram розыгрыш! ура",
+        "Стартовал розыгрыш в нашем Instagram. Главный приз сертификат на 10 000 рублей!",
+        ".tabcontainer"
+
+    ).render();
+
+    new NewsMenuItem(
         "",
         "Розыгрыш",
         "12.10.20",
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
         ".container__news",
-        "Instagram розыгрыш",
-        ".lb__container-inner",
-        "container__news__item-active"
+        ".tabheader__item_active"
     ).render();
 
-    new News(
-        "o",
+    new NewsTab(
+        "img/news/img_1.jpg",
+        "Открытие",
+        "Открылся новый магазин!",
+        "Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.",
+        ".tabcontainer"
+
+    ).render();
+
+    new NewsMenuItem(
         "",
         "Открытие",
         "12.10.20",
         'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток".',
         ".container__news",
-        "Новый отдел на Лыткина!",
-        ".lb__container-inner"
+        ".tabheader__item_active"
     ).render();
 
-    new News(
-        "ch",
+    new NewsTab(
+        "img/news/img_2.jpg",
+        "Часы работы",
+        "Новый график на Ленина",
+        "Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00",
+        ".tabcontainer"
+
+    ).render();
+
+    new NewsMenuItem(
         "",
         "Часы работы",
         "12.10.20",
-        "Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00 ",
+        'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
         ".container__news",
-        "Новый график на Ленина",
-        ".lb__container-inner"
+        ".tabheader__item_active"
     ).render();
 
-    new News(
-        "o",
+    new NewsTab(
+        "img/news/img_1.jpg",
+        "Открытие",
+        "Новый отдел на Лыткина!",
+        "Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.",
+        ".tabcontainer"
+
+    ).render();
+
+    new NewsMenuItem(
         "",
         "Открытие",
         "12.10.20",
-        "Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.",
+        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
         ".container__news",
-        "Открылся новый магазин!",
-        ".lb__container-inner"
+        ".tabheader__item_active"
     ).render();
 
-    new News(
-        "r",
+    new NewsTab(
+        "img/news/img_3.jpg",
+        "Розыгрыш",
+        "Instagram розыгрыш",
+        "Стартовал розыгрыш в нашем аккаунте Instagram.",
+        ".tabcontainer"
+
+    ).render();
+
+    new NewsMenuItem(
         "",
         "Розыгрыш",
         "12.10.20",
-        "Стартовал розыгрыш  в нашем Instagram. Главный приз сертификат на 10 000 рублей! ",
+        'Стартовал розыгрыш в нашем аккаунте Instagram.',
         ".container__news",
-        "Instagram розыгрыш! ура",
-        ".lb__container-inner"
+        ".tabheader__item_active"
     ).render();
-
 
 
     const newsScroll = document.querySelector('.news__block-scroll'),
         newsCointainer = document.querySelector('.container__news'),
-        itemBlock = document.querySelectorAll('.container__news__item');
+        itemBlock = document.querySelectorAll('.tabheader__item');
+
 
     // tab content
 
-    function slidesNewsContent() {
-
-        const news = document.querySelectorAll('.left__block'),
-            currentNews = document.querySelectorAll('.news__item-block'),
-            wrapper = document.querySelector('.left__block-container'),
-            newsGround = document.querySelector('.lb__container-inner'),
-            width = window.getComputedStyle(wrapper).width,
-            containerNews = document.querySelectorAll('.container__news__item'),
-            newsItem = document.querySelectorAll('.news__item'),
-            itemCircle = document.querySelectorAll('.item__cirlce'),
-            newsLatter = document.querySelectorAll('.news__latter'),
-            newsContent = document.querySelectorAll('.news__content'),
-            newsItemTitle = document.querySelectorAll('.news__item-title'),
-            newsDate = document.querySelectorAll('.news__date'),
-            newsItemText = document.querySelectorAll('.news__item-text'),
-            bg = document.querySelector('.news__bg');
-
-        let contentIndex = 1,
-            offset = 0;
-
-        newsGround.style.width = 100 * news.length + '%'; // Размер ширины блока со всеми слайдами
-        newsGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
-        newsGround.style.transition = '0.5s all'; // Плавное переключение слайдов
-
-        wrapper.style.overflow = 'hidden';
-
-        const bgImage = [
-            "img/news/img_3.jpg",
-            "img/news/img_1.jpg",
-            "img/news/img_2.jpg",
-            "img/news/img_1.jpg",
-            "img/news/img_3.jpg",
-        ];
-
-        news.forEach(slide => {
-            slide.style.width = width.replace('px', '') - '50.609' + 'px';
-        });
+    function tabs() {
+        let tabs = document.querySelectorAll('.tabheader__item'),
+            tabsContent = document.querySelectorAll('.tabcontent'),
+            tabsParent = document.querySelector('.tabheader__items'),
+            tabsNewsItem = document.querySelectorAll('.news__item');
 
         function addDataAtribute(n) {
-            for (let i = 0; i < news.length; i++) {
+            for (let i = 0; i < tabs.length; i++) {
                 n[i].setAttribute('data-slide-to', i + 1);
             }
         }
 
-        addDataAtribute(currentNews);
-        addDataAtribute(containerNews);
-        addDataAtribute(newsItem);
-        addDataAtribute(itemCircle);
-        addDataAtribute(newsLatter);
-        addDataAtribute(newsContent);
-        addDataAtribute(newsItemTitle);
-        addDataAtribute(newsDate);
-        addDataAtribute(newsItemText);
+        addDataAtribute(tabsNewsItem);
 
-        currentNews.forEach(news => {
 
-            news.addEventListener('click', (e) => {
-                const slideTo = e.target.getAttribute('data-slide-to');
-                const widthInNum = +width.slice(0, width.length - 5) - 50;
+        function hideTabContent() {
 
-                contentIndex = slideTo;
-                offset = widthInNum * (slideTo - 1);
-                newsGround.style.transform = `translateX(-${offset}px)`;
-
+            tabsContent.forEach(item => {
+                item.classList.add('hide');
+                item.classList.remove('show', 'fade');
             });
-        });
 
+            tabs.forEach(item => {
+                item.classList.remove('tabheader__item_active');
+            });
+        }
+
+        function showTabContent(i = 0) {
+            tabsContent[i].classList.add('show', 'fade');
+            tabsContent[i].classList.remove('hide');
+            tabs[i].classList.add('tabheader__item_active');
+        }
+
+        hideTabContent();
+        showTabContent();
+
+        tabsParent.addEventListener('click', function (event) {
+            const target = event.target;
+            if (target && target.classList.contains('.tabheader__item'.slice(1))) {
+                tabs.forEach((item, i) => {
+                    if (target == item /* && event.target.getAttribute('data-slide-to') */ ) {
+                        hideTabContent();
+                        showTabContent(i);
+                    }
+                });
+            }
+        });
     }
-    slidesNewsContent();
+
+    tabs();
+
 
     function changeElemColor(index, color) {
         document.querySelectorAll('.item__cirlce')[index].style.backgroundColor = color;
     }
-
-
 
     changeElemColor(0, '#E30613');
     changeElemColor(1, '#E25011');
