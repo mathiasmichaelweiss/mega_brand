@@ -425,7 +425,22 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const newsScroll = document.querySelector('.news__block-scroll'),
         newsCointainer = document.querySelector('.container__news'),
-        itemBlock = document.querySelectorAll('.tabheader__item');
+        itemBlock = document.querySelectorAll('.tabheader__item'),
+        tabContentItemText = document.querySelectorAll('.news__item-text');
+
+
+
+    function changeText(text) {
+        const maxlength = 44; //количество символов, которое должно отображаться
+        const strNum = document.getElementsByClassName(text).length; //количество блоков с классом text
+        for (let i = 0; i < strNum; i++) {
+            const str = document.getElementsByClassName(text)[i].innerHTML; //текст
+            document.getElementsByClassName(text)[i].innerHTML = str.slice(0, maxlength) + '...';
+        }
+    }
+
+    changeText("news__item-text");
+
 
 
     // tab content
