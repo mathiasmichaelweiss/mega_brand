@@ -298,6 +298,7 @@ window.addEventListener('DOMContentLoaded', () => {
             this.parent = document.querySelector(parentSelector);
             this.activeClass = activeClass;
 
+
         }
         render() {
             const elem = document.createElement('div');
@@ -305,6 +306,7 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.classList.add('tabheader__item');
             this.newsLatter = this.title[0];
             elem.classList.add(this.activeClass);
+
 
             elem.innerHTML = `
                     <div class="news__item">
@@ -340,7 +342,8 @@ window.addEventListener('DOMContentLoaded', () => {
         "12.10.20",
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
         ".container__news",
-        ".tabheader__item_active"
+        "tabheader__item_active",
+        "tabclick"
     ).render();
 
     new NewsTab(
@@ -358,7 +361,8 @@ window.addEventListener('DOMContentLoaded', () => {
         "12.10.20",
         'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток".',
         ".container__news",
-        ".tabheader__item_active"
+        "tabheader__item_active",
+        "tabclick"
     ).render();
 
     new NewsTab(
@@ -376,7 +380,8 @@ window.addEventListener('DOMContentLoaded', () => {
         "12.10.20",
         'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
         ".container__news",
-        ".tabheader__item_active"
+        "tabheader__item_active",
+        "tabclick"
     ).render();
 
     new NewsTab(
@@ -394,7 +399,8 @@ window.addEventListener('DOMContentLoaded', () => {
         "12.10.20",
         'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
         ".container__news",
-        ".tabheader__item_active"
+        "tabheader__item_active",
+        "tabclick"
     ).render();
 
     new NewsTab(
@@ -412,7 +418,8 @@ window.addEventListener('DOMContentLoaded', () => {
         "12.10.20",
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
         ".container__news",
-        ".tabheader__item_active"
+        "tabheader__item_active",
+        "tabclick"
     ).render();
 
 
@@ -427,7 +434,8 @@ window.addEventListener('DOMContentLoaded', () => {
         let tabs = document.querySelectorAll('.tabheader__item'),
             tabsContent = document.querySelectorAll('.tabcontent'),
             tabsParent = document.querySelector('.tabheader__items'),
-            tabsNewsItem = document.querySelectorAll('.news__item');
+            tabsNewsItem = document.querySelectorAll('.news__item'),
+            clickTabs = document.querySelectorAll('.news__item');
 
         function addDataAtribute(n) {
             for (let i = 0; i < tabs.length; i++) {
@@ -459,19 +467,20 @@ window.addEventListener('DOMContentLoaded', () => {
         hideTabContent();
         showTabContent();
 
-        tabsParent.addEventListener('click', function (event) {
+        tabsParent.addEventListener('click', (event) => {
             const target = event.target;
-            if (target && target.classList.contains('.tabheader__item'.slice(1))) {
+            if (target.classList.contains('tabheader__item')) {
                 tabs.forEach((item, i) => {
-                    if (target == item /* && event.target.getAttribute('data-slide-to') */ ) {
+                    if (target == item) {
                         hideTabContent();
                         showTabContent(i);
                     }
                 });
             }
         });
-    }
 
+    }
+    /* tabclick */
     tabs();
 
 

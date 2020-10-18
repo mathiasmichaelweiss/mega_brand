@@ -558,7 +558,6 @@ h2 {
     background-blend-mode: darken;
     border-radius: 10px;
     margin-bottom: 81px;
-    margin-top: 81px;
     color: #fff;
     max-width: 981px;
     overflow: hidden;
@@ -603,11 +602,11 @@ h2 {
 
 .tabheader {
     position: absolute;
-    align-self: center;
+    margin-top: 14px;
+
     margin-left: 685px;
     max-width: 280px;
     height: 587px;
-    /* 239 */
     background: #FFFFFF;
     border-radius: 10px;
     color: #1d1d1d;
