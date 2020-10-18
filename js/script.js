@@ -309,6 +309,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
             elem.innerHTML = `
+                    
                     <div class="news__item">
                         <div class="item__cirlce">
                             <p class="news__latter">${this.newsLatter}</p>
@@ -449,16 +450,15 @@ window.addEventListener('DOMContentLoaded', () => {
         let tabs = document.querySelectorAll('.tabheader__item'),
             tabsContent = document.querySelectorAll('.tabcontent'),
             tabsParent = document.querySelector('.tabheader__items'),
-            tabsNewsItem = document.querySelectorAll('.news__item'),
-            clickTabs = document.querySelectorAll('.news__item');
+            tabsNewsItem = document.querySelectorAll('.news__item');
 
-        function addDataAtribute(n) {
+        /* function addDataAtribute(n) {
             for (let i = 0; i < tabs.length; i++) {
                 n[i].setAttribute('data-slide-to', i + 1);
             }
         }
 
-        addDataAtribute(tabsNewsItem);
+        addDataAtribute(tabsNewsItem); */
 
 
         function hideTabContent() {
@@ -484,7 +484,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         tabsParent.addEventListener('click', (event) => {
             const target = event.target;
-            if (target.classList.contains('tabheader__item')) {
+            if (target.classList.contains('tabheader__item') || target.classList.contains('news__item-title')) {
                 tabs.forEach((item, i) => {
                     if (target == item) {
                         hideTabContent();
@@ -495,7 +495,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
     }
-    /* tabclick */
+
     tabs();
 
 
