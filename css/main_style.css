@@ -646,7 +646,7 @@ h2 {
     cursor: pointer;
 }
 
-.tabheader__item::after {
+/* .tabheader__item::after {
     width: 16px;
     height: 16px;
     content: "подробнее";
@@ -654,7 +654,7 @@ h2 {
 
 .tabheader__item:hover::after {
     color: #1d1d1d;
-}
+} */
 
 .tabheader__item:last-child {
     border-bottom: 0px solid rgba(29, 29, 29, 0.2);

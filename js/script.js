@@ -450,8 +450,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function tabs() {
         let tabs = document.querySelectorAll('.tabheader__item'),
-            tabsContent = document.querySelectorAll('.tabcontent'),
-            tabsParent = document.querySelector('.tabheader__items');
+            tabsContent = document.querySelectorAll('.tabcontent');
 
 
         function hideTabContent() {
@@ -475,21 +474,22 @@ window.addEventListener('DOMContentLoaded', () => {
         hideTabContent();
         showTabContent();
 
-        tabsParent.addEventListener('click', (event) => {
-            const target = event.target;
+        function changeTabOnClick(clickElem) {
+            clickElem.forEach((item, i) => {
+                item.addEventListener('click', (e) => {
+                    console.log(i);
 
-            if (target.classList.contains('tabheader__item')) {
-                tabs.forEach((item, i) => {
-                    if (target == item) {
-
-                        hideTabContent();
-                        showTabContent(i);
-                    }
+                    hideTabContent();
+                    showTabContent(i);
                 });
-            }
-        });
+            });
+
+        }
+
+        changeTabOnClick(tabs);
 
     }
+
 
     tabs();
 
