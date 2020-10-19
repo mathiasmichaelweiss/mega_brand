@@ -1002,6 +1002,8 @@ h2 {
     margin: 0 auto;
     max-width: 1440px;
     margin-bottom: 134px;
+    background: rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_3.jpg);
+    background: rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_2.jpg);
     background: rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_1.jpg);
     background-blend-mode: soft-light;
 

@@ -650,9 +650,6 @@ window.addEventListener('DOMContentLoaded', () => {
             charityBg.style.background = images[i];
             charityBg.style.transition = 'background 0.5s';
 
-
-
-
             for (let j = 0; j < n2.length; j++) {
                 if (n2[j].classList.contains('active__dot')) {
                     n2[j].classList.remove('active__dot');
