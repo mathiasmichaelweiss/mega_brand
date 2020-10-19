@@ -995,14 +995,14 @@ h2 {
 
 /* charity */
 
-.bg__chairty {
+.bg__charity {
     position: relative;
     padding-top: 57px;
     padding-bottom: 23px;
     margin: 0 auto;
     max-width: 1440px;
     margin-bottom: 134px;
-    background: rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_1.jpg);
+    background: rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_1.jpg);
     background-blend-mode: soft-light;
 
 
@@ -1013,7 +1013,7 @@ h2 {
     color: #fff;
 }
 
-.blackbg-chairty {
+.blackbg-charity {
     position: absolute;
     align-self: center;
     justify-content: center;
@@ -1024,7 +1024,7 @@ h2 {
     opacity: 0.1;
 }
 
-.chairty__titles {
+.charity__titles {
     display: flex;
 }
 

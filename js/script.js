@@ -627,11 +627,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     switchRegEnter(SwitchRegBtn, SwitchRegBtn2, enterModal, regModal);
 
-    // chairty
+    // charity
 
     const doingItem = document.querySelectorAll('.doing__item'),
         dot = document.querySelectorAll('.slider__dot'),
-        chairtyBg = document.querySelector('.bg__chairty');
+        charityBg = document.querySelector('.bg__charity');
 
 
     console.log(dot);
@@ -639,16 +639,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const images = [
-        'rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_1.jpg)',
-        'rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_2.jpg)',
-        'rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_3.jpg)'
+        'rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_1.jpg)',
+        'rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_2.jpg)',
+        'rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_3.jpg)'
     ];
 
     function changeBg(n, i, n2) {
         n[i].addEventListener('click', () => {
 
-            chairtyBg.style.background = images[i];
-            chairtyBg.style.transition = 'background 0.5s';
+            charityBg.style.background = images[i];
+            charityBg.style.transition = 'background 0.5s';
 
 
 
