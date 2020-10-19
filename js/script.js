@@ -33,13 +33,14 @@ window.addEventListener('DOMContentLoaded', () => {
     // Shop Class
 
     class Shop {
-        constructor(street, currentSale, id, parentSelector, slideImage, slideParent) {
+        constructor(street, currentSale, id, parentSelector, slideImage, slideParent, activeClass) {
             this.id = id;
             this.street = street;
             this.currentSale = currentSale;
             this.parent = document.querySelector(parentSelector);
             this.slideImage = slideImage;
             this.sParent = document.querySelector(slideParent);
+            this.activeClass = activeClass;
 
         }
 
@@ -47,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
             const elem = document.createElement('div');
 
             elem.classList.add('current__shop');
+            elem.classList.add(this.activeClass);
             elem.id = this.id;
 
             elem.innerHTML = `
@@ -77,7 +79,8 @@ window.addEventListener('DOMContentLoaded', () => {
         "1",
         ".current__shops-container",
         'img/slider_img/slide_1.jpg',
-        '.slider__inner'
+        '.slider__inner',
+        'current__shop-active'
     ).render();
 
     new Shop(
@@ -445,9 +448,7 @@ window.addEventListener('DOMContentLoaded', () => {
     changeText("news__item-text", 44);
 
 
-
     // tab content
-
 
     let tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent');
@@ -487,12 +488,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     changeTabOnClick(tabs);
-
-
-
-
-
-
 
     function changeElemColor(index, color) {
         document.querySelectorAll('.item__cirlce')[index].style.backgroundColor = color;
@@ -638,6 +633,7 @@ window.addEventListener('DOMContentLoaded', () => {
         dot = document.querySelectorAll('.slider__dot'),
         chairtyBg = document.querySelector('.bg__chairty');
 
+
     console.log(dot);
     console.log(doingItem);
 
@@ -647,29 +643,31 @@ window.addEventListener('DOMContentLoaded', () => {
         'rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_2.jpg)',
         'rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_3.jpg)'
     ];
-    console.log(images[0]);
 
-
-    function changeBg(n, i) {
+    function changeBg(n, i, n2) {
         n[i].addEventListener('click', () => {
+
             chairtyBg.style.background = images[i];
+            chairtyBg.style.transition = 'background 0.5s';
+
+
+
+
+            for (let j = 0; j < n2.length; j++) {
+                if (n2[j].classList.contains('active__dot')) {
+                    n2[j].classList.remove('active__dot');
+                }
+                n2[i].classList.add('active__dot');
+            }
+
         });
     }
-    changeBg(dot, 0);
-    changeBg(dot, 1);
-    changeBg(dot, 2);
-    changeBg(doingItem, 0);
-    changeBg(doingItem, 1);
-    changeBg(doingItem, 2);
 
-
-
-
-
-
-
-
-
-
+    changeBg(dot, 0, dot);
+    changeBg(dot, 1, dot);
+    changeBg(dot, 2, dot);
+    changeBg(doingItem, 0, dot);
+    changeBg(doingItem, 1, dot);
+    changeBg(doingItem, 2, dot);
 
 });
