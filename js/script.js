@@ -306,11 +306,12 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.classList.add('tabheader__item');
             this.newsLatter = this.title[0];
             elem.classList.add(this.activeClass);
+            /* elem.classList.add(''); */
 
 
             elem.innerHTML = `
                     
-                    <div class="news__item">
+                    <div class="news__item  tabclick">
                         <div class="item__cirlce">
                             <p class="news__latter">${this.newsLatter}</p>
                         </div>
@@ -322,6 +323,8 @@ window.addEventListener('DOMContentLoaded', () => {
                             <p class="news__item-text">${this.text}</p>
                         </div>
                     </div>
+                    
+                    
             `;
 
             this.parent.append(elem);
@@ -344,7 +347,6 @@ window.addEventListener('DOMContentLoaded', () => {
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
         ".container__news",
         "tabheader__item_active",
-        "tabclick"
     ).render();
 
     new NewsTab(
@@ -449,16 +451,7 @@ window.addEventListener('DOMContentLoaded', () => {
     function tabs() {
         let tabs = document.querySelectorAll('.tabheader__item'),
             tabsContent = document.querySelectorAll('.tabcontent'),
-            tabsParent = document.querySelector('.tabheader__items'),
-            tabsNewsItem = document.querySelectorAll('.news__item');
-
-        /* function addDataAtribute(n) {
-            for (let i = 0; i < tabs.length; i++) {
-                n[i].setAttribute('data-slide-to', i + 1);
-            }
-        }
-
-        addDataAtribute(tabsNewsItem); */
+            tabsParent = document.querySelector('.tabheader__items');
 
 
         function hideTabContent() {
@@ -484,9 +477,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
         tabsParent.addEventListener('click', (event) => {
             const target = event.target;
-            if (target.classList.contains('tabheader__item') || target.classList.contains('news__item-title')) {
+
+            if (target.classList.contains('tabheader__item')) {
                 tabs.forEach((item, i) => {
                     if (target == item) {
+
                         hideTabContent();
                         showTabContent(i);
                     }
@@ -512,7 +507,6 @@ window.addEventListener('DOMContentLoaded', () => {
     addScroll(newsScroll, newsCointainer);
 
     activateElem(itemBlock, 'container__news__item-active');
-
 
     // Project photos
 

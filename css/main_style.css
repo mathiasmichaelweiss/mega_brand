@@ -579,6 +579,7 @@ h2 {
 
 }
 
+
 .tabcontent {
     max-width: 981px;
     position: relative;
@@ -637,11 +638,22 @@ h2 {
 .tabheader__item {
     width: 100%;
     padding-top: 20px;
-    padding-bottom: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
     border-bottom: 1px solid rgba(29, 29, 29, 0.2);
+    color: #A8A8A8;
+    font-size: 12px;
+    padding-bottom: 5px;
+    text-align: right;
     cursor: pointer;
+}
+
+.tabheader__item::after {
+    width: 16px;
+    height: 16px;
+    content: "подробнее";
+}
+
+.tabheader__item:hover::after {
+    color: #1d1d1d;
 }
 
 .tabheader__item:last-child {
@@ -652,6 +664,16 @@ h2 {
     background-color: #F7F7F7;
 }
 
+.container__news {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.hidden-news {
+    width: 10px;
+    height: 10px;
+}
 
 .news__subtitle-container {
     display: flex;
@@ -727,6 +749,7 @@ h2 {
     flex-wrap: wrap;
     margin-left: 15px;
     margin-right: 15px;
+    padding-bottom: 15px;
 }
 
 .item__cirlce {
@@ -764,6 +787,7 @@ h2 {
 }
 
 .news__item-title {
+    text-align: left;
     width: 119.98px;
     font-style: normal;
     font-weight: bold;
@@ -796,6 +820,7 @@ h2 {
 }
 
 .news__item-text {
+    text-align: left;
     max-width: 173px;
     font-style: normal;
     font-weight: bold;
