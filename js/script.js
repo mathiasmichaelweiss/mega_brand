@@ -448,50 +448,50 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // tab content
 
-    function tabs() {
-        let tabs = document.querySelectorAll('.tabheader__item'),
-            tabsContent = document.querySelectorAll('.tabcontent');
+
+    let tabs = document.querySelectorAll('.tabheader__item'),
+        tabsContent = document.querySelectorAll('.tabcontent');
 
 
-        function hideTabContent() {
+    function hideTabContent() {
 
-            tabsContent.forEach(item => {
-                item.classList.add('hide');
-                item.classList.remove('show', 'fade');
+        tabsContent.forEach(item => {
+            item.classList.add('hide');
+            item.classList.remove('show', 'fade');
+        });
+
+        tabs.forEach(item => {
+            item.classList.remove('tabheader__item_active');
+        });
+    }
+
+    function showTabContent(i = 0) {
+        tabsContent[i].classList.add('show', 'fade');
+        tabsContent[i].classList.remove('hide');
+        tabs[i].classList.add('tabheader__item_active');
+    }
+
+    hideTabContent();
+    showTabContent();
+
+    function changeTabOnClick(clickElem) {
+        clickElem.forEach((item, i) => {
+            item.addEventListener('click', (e) => {
+                console.log(i);
+
+                hideTabContent();
+                showTabContent(i);
             });
-
-            tabs.forEach(item => {
-                item.classList.remove('tabheader__item_active');
-            });
-        }
-
-        function showTabContent(i = 0) {
-            tabsContent[i].classList.add('show', 'fade');
-            tabsContent[i].classList.remove('hide');
-            tabs[i].classList.add('tabheader__item_active');
-        }
-
-        hideTabContent();
-        showTabContent();
-
-        function changeTabOnClick(clickElem) {
-            clickElem.forEach((item, i) => {
-                item.addEventListener('click', (e) => {
-                    console.log(i);
-
-                    hideTabContent();
-                    showTabContent(i);
-                });
-            });
-
-        }
-
-        changeTabOnClick(tabs);
+        });
 
     }
 
+    changeTabOnClick(tabs);
 
-    tabs();
+
+
+
+
 
 
     function changeElemColor(index, color) {
@@ -631,6 +631,45 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     switchRegEnter(SwitchRegBtn, SwitchRegBtn2, enterModal, regModal);
+
+    // chairty
+
+    const doingItem = document.querySelectorAll('.doing__item'),
+        dot = document.querySelectorAll('.slider__dot'),
+        chairtyBg = document.querySelector('.bg__chairty');
+
+    console.log(dot);
+    console.log(doingItem);
+
+
+    const images = [
+        'rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_1.jpg)',
+        'rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_2.jpg)',
+        'rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_3.jpg)'
+    ];
+    console.log(images[0]);
+
+
+    function changeBg(n, i) {
+        n[i].addEventListener('click', () => {
+            chairtyBg.style.background = images[i];
+        });
+    }
+    changeBg(dot, 0);
+    changeBg(dot, 1);
+    changeBg(dot, 2);
+    changeBg(doingItem, 0);
+    changeBg(doingItem, 1);
+    changeBg(doingItem, 2);
+
+
+
+
+
+
+
+
+
 
 
 });

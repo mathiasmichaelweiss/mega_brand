@@ -1001,7 +1001,7 @@ h2 {
     margin: 0 auto;
     max-width: 1440px;
     margin-bottom: 134px;
-    background: rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago.jpg);
+    background: rgba(45, 179, 70, 0.4) url(../img/chairty_slider_image/blago_1.jpg);
     background-blend-mode: soft-light;
 
     font-style: normal;
@@ -1013,6 +1013,10 @@ h2 {
 
 .chairty__titles {
     display: flex;
+}
+
+.doing__item {
+    cursor: pointer;
 }
 
 .doing__title {
@@ -1074,6 +1078,8 @@ h2 {
     margin-left: 17px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.5);
+
+    cursor: pointer;
 }
 
 .slider__dot:first-child {
