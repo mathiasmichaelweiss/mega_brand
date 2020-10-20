@@ -639,9 +639,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     const images = [
-        'rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_1.jpg)',
-        'rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_2.jpg)',
-        'rgba(45, 179, 70, 0.4) url(../img/charity_slider_image/blago_3.jpg)'
+        'rgba(45, 179, 70, 0.4) url(img/charity_slider_image/blago_1.jpg)',
+        'rgba(45, 179, 70, 0.4) url(img/charity_slider_image/blago_2.jpg)',
+        'rgba(45, 179, 70, 0.4) url(img/charity_slider_image/blago_3.jpg)'
     ];
 
     function changeBg(n, i, n2) {
