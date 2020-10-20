@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
         const menu = document.querySelector('.container__menu'),
             nav = document.querySelector('.nav__position-active');
 
-        if (window.pageYOffset > 200) {
+        if (window.pageYOffset > 140) {
             menu.classList.add('container__menu-fixed');
             nav.classList.add('nav__position-active-fixed');
         } else {

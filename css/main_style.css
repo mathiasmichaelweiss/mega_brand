@@ -240,7 +240,7 @@ h2 {
     z-index: 1010;
 
     top: 40px;
-    left: -14.5%;
+    left: -100px;
     animation-name: show_menu;
     animation-duration: 1s;
 }
