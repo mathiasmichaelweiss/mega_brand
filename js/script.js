@@ -30,6 +30,23 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // fixed menu
+
+    window.onscroll = function showMenu() {
+
+        const menu = document.querySelector('.container__menu'),
+            nav = document.querySelector('.nav__position-active');
+
+        if (window.pageYOffset > 200) {
+            menu.classList.add('container__menu-fixed');
+            nav.classList.add('nav__position-active-fixed');
+        } else {
+            menu.classList.remove('container__menu-fixed');
+            nav.classList.remove('nav__position-active-fixed');
+
+        }
+    };
+
     // Shop Class
 
     class Shop {

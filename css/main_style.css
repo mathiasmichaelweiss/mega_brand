@@ -235,6 +235,33 @@ h2 {
     height: 40px;
 }
 
+.container__menu-fixed {
+    position: fixed;
+    z-index: 1010;
+
+    top: 40px;
+    left: -14.5%;
+    animation-name: show_menu;
+    animation-duration: 1s;
+}
+
+.nav__position-active-fixed {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes show_menu {
+    0% {
+        opacity: 0;
+        top: -70px;
+        ;
+    }
+
+    100% {
+        opacity: 1;
+        top: 40px;
+    }
+}
+
 .container__nav {
     overflow: hidden;
 }
