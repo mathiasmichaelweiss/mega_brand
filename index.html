@@ -13,7 +13,7 @@
 
 <body>
     <!-- header -->
-    <div class="container">
+    <div class="container" id="home">
         <div class="small__container">
             <header>
                 <div class="header__inner">
@@ -46,23 +46,23 @@
             </div>
             <div class="container__nav">
                 <div class="nav  nav__position">
-                    <a class="nav-mouse" href="">Главная</a>
-                    <a class="nav-mouse" href="">Магазины</a>
-                    <a class="nav-mouse" href="">Экомода</a>
-                    <a class="nav-mouse" href="">Розыгрыши</a>
-                    <a class="nav-mouse" href="">Волонтерство</a>
-                    <a class="nav-mouse" href="">Благотворительность</a>
-                    <a class="nav-mouse" href="">Новости</a>
-                    <a class="nav-mouse" href="">Контакты</a>
-                    <a class="nav-mouse" href="">О нас</a>
-                    <a class="nav-mouse" href="">Ч.А.В.О</a>
+                    <a class="nav-mouse" href="#home" data-scroll="#home">Главная</a>
+                    <a class="nav-mouse" href="#shops" data-scroll="#home">Магазины</a>
+                    <a class="nav-mouse" href="#ecomoda" data-scroll="#home">Экомода</a>
+                    <a class="nav-mouse" href="#contests" data-scroll="#home">Розыгрыши</a>
+                    <a class="nav-mouse" href="#volunteering" data-scroll="#home">Волонтерство</a>
+                    <a class="nav-mouse" href="#charity" data-scroll="#home">Благотворительность</a>
+                    <a class="nav-mouse" href="#news" data-scroll="#home">Новости</a>
+                    <a class="nav-mouse" href="#contacts" data-scroll="#home">Контакты</a>
+                    <a class="nav-mouse" href="#about" data-scroll="#home">О нас</a>
+                    <a class="nav-mouse" href="#chavo" data-scroll="#home">Ч.А.В.О</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- slider -->
     <div class="container">
-        <div class="container__slider">
+        <div class="container__slider" id="shops">
             <div class="shops__window">
                 <div class="shop__titles">
                     <div class="shop__title">Магазин</div>
@@ -189,7 +189,7 @@
         </div>
     </div>
     <!-- news -->
-    <div class="small__container ch-height">
+    <div class="small__container ch-height" id="news">
         <div class="news-tab">
             <div class="tabcontainer">
 
@@ -293,7 +293,7 @@
 
     </div>
     <!-- charity -->
-    <div class="container">
+    <div class="container" id="charity">
 
         <div class="small__container">
             <div class="charity__title">
@@ -417,7 +417,7 @@
 
         <div class="small__container">
 
-            <div class="footer__container">
+            <div class="footer__container" id="contacts">
                 <div class="first__block__footer">
                     <p class="fbf__title">
                         Сеть секондхендов
