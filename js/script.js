@@ -50,8 +50,6 @@ window.addEventListener('DOMContentLoaded', () => {
     // anchors
 
     const anchors = document.querySelectorAll('a[href*="#"]');
-    console.log(anchors);
-
 
     for (let anchor of anchors) {
         anchor.addEventListener('click', (e) => {
@@ -467,8 +465,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const newsScroll = document.querySelector('.news__block-scroll'),
         newsCointainer = document.querySelector('.container__news'),
-        itemBlock = document.querySelectorAll('.tabheader__item'),
-        tabContentItemText = document.querySelectorAll('.news__item-text');
+        itemBlock = document.querySelectorAll('.tabheader__item');
 
 
 
@@ -538,6 +535,20 @@ window.addEventListener('DOMContentLoaded', () => {
     addScroll(newsScroll, newsCointainer);
 
     activateElem(itemBlock, 'container__news__item-active');
+
+    const newsSubtitle = document.querySelectorAll('.news__subtitle-container'),
+        newsCircle = document.querySelectorAll('.item__cirlce');
+
+
+    function subColorIsCircleColor() {
+        for (let j = 0; j < newsCircle.length; j++) {
+
+            newsSubtitle[j].style.backgroundColor = newsCircle[j].style.backgroundColor;
+        }
+    }
+    subColorIsCircleColor();
+
+
 
     // Project photos
 
@@ -668,10 +679,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const doingItem = document.querySelectorAll('.doing__item'),
         dot = document.querySelectorAll('.slider__dot'),
         charityBg = document.querySelector('.bg__charity');
-
-
-    console.log(dot);
-    console.log(doingItem);
 
 
     const images = [
