@@ -1751,23 +1751,26 @@ input[type="checkbox"]:checked+label::before {
     /* footer */
 
     .footer__container {
-        font-size: 6px;
+        font-size: 10px;
     }
 
     .first__block__footer {
+        margin-right: 15px;
         height: 71.5px;
     }
 
     .second__block__footer {
+        margin-right: 15px;
         height: 71.5px;
     }
 
     .third__block__footer {
+        margin-right: 15px;
         height: 71.5px;
     }
 
     .shop__name {
-        margin-bottom: 45px;
+        margin-bottom: 27px;
     }
 
     .tbf__triple__block {
@@ -1775,11 +1778,12 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .f__about {
-        width: 21px;
+        width: 27px;
     }
 
     .mbf {
-        margin-bottom: 16px;
+        margin-bottom: 10px;
+        margin-right: 15px;
     }
 
     .mbf:last-child {
@@ -1791,6 +1795,18 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .fbf__title {
-        width: 60px;
+        width: 120px;
+    }
+
+    .fbf2 {
+        width: 80px;
+    }
+
+    .social-img {
+        width: 20px;
+    }
+
+    .vk {
+        margin-left: 0px;
     }
 }
