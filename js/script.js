@@ -32,20 +32,36 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // fixed menu
 
-    window.onscroll = function showMenu() {
+    if (document.body.clientWidth >= 913) {
+        window.onscroll = function showMenu() {
 
-        const menu = document.querySelector('.container__menu'),
-            nav = document.querySelector('.nav__position-active');
+            const menu = document.querySelector('.container__menu'),
+                nav = document.querySelector('.nav__position-active');
 
-        if (window.pageYOffset > 140) {
-            menu.classList.add('container__menu-fixed');
-            nav.classList.add('nav__position-active-fixed');
-        } else {
-            menu.classList.remove('container__menu-fixed');
-            nav.classList.remove('nav__position-active-fixed');
+            if (window.pageYOffset > 140) {
+                menu.classList.add('container__menu-fixed');
+                nav.classList.add('nav__position-active-fixed');
+            } else {
+                menu.classList.remove('container__menu-fixed');
+                nav.classList.remove('nav__position-active-fixed');
+            }
+        };
+    }
 
-        }
-    };
+
+
+
+    /*  if (document.body.clientWidth < 913) {
+         menu2.classList.remove('container__menu-fixed');
+         nav2.classList.remove('nav__position-active-fixed');
+     } else {
+         console.log('lol');
+
+     } */
+
+    console.log(document.body.clientWidth);
+
+
 
     // anchors
 
@@ -308,7 +324,7 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.innerHTML = `
                     <div class="darkbg-container">
                     <div class="darkbg"></div>
-                    <img src="${this.image}">
+                    <img class="news-img" src="${this.image}">
                     </div>
                     <div class="tabcontent__descr">
                         <div class="news__subtitle-container">
@@ -542,7 +558,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function subColorIsCircleColor() {
         for (let j = 0; j < newsCircle.length; j++) {
-
             newsSubtitle[j].style.backgroundColor = newsCircle[j].style.backgroundColor;
         }
     }
