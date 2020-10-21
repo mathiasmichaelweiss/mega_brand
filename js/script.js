@@ -4,7 +4,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const burgerIcon = document.querySelector('.burger__icon'),
         burgerLocation = document.querySelector('.menu__burger'),
-        burgerTitle = document.querySelector('.title__menu-burger'),
         nav = document.querySelectorAll('.nav-mouse'),
         navActivate = document.querySelector('.nav');
 
@@ -48,20 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-
-
-
-    /*  if (document.body.clientWidth < 913) {
-         menu2.classList.remove('container__menu-fixed');
-         nav2.classList.remove('nav__position-active-fixed');
-     } else {
-         console.log('lol');
-
-     } */
-
     console.log(document.body.clientWidth);
-
-
 
     // anchors
 
@@ -91,7 +77,6 @@ window.addEventListener('DOMContentLoaded', () => {
             this.slideImage = slideImage;
             this.sParent = document.querySelector(slideParent);
             this.activeClass = activeClass;
-
         }
 
         render() {
@@ -118,9 +103,7 @@ window.addEventListener('DOMContentLoaded', () => {
             `;
 
             this.sParent.append(slide);
-
         }
-
     }
 
     new Shop(
@@ -198,7 +181,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     // Activate shops und scroll
-
     const activeShop = document.querySelectorAll('.current__shop'),
         containerForScroll = document.querySelector('.forscroll'),
         shopsContainer = document.querySelector('.shops__window'),
@@ -221,7 +203,6 @@ window.addEventListener('DOMContentLoaded', () => {
                         elem[i].classList.remove(activeClass);
                     }
                     item.classList.add(activeClass);
-
                 }
             });
         });
@@ -230,7 +211,6 @@ window.addEventListener('DOMContentLoaded', () => {
     activateElem(activeShop, 'current__shop-active');
 
     // slider
-
     function mainSlider() {
         const currentShop = document.querySelectorAll('.current__shop'),
             wrapper = document.querySelector('.wrapper'),
@@ -243,7 +223,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
         let slideIndex = 1,
             offset = 0;
-
 
         slideGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
         slideGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
@@ -279,17 +258,13 @@ window.addEventListener('DOMContentLoaded', () => {
                 slideIndex = slideTo;
                 offset = removeNumbers(width) * (slideTo - 1);
                 slideGround.style.transform = `translateX(-${offset}px)`;
-
-
             });
         });
     }
     mainSlider();
 
     // calendar
-
-    const calendarItem = document.querySelectorAll('.calendar__item'),
-        calendarPercent = document.querySelectorAll('.percent');
+    const calendarItem = document.querySelectorAll('.calendar__item');
 
     calendarItem.forEach(item => {
 
@@ -304,7 +279,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 e.target.style.color = "";
             }
         });
-
     });
 
     // class news
@@ -350,8 +324,6 @@ window.addEventListener('DOMContentLoaded', () => {
             this.text = text;
             this.parent = document.querySelector(parentSelector);
             this.activeClass = activeClass;
-
-
         }
         render() {
             const elem = document.createElement('div');
@@ -359,11 +331,8 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.classList.add('tabheader__item');
             this.newsLatter = this.title[0];
             elem.classList.add(this.activeClass);
-            /* elem.classList.add(''); */
-
 
             elem.innerHTML = `
-                    
                     <div class="news__item  tabclick">
                         <div class="item__cirlce">
                             <p class="news__latter">${this.newsLatter}</p>
@@ -375,9 +344,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="news__content-text">
                             <p class="news__item-text">${this.text}</p>
                         </div>
-                    </div>
-                    
-                    
+                    </div>    
             `;
 
             this.parent.append(elem);
@@ -484,7 +451,6 @@ window.addEventListener('DOMContentLoaded', () => {
         itemBlock = document.querySelectorAll('.tabheader__item');
 
 
-
     function changeText(text, chooseMaxLength) {
         const maxLength = chooseMaxLength; //количество символов, которое должно отображаться
         const strNum = document.getElementsByClassName(text).length; //количество блоков с классом text
@@ -493,12 +459,10 @@ window.addEventListener('DOMContentLoaded', () => {
             document.getElementsByClassName(text)[i].innerHTML = str.slice(0, maxLength) + '...';
         }
     }
-
     changeText("news__item-text", 44);
 
 
     // tab content
-
     let tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent');
 
@@ -562,7 +526,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     subColorIsCircleColor();
-
 
 
     // Project photos
