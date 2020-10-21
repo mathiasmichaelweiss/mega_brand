@@ -29,11 +29,10 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    
     // fixed menu
-
     if (document.body.clientWidth >= 913) {
         window.onscroll = function showMenu() {
-
             const menu = document.querySelector('.container__menu'),
                 nav = document.querySelector('.nav__position-active');
 
@@ -47,11 +46,10 @@ window.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    console.log(document.body.clientWidth);
 
     // anchors
-
     const anchors = document.querySelectorAll('a[href*="#"]');
+
 
     for (let anchor of anchors) {
         anchor.addEventListener('click', (e) => {
@@ -67,7 +65,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     // Shop Class
-
     class Shop {
         constructor(street, currentSale, id, parentSelector, slideImage, slideParent, activeClass) {
             this.id = id;
@@ -107,74 +104,74 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     new Shop(
-        "Ул. Пушкина, 61 стр. 1",
-        "50%",
-        "1",
-        ".current__shops-container",
+        'Ул. Пушкина, 61 стр. 1',
+        '50%',
+        '1',
+        '.current__shops-container',
         'img/slider_img/slide_1.jpg',
         '.slider__inner',
         'current__shop-active'
     ).render();
 
     new Shop(
-        "Ул. Ленина, 163а ТЦ “Гранд”",
-        "50%",
-        "2",
-        ".current__shops-container",
+        'Ул. Ленина, 163а ТЦ “Гранд”',
+        '50%',
+        '2',
+        '.current__shops-container',
         'img/slider_img/slide_2.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
-        "Ул. Лыткина, 3",
-        "50%",
-        "3",
-        ".current__shops-container",
+        'Ул. Лыткина, 3',
+        '50%',
+        '3',
+        '.current__shops-container',
         'img/slider_img/slide_3.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
-        "Ул. Иркутский тракт, 155",
-        "10%",
-        "4",
-        ".current__shops-container",
+        'Ул. Иркутский тракт, 155',
+        '10%',
+        '4',
+        '.current__shops-container',
         'img/slider_img/slide_4.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
-        "Ул. Мир, 50",
-        "10%",
-        "5",
-        ".current__shops-container",
+        'Ул. Мир, 50',
+        '10%',
+        '5',
+        '.current__shops-container',
         'img/slider_img/slide_5.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
-        "Ул. Пушкина, 68",
-        "90%",
-        "6",
-        ".current__shops-container",
+        'Ул. Пушкина, 68',
+        '90%',
+        '6',
+        '.current__shops-container',
         'img/slider_img/slide_6.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
-        "Ул. Жукова, 68/2",
-        "90%",
-        "7",
-        ".current__shops-container",
+        'Ул. Жукова, 68/2',
+        '90%',
+        '7',
+        '.current__shops-container',
         'img/slider_img/slide_7.jpg',
         '.slider__inner'
     ).render();
 
     new Shop(
-        "Ул. Красных фонарей, 12к2",
-        "10%",
-        "8",
-        ".current__shops-container",
+        'Ул. Красных фонарей, 12к2',
+        '10%',
+        '8',
+        '.current__shops-container',
         'img/slider_img/slide_8.jpg',
         '.slider__inner'
     ).render();
@@ -182,7 +179,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // Activate shops und scroll
     const activeShop = document.querySelectorAll('.current__shop'),
-        containerForScroll = document.querySelector('.forscroll'),
         shopsContainer = document.querySelector('.shops__window'),
         shopContainerInner = document.querySelector('.current__shops-container');
 
@@ -209,6 +205,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     activateElem(activeShop, 'current__shop-active');
+
 
     // slider
     function mainSlider() {
@@ -250,7 +247,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
 
         currentShop.forEach(shop => {
-
             shop.addEventListener('click', (e) => {
                 e.preventDefault();
                 const slideTo = e.target.getAttribute('data-slide-to');
@@ -266,17 +262,18 @@ window.addEventListener('DOMContentLoaded', () => {
     // calendar
     const calendarItem = document.querySelectorAll('.calendar__item');
 
+
     calendarItem.forEach(item => {
 
         item.addEventListener('mouseover', (e) => {
-            if (e.target.classList.contains("percent")) {
-                e.target.style.color = "#1D1D1D";
+            if (e.target.classList.contains('percent')) {
+                e.target.style.color = '#1D1D1D';
             }
         });
 
         item.addEventListener('mouseout', (e) => {
-            if (e.target.classList.contains("percent")) {
-                e.target.style.color = "";
+            if (e.target.classList.contains('percent')) {
+                e.target.style.color = '';
             }
         });
     });
@@ -352,97 +349,97 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     new NewsTab(
-        "img/news/img_3.jpg",
-        "Розыгрыш",
-        "Instagram розыгрыш! ура",
-        "Стартовал розыгрыш в нашем Instagram. Главный приз сертификат на 10 000 рублей!",
-        ".tabcontainer"
+        'img/news/img_3.jpg',
+        'Розыгрыш',
+        'Instagram розыгрыш! ура',
+        'Стартовал розыгрыш в нашем Instagram. Главный приз сертификат на 10 000 рублей!',
+        '.tabcontainer'
 
     ).render();
 
     new NewsMenuItem(
-        "",
-        "Розыгрыш",
-        "12.10.20",
+        '',
+        'Розыгрыш',
+        '12.10.20',
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
-        ".container__news",
-        "tabheader__item_active",
+        '.container__news',
+        'tabheader__item_active',
     ).render();
 
     new NewsTab(
-        "img/news/img_1.jpg",
-        "Открытие",
-        "Открылся новый магазин!",
-        "Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.",
-        ".tabcontainer"
-
-    ).render();
-
-    new NewsMenuItem(
-        "",
-        "Открытие",
-        "12.10.20",
-        'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток".',
-        ".container__news",
-        "tabheader__item_active",
-        "tabclick"
-    ).render();
-
-    new NewsTab(
-        "img/news/img_2.jpg",
-        "Часы работы",
-        "Новый график на Ленина",
-        "Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00",
-        ".tabcontainer"
-
-    ).render();
-
-    new NewsMenuItem(
-        "",
-        "Часы работы",
-        "12.10.20",
-        'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
-        ".container__news",
-        "tabheader__item_active",
-        "tabclick"
-    ).render();
-
-    new NewsTab(
-        "img/news/img_1.jpg",
-        "Открытие",
-        "Новый отдел на Лыткина!",
-        "Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.",
-        ".tabcontainer"
-
-    ).render();
-
-    new NewsMenuItem(
-        "",
-        "Открытие",
-        "12.10.20",
+        'img/news/img_1.jpg',
+        'Открытие',
+        'Открылся новый магазин!',
         'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
-        ".container__news",
-        "tabheader__item_active",
-        "tabclick"
-    ).render();
-
-    new NewsTab(
-        "img/news/img_3.jpg",
-        "Розыгрыш",
-        "Instagram розыгрыш",
-        "Стартовал розыгрыш в нашем аккаунте Instagram.",
-        ".tabcontainer"
+        '.tabcontainer'
 
     ).render();
 
     new NewsMenuItem(
-        "",
-        "Розыгрыш",
-        "12.10.20",
+        '',
+        'Открытие',
+        '12.10.20',
+        'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток".',
+        '.container__news',
+        'tabheader__item_active',
+        'tabclick'
+    ).render();
+
+    new NewsTab(
+        'img/news/img_2.jpg',
+        'Часы работы',
+        'Новый график на Ленина',
+        'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
+        '.tabcontainer'
+
+    ).render();
+
+    new NewsMenuItem(
+        '',
+        'Часы работы',
+        '12.10.20',
+        'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
+        '.container__news',
+        'tabheader__item_active',
+        'tabclick'
+    ).render();
+
+    new NewsTab(
+        'img/news/img_1.jpg',
+        'Открытие',
+        'Новый отдел на Лыткина!',
+        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
+        '.tabcontainer'
+
+    ).render();
+
+    new NewsMenuItem(
+        '',
+        'Открытие',
+        '12.10.20',
+        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
+        '.container__news',
+        'tabheader__item_active',
+        'tabclick'
+    ).render();
+
+    new NewsTab(
+        'img/news/img_3.jpg',
+        'Розыгрыш',
+        'Instagram розыгрыш',
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
-        ".container__news",
-        "tabheader__item_active",
-        "tabclick"
+        '.tabcontainer'
+
+    ).render();
+
+    new NewsMenuItem(
+        '',
+        'Розыгрыш',
+        '12.10.20',
+        'Стартовал розыгрыш в нашем аккаунте Instagram.',
+        '.container__news',
+        'tabheader__item_active',
+        'tabclick'
     ).render();
 
 
@@ -459,7 +456,7 @@ window.addEventListener('DOMContentLoaded', () => {
             document.getElementsByClassName(text)[i].innerHTML = str.slice(0, maxLength) + '...';
         }
     }
-    changeText("news__item-text", 44);
+    changeText('news__item-text', 44);
 
 
     // tab content
@@ -491,8 +488,6 @@ window.addEventListener('DOMContentLoaded', () => {
     function changeTabOnClick(clickElem) {
         clickElem.forEach((item, i) => {
             item.addEventListener('click', (e) => {
-                console.log(i);
-
                 hideTabContent();
                 showTabContent(i);
             });
@@ -529,9 +524,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     // Project photos
-
     const photoScrall = document.querySelector('.photo__scrall'),
         projectsCatalog = document.querySelector('.project__catalog');
+
 
     addScroll(photoScrall, projectsCatalog);
 
@@ -552,43 +547,42 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function openModal(modal, openBtn) {
         openBtn.addEventListener('click', () => {
-            modal.style.opacity = "1";
-            modal.style.visibility = "visible";
-            modal.style.transition = "all 0.8s ease";
+            modal.style.opacity = '1';
+            modal.style.visibility = 'visible';
+            modal.style.transition = 'all 0.8s ease';
         });
     }
 
     function closeModal(modal, closeBtn, closeOnBody, btn) {
         closeOnBody.addEventListener('click', (e) => {
             if (e.target.getAttribute('data-close') == '1') {
-                modal.style.opacity = "0";
-                modal.style.visibility = "hidden";
-                modal.style.transition = "all 0.8s ease";
+                modal.style.opacity = '0';
+                modal.style.visibility = 'hidden';
+                modal.style.transition = 'all 0.8s ease';
             }
-
         });
 
         closeBtn.forEach(item => {
             item.addEventListener('click', () => {
-                modal.style.opacity = "0";
-                modal.style.visibility = "hidden";
-                modal.style.transition = "all 0.8s ease";
+                modal.style.opacity = '0';
+                modal.style.visibility = 'hidden';
+                modal.style.transition = 'all 0.8s ease';
             });
         });
 
         btn.forEach(item => {
             item.addEventListener('click', () => {
-                modal.style.opacity = "0";
-                modal.style.visibility = "hidden";
-                modal.style.transition = "all 0.8s ease";
+                modal.style.opacity = '0';
+                modal.style.visibility = 'hidden';
+                modal.style.transition = 'all 0.8s ease';
             });
         });
 
         document.addEventListener('keydown', (e) => {
-            if (e.code === 'Escape') { // 
-                modal.style.opacity = "0";
-                modal.style.visibility = "hidden";
-                modal.style.transition = "all 0.8s ease";
+            if (e.code === 'Escape') {
+                modal.style.opacity = '0';
+                modal.style.visibility = 'hidden';
+                modal.style.transition = 'all 0.8s ease';
             }
         });
     }
@@ -597,8 +591,7 @@ window.addEventListener('DOMContentLoaded', () => {
     closeModal(regModal, closeRegModal, regModalBody, regBtn);
     closeModal(enterModal, closeRegModal, enterModalBody, regBtn);
 
-    /* viewPassBtn
-    passInput */
+    // viewPassBtn passInput
     function viewPass(btn, input) {
         btn.addEventListener('click', () => {
             if (input.getAttribute('type') == 'password') {
@@ -610,10 +603,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 btn.style.backgroundImage = 'url(img/icons/view.svg)';
                 btn.style.opacity = '0.5';
             }
-
         });
     }
-
 
     viewPass(viewPassBtn, passInput);
     viewPass(viewBtnEnter, passInputEnter);
@@ -621,30 +612,29 @@ window.addEventListener('DOMContentLoaded', () => {
     const SwitchRegBtn = document.querySelectorAll('.change__modal__to-reg'),
         SwitchRegBtn2 = document.querySelectorAll('.change__modal__to-enter');
 
+
     function switchRegEnter(btn, btn2, modal, modal2) {
         btn.forEach(item => {
             item.addEventListener('click', () => {
-                modal.style.opacity = "0";
-                modal.style.visibility = "hidden";
-                modal.style.transition = "";
+                modal.style.opacity = '0';
+                modal.style.visibility = 'hidden';
+                modal.style.transition = '';
 
-                modal2.style.opacity = "1";
-                modal2.style.visibility = "visible";
-                modal2.style.transition = "";
-
+                modal2.style.opacity = '1';
+                modal2.style.visibility = 'visible';
+                modal2.style.transition = '';
             });
         });
 
         btn2.forEach(item => {
             item.addEventListener('click', () => {
-                modal2.style.opacity = "0";
-                modal2.style.visibility = "hidden";
-                modal2.style.transition = "";
+                modal2.style.opacity = '0';
+                modal2.style.visibility = 'hidden';
+                modal2.style.transition = '';
 
-                modal.style.opacity = "1";
-                modal.style.visibility = "visible";
-                modal.style.transition = "";
-
+                modal.style.opacity = '1';
+                modal.style.visibility = 'visible';
+                modal.style.transition = '';
             });
         });
 
@@ -653,11 +643,23 @@ window.addEventListener('DOMContentLoaded', () => {
     switchRegEnter(SwitchRegBtn, SwitchRegBtn2, enterModal, regModal);
 
     // charity
-
     const doingItem = document.querySelectorAll('.doing__item'),
         dot = document.querySelectorAll('.slider__dot'),
         charityBg = document.querySelector('.bg__charity');
 
+
+    // Функция предзагрузки изображений
+    function preloadImages() {
+        for (let i = 0; i < arguments.length; i++) {
+            new Image().src = arguments[i];
+        }
+    }
+
+    preloadImages(
+        'img/charity_slider_image/blago_1.jpg',
+        'img/charity_slider_image/blago_2.jpg',
+        'img/charity_slider_image/blago_3.jpg'
+    );
 
     const images = [
         'rgba(45, 179, 70, 0.4) url(img/charity_slider_image/blago_1.jpg)',
