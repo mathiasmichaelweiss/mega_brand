@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
+
     // fixed menu
     if (document.body.clientWidth >= 913) {
         window.onscroll = function showMenu() {
