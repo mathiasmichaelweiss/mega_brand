@@ -34,33 +34,60 @@
                         <img src="img/personal_area_icon.svg" alt="" class="personal__area-icon">
                         <div class="personal__area-text">Личный кабинет</div>
                     </div>
+
+                    <div class="burger-mob">
+                        <div class="menu__burger">
+                            <div class="burger__inner">
+                                <div class="burger__icon"></div>
+                                <p class="title__menu-burger">меню</p>
+                            </div>
+                        </div>
+
+                        <div class="container__nav">
+                            <div class="nav  nav__position">
+                                <a class="nav-mouse" href="#home" data-scroll="#home">Главная</a>
+                                <a class="nav-mouse" href="#shops" data-scroll="#home">Магазины</a>
+                                <a class="nav-mouse" href="#ecomoda" data-scroll="#home">Экомода</a>
+                                <a class="nav-mouse" href="#contests" data-scroll="#home">Розыгрыши</a>
+                                <a class="nav-mouse" href="#volunteering" data-scroll="#home">Волонтерство</a>
+                                <a class="nav-mouse" href="#charity" data-scroll="#home">Благотворительность</a>
+                                <a class="nav-mouse" href="#news" data-scroll="#home">Новости</a>
+                                <a class="nav-mouse" href="#contacts" data-scroll="#home">Контакты</a>
+                                <a class="nav-mouse" href="#about" data-scroll="#home">О нас</a>
+                                <a class="nav-mouse" href="#chavo" data-scroll="#home">Ч.А.В.О</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </header>
+
+        </div>
+        </header>
+    </div>
+
+    <div class="container__menu">
+        <div class="menu__burger">
+            <div class="burger__inner">
+                <div class="burger__icon"></div>
+                <p class="title__menu-burger">меню</p>
+            </div>
         </div>
 
-        <div class="container__menu">
-            <div class="menu__burger">
-                <div class="burger__inner">
-                    <div class="burger__icon"></div>
-                    <p class="title__menu-burger">меню</p>
-                </div>
-            </div>
-
-            <div class="container__nav">
-                <div class="nav  nav__position">
-                    <a class="nav-mouse" href="#home" data-scroll="#home">Главная</a>
-                    <a class="nav-mouse" href="#shops" data-scroll="#home">Магазины</a>
-                    <a class="nav-mouse" href="#ecomoda" data-scroll="#home">Экомода</a>
-                    <a class="nav-mouse" href="#contests" data-scroll="#home">Розыгрыши</a>
-                    <a class="nav-mouse" href="#volunteering" data-scroll="#home">Волонтерство</a>
-                    <a class="nav-mouse" href="#charity" data-scroll="#home">Благотворительность</a>
-                    <a class="nav-mouse" href="#news" data-scroll="#home">Новости</a>
-                    <a class="nav-mouse" href="#contacts" data-scroll="#home">Контакты</a>
-                    <a class="nav-mouse" href="#about" data-scroll="#home">О нас</a>
-                    <a class="nav-mouse" href="#chavo" data-scroll="#home">Ч.А.В.О</a>
-                </div>
+        <div class="container__nav">
+            <div class="nav  nav__position">
+                <a class="nav-mouse" href="#home" data-scroll="#home">Главная</a>
+                <a class="nav-mouse" href="#shops" data-scroll="#home">Магазины</a>
+                <a class="nav-mouse" href="#ecomoda" data-scroll="#home">Экомода</a>
+                <a class="nav-mouse" href="#contests" data-scroll="#home">Розыгрыши</a>
+                <a class="nav-mouse" href="#volunteering" data-scroll="#home">Волонтерство</a>
+                <a class="nav-mouse" href="#charity" data-scroll="#home">Благотворительность</a>
+                <a class="nav-mouse" href="#news" data-scroll="#home">Новости</a>
+                <a class="nav-mouse" href="#contacts" data-scroll="#home">Контакты</a>
+                <a class="nav-mouse" href="#about" data-scroll="#home">О нас</a>
+                <a class="nav-mouse" href="#chavo" data-scroll="#home">Ч.А.В.О</a>
             </div>
         </div>
+    </div>
     </div>
 
 
@@ -86,7 +113,7 @@
 
 
     <!-- calendar -->
-    <div class="container">
+    <div class="container" id="calendar-desktop">
         <div class="small__container">
             <div class="calendar__title">
                 <h2>Наша система скидок</h2>
@@ -195,26 +222,151 @@
         </div>
     </div>
 
+    <!-- mobile calendar -->
 
-    <!-- news -->
-    <div class="small__container ch-height" id="news">
-        <div class="news-tab">
-            <div class="tabcontainer">
+    <div class="container" id="calendar-mobile">
+        <div class="calendar__title">
+            <h2>Наша система скидок</h2>
+            <img src="img/title_line.svg" alt="" class="title__line">
+        </div>
+        <div class="calendar__inner">
+
+            <div class="calendar__column-first">
+
+                <div class="calendar__item  correct__calendar-item">
+                    <p class="day">ПН</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">0%</div>
+                    <div class="new__delivery">новый завоз</div>
+                </div>
+
+                <div class="calendar__item  correct__calendar-item">
+                    <p class="day">ВТ</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">0%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item  correct__calendar-item">
+                    <p class="day">СР</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">10%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item  correct__calendar-item">
+                    <p class="day">ЧТ</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">10%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item  correct__calendar-item">
+                    <p class="day">ПТ</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">20%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item">
+                    <p class="day">СБ</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">30%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item">
+                    <p class="day">ВС</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">30%</div>
+                    <div class="new__delivery"></div>
+                </div>
 
             </div>
-            <div class="tabheader">
-                <div class="news__block-title">Мега новости</div>
-                <div class="tabheader__items">
-                    <div class="news__block-scroll">
-                        <div class="container__news"></div>
-                    </div>
-                    <div class="sub__block">
-                    </div>
+
+            <div class="calendar__column-second">
+
+                <div class="calendar__item">
+                    <p class="day  orange">ПН</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">40%</div>
+                    <div class="new__delivery"></div>
                 </div>
-                <div class="news__sub">Подписаться на рассылку</div>
+
+                <div class="calendar__item">
+                    <p class="day  orange">ВТ</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">40%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item">
+                    <p class="day  orange">СР</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">50%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item">
+                    <p class="day  orange">ЧТ</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">60%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item  minus__margin">
+                    <p class="day  orange">ПТ</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">70%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item">
+                    <p class="day  orange">СБ</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">80%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
+                <div class="calendar__item">
+                    <p class="day  orange">ВС</p>
+                    <img src="img/day_line.svg" alt="" class="day__line">
+                    <div class="percent">90%</div>
+                    <div class="new__delivery"></div>
+                </div>
+
             </div>
         </div>
     </div>
+
+    <!-- news -->
+    <div class="container  newscontainer">
+        <div class="prev__next-container">
+            <div class="prevnews-mobile">
+                <</div> <div class="nextnews-mobile">>
+            </div>
+        </div>
+        <div class="small__container ch-height" id="news">
+            <div class="news-tab">
+                <div class="tabcontainer">
+
+                </div>
+                <div class="tabheader">
+                    <div class="news__block-title">Мега новости</div>
+                    <div class="tabheader__items">
+                        <div class="news__block-scroll">
+                            <div class="container__news"></div>
+                        </div>
+                        <div class="sub__block">
+                        </div>
+                    </div>
+                    <div class="news__sub">Подписаться на рассылку</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
 
 
     <!-- partnes/projects -->
