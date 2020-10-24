@@ -1981,6 +1981,7 @@ input[type="checkbox"]:checked+label::before {
     .news-tab {
         display: flex;
         height: 150px;
+        width: 100%;
     }
 
     .tabcontainer {
@@ -1998,11 +1999,14 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .tabcontent {
-        max-width: 981px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .darkbg-container {
-        width: 139%;
+        width: 100%;
         height: 150px;
     }
 
@@ -2015,19 +2019,22 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .tabcontent img {
-        width: 100%;
+        width: 150%;
         height: 100%;
         object-fit: cover
     }
 
     .tabcontent__descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         top: 0px;
-        left: 0px;
-        margin: auto;
-        width: auto;
+        left: 18%;
+        margin: 0 auto;
+        width: 70%;
         height: 150px;
         color: #fff;
-        padding: 10px 70px 10px 70px;
+        justify-content: center;
     }
 
     .news__subtitle-container {
@@ -2040,7 +2047,7 @@ input[type="checkbox"]:checked+label::before {
         height: 19px;
         background: #0BBBEF;
         border-radius: 5px;
-        margin-bottom: 25px;
+        margin-bottom: 5px;
     }
 
     .news__subtitle-text {
@@ -2056,21 +2063,21 @@ input[type="checkbox"]:checked+label::before {
         margin-right: 210px;
         margin-bottom: 5px;
 
-        width: 100%;
-        height: auto;
+        width: 180px;
+        height: 38px;
     }
 
     .news__text {
         position: relative;
         z-index: 30;
-        width: 100%;
-        height: auto;
+        width: 180px;
+        height: 39px;
         margin-bottom: 6px;
 
         font-style: normal;
         font-weight: 800;
         font-size: 11px;
-        line-height: 23px;
+        line-height: 13px;
     }
 
     .more__about {
@@ -2079,26 +2086,13 @@ input[type="checkbox"]:checked+label::before {
         width: 83px;
         height: 19px;
         font-size: 10px;
-        margin-left: 190px;
+
 
         border: 1px solid #FFFFFF;
         box-sizing: border-box;
         border-radius: 59px;
         color: #fff;
         background-color: transparent;
-    }
-
-    .news__block-title {
-        text-align: center;
-        width: 100%;
-        height: 50px;
-        margin-top: 7%;
-        border-bottom: 1px solid rgba(29, 29, 29, 0.2);
-
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
     }
 
     .news__block-scroll {

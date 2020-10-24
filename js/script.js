@@ -461,7 +461,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // tab content
     let tabs = document.querySelectorAll('.tabheader__item'),
-        tabsContent = document.querySelectorAll('.tabcontent');
+        tabsContent = document.querySelectorAll('.tabcontent'),
+        prev = document.querySelector('.prevnews-mobile'),
+        next = document.querySelector('.nextnews-mobile'),
+        prevNextContainer = document.querySelector('.prev__next-container');
 
 
     function hideTabContent() {
@@ -496,6 +499,42 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     changeTabOnClick(tabs);
+    console.log(tabs.length);
+
+    let tabIndex = 0;
+
+    function changeTabOnPrevNext() {
+        next.addEventListener('click', (e) => {
+            if (e.target.classList.contains('nextnews-mobile')) {
+                tabIndex++;
+
+            }
+            console.log(tabIndex);
+            showTabContent(tabIndex);
+        });
+        prev.addEventListener('click', (e) => {
+            if (e.target.classList.contains('prevnews-mobile')) {
+                tabIndex--;
+
+            }
+            console.log(tabIndex);
+            showTabContent(tabIndex);
+        });
+
+    }
+
+    changeTabOnPrevNext();
+
+
+    console.log(tabIndex);
+
+
+
+
+
+
+
+
 
     function changeElemColor(index, color) {
         document.querySelectorAll('.item__cirlce')[index].style.backgroundColor = color;
