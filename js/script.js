@@ -462,9 +462,12 @@ window.addEventListener('DOMContentLoaded', () => {
     // tab content
     let tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent'),
+        tabContainer = document.querySelector('.tabcontainer'),
+        tabsWrapper = document.querySelector('.news-tab'),
         prev = document.querySelector('.prevnews-mobile'),
         next = document.querySelector('.nextnews-mobile'),
         prevNextContainer = document.querySelector('.prev__next-container');
+
 
 
     function hideTabContent() {
@@ -495,46 +498,55 @@ window.addEventListener('DOMContentLoaded', () => {
                 showTabContent(i);
             });
         });
-
     }
 
     changeTabOnClick(tabs);
-    console.log(tabs.length);
+
+    function hideTabContentPrevNext() {
+
+        tabsContent.forEach(item => {
+            item.classList.add('hide');
+            item.classList.remove('show', 'fade');
+        });
+    }
+
+    hideTabContentPrevNext();
+
+    if (document.body.clientWidth <= 374) {
+        tabsContent.forEach(item => {
+            item.classList.remove('hide');
+            item.style.width = '100%';
+        });
+        tabContainer.style.display = "flex";
+        tabContainer.style.overflow = 'hidden';
+        tabContainer.style.width = 100 + '%';
+        tabsWrapper.style.width = 100 * tabsContent.length + '%';
+    }
 
     let tabIndex = 0;
 
     function changeTabOnPrevNext() {
-        next.addEventListener('click', (e) => {
-            if (e.target.classList.contains('nextnews-mobile')) {
+        prevNextContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('nextnews-mobile') || e.target.classList.contains('nextbtn-mobile') && tabIndex <= tabs.length - 1) {
+                hideTabContentPrevNext();
                 tabIndex++;
-
-            }
-            console.log(tabIndex);
-            showTabContent(tabIndex);
-        });
-        prev.addEventListener('click', (e) => {
-            if (e.target.classList.contains('prevnews-mobile')) {
+            } else if (e.target.classList.contains('prevnews-mobile') || e.target.classList.contains('prevtbtn-mobile') && tabIndex >= 1) {
                 tabIndex--;
-
             }
             console.log(tabIndex);
-            showTabContent(tabIndex);
         });
-
+        /*  prev.addEventListener('click', (e) => {
+             if (e.target.classList.contains('prevnews-mobile')) {
+                 tabIndex--;
+             }
+             console.log(tabIndex);
+         }); */
     }
 
     changeTabOnPrevNext();
 
 
     console.log(tabIndex);
-
-
-
-
-
-
-
-
 
     function changeElemColor(index, color) {
         document.querySelectorAll('.item__cirlce')[index].style.backgroundColor = color;
