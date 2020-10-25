@@ -1964,6 +1964,8 @@ input[type="checkbox"]:checked+label::before {
         color: #fff;
     }
 
+
+
     .nextnews-mobile {
         position: relative;
         display: flex;
@@ -2019,7 +2021,7 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .tabcontent img {
-        width: 100%;
+        width: 150%;
         height: 100%;
         object-fit: cover
     }
@@ -2203,6 +2205,15 @@ input[type="checkbox"]:checked+label::before {
 
     #project__catalog {
         display: none;
+    }
+
+    .fade {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
     }
 }
 
