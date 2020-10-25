@@ -1856,10 +1856,6 @@ input[type="checkbox"]:checked+label::before {
         height: 50px;
     }
 
-    .footer__container {
-        display: none;
-    }
-
     .cooperation__partners-item {
         display: block;
     }
@@ -2436,7 +2432,7 @@ input[type="checkbox"]:checked+label::before {
         margin: 0 auto;
         width: 100%;
         height: 895px;
-        margin-bottom: 134px;
+        margin-bottom: 72px;
         background: rgba(45, 179, 70, 0.4) url(../img/charity_mobile_1.jpg);
         background-blend-mode: soft-light;
 
@@ -2594,6 +2590,89 @@ input[type="checkbox"]:checked+label::before {
         margin-left: 0;
         height: auto;
         margin-bottom: 0;
+    }
+
+    /* Footer */
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        height: 633px;
+    }
+
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        line-height: 19px;
+        height: 560px;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    .first__block__footer {
+        width: 100%;
+        height: 338px;
+        border-right: 0px solid #C4C4C4;
+        margin-right: 0px;
+        margin-bottom: 13px;
+    }
+
+    .shop__name {
+        margin-bottom: 0px;
+    }
+
+    .rights {
+        width: 100%;
+        margin: 0 auto;
+        color: #616161;
+    }
+
+    .second__block__footer {
+        display: inline-block;
+        border-right: 0px solid #C4C4C4;
+        height: 123px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #sb__footer {
+        margin-bottom: 15px;
+    }
+
+    .mbf {
+        width: 100%;
+        margin-bottom: 13px;
+        margin-right: 0px;
+    }
+
+    .tbf__triple__block {
+        display: inline-block;
+    }
+
+    .footer__social {
+        margin-top: 17px;
+        display: flex;
+    }
+
+    .social__media__icon {
+        position: static;
+        margin-left: 12px;
+    }
+
+    .social-link {
+        display: inline-block;
+        position: static;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    .vk {
+        margin-left: 0px;
     }
 
 
