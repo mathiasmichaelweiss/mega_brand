@@ -2,32 +2,38 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    const burgerIcon = document.querySelector('.burger__icon'),
-        burgerLocation = document.querySelector('.menu__burger'),
-        nav = document.querySelectorAll('.nav-mouse'),
-        navActivate = document.querySelector('.nav');
+    function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
+        const burgerIcon = document.querySelector(icon),
+            burgerLocation = document.querySelector(menuBurger),
+            nav = document.querySelectorAll(navMouse),
+            navActivate = document.querySelector(navActive);
 
 
-    burgerLocation.addEventListener('click', () => {
-        burgerIcon.classList.toggle('burger__icon-active');
-        if (navActivate.classList.contains('nav__position')) {
-            navActivate.classList.remove('nav__position');
-            navActivate.classList.add('nav__position-active');
-        } else {
-            navActivate.classList.add('nav__position');
-            navActivate.classList.remove('nav__position-active');
-        }
-    });
-
-    nav.forEach(item => {
-        item.addEventListener('mouseover', () => {
-            item.classList.add('nav__mouseover');
+        burgerLocation.addEventListener('click', () => {
+            burgerIcon.classList.toggle('burger__icon-active');
+            if (navActivate.classList.contains('nav__position')) {
+                navActivate.classList.remove('nav__position');
+                navActivate.classList.add('nav__position-active');
+            } else {
+                navActivate.classList.add('nav__position');
+                navActivate.classList.remove('nav__position-active');
+            }
         });
 
-        item.addEventListener('mouseout', () => {
-            item.classList.remove('nav__mouseover');
+        nav.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.classList.add('nav__mouseover');
+            });
+
+            item.addEventListener('mouseout', () => {
+                item.classList.remove('nav__mouseover');
+            });
         });
-    });
+    }
+
+    animateMenuBurger('.burger__icon', '.menu__burger', '.nav-mouse', '.nav');
+    animateMenuBurger('.burger__icon-mobile', '.menu__burger-mobile', '.nav-mouse-mobile', '.nav-mobile');
+
 
 
     // fixed menu
