@@ -221,7 +221,7 @@ h2 {
 
 .container__menu-fixed {
     position: fixed;
-    margin-left: 15px;
+    margin-left: -75px;
     z-index: 1010;
     top: 40px;
     animation-name: show_menu;
@@ -318,6 +318,10 @@ h2 {
     font-weight: 900;
     font-size: 13px;
     line-height: 16px;
+}
+
+.title__menu-burger-mobile {
+    display: none;
 }
 
 .container__menu-mobile {
