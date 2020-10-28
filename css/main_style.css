@@ -168,8 +168,14 @@ h2 {
     /* padding-right: 15px; */
     width: 100%;
     justify-content: flex-end;
+    align-items: flex-end;
     cursor: pointer;
     height: 18px;
+}
+
+.personal__area-text {
+    display: flex;
+    align-items: flex-end;
 }
 
 .personal__area-icon {
@@ -863,6 +869,10 @@ h2 {
 
 
 /* Projects/Partners */
+.cp-img {
+    display: none;
+}
+
 .bg__partners__projects {
     padding-top: 39px;
     padding-bottom: 39px;
@@ -1822,6 +1832,8 @@ input[type="checkbox"]:checked+label::before {
         display: none;
     }
 
+
+
     .city__container {
         display: flex;
         flex-direction: column;
@@ -1917,9 +1929,10 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .nav__mouseover {
-        background-image: url(../img/city_line.svg);
+        background-image: url(../img/city_line_opacity.svg);
         background-repeat: repeat-x;
         background-position: 50% 80%;
+        backgroung
     }
 
     .nav__position {
@@ -2546,6 +2559,7 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .cp-img {
+        display: block;
         margin-right: 6px;
     }
 
