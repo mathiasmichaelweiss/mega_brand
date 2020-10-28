@@ -1932,7 +1932,6 @@ input[type="checkbox"]:checked+label::before {
         background-image: url(../img/city_line_opacity.svg);
         background-repeat: repeat-x;
         background-position: 50% 80%;
-        backgroung
     }
 
     .nav__position {
