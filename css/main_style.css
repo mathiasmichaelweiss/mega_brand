@@ -557,7 +557,7 @@ h2 {
 
 .newsmodal-body {
     position: fixed;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     z-index: 1010;

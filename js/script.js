@@ -367,7 +367,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '',
         'Розыгрыш',
         '12.10.20',
-        'Стартовал розыгрыш в нашем аккаунте Instagram.',
+        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, на покупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс на стать победителем!',
         '.container__news',
         'tabheader__item_active',
     ).render();
@@ -433,14 +433,14 @@ window.addEventListener('DOMContentLoaded', () => {
         'img/news/img_3.jpg',
         'Розыгрыш',
         'Instagram розыгрыш',
-        'Стартовал розыгрыш в нашем аккаунте Instagram.',
+        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, на покупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс на стать победителем!',
         '.tabcontainer'
 
     ).render();
 
     new NewsMenuItem(
         '',
-        'Розыгрыш',
+        'Розыгрыш Instagram',
         '12.10.20',
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
         '.container__news',
@@ -463,6 +463,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     changeText('news__item-text', 44);
+    changeText('news__text', 147);
 
 
     // tab content
@@ -545,9 +546,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     changeTabOnPrevNext();
-
-
-    /* console.log(tabIndex); */
 
     function changeElemColor(index, color) {
         document.querySelectorAll('.item__cirlce')[index].style.backgroundColor = color;
@@ -642,6 +640,28 @@ window.addEventListener('DOMContentLoaded', () => {
     openModal(regModal, openRegModal);
     closeModal(regModal, closeRegModal, regModalBody, regBtn);
     closeModal(enterModal, closeRegModal, enterModalBody, regBtn);
+
+    // news modal
+    const closeNewsModalBtn = document.querySelector('.close__newsmodal'),
+        newsModal = document.querySelector('.container__newsmodal'),
+        newsModalBody = document.querySelector('.newsmodal-body'),
+        moreAboutNews = document.querySelector('.more__about');
+
+    function closeNewsModal() {
+        closeNewsModalBtn.addEventListener('click', () => {
+            newsModalBody.style.display = 'none';
+            document.querySelector('body').style.overflow = '';
+        })
+    }
+
+    function openCloseModal() {
+        moreAboutNews.addEventListener('click', () => {
+            newsModalBody.style.display = 'flex';
+            document.querySelector('body').style.overflow = 'hidden';
+        })
+    }
+    openCloseModal();
+    closeNewsModal();
 
     // viewPassBtn passInput
     function viewPass(btn, input) {
