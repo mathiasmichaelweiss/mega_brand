@@ -629,11 +629,13 @@ h2 {
 }
 
 .newsmodal-text-container {
+    position: relative;
     width: 400px;
     padding-left: 25px;
 }
 
 .newsmodal-text-container2 {
+    position: relative;
     width: 319px;
     padding-left: 25px;
     margin-top: 33px;
@@ -757,7 +759,7 @@ h2 {
 
 .tabcontent__descr {
     position: absolute;
-    top: 270px;
+    top: 210px;
     left: 50px;
     width: 640.99px;
     height: 304px;
@@ -850,7 +852,8 @@ h2 {
 .news__text {
     width: 397px;
     height: 109px;
-
+    margin-bottom: 20px;
+    overflow: hidden;
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
@@ -858,8 +861,6 @@ h2 {
 }
 
 .more__about {
-    position: absolute;
-    bottom: -20px;
     width: 172px;
     height: 27px;
 

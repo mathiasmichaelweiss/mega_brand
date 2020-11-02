@@ -314,76 +314,100 @@ window.addEventListener('DOMContentLoaded', () => {
                         <button class="more__about">Подробности</button>
                     </div>
             `;
-
             this.parent.prepend(elem);
         }
-
     }
 
-    class CreateNewsModal extends NewsTab {
+    class NewsModalWindow {
         constructor(image, newsTitle, text, parentSelector, modalTextBtn) {
-            super(image, newsTitle, text, parentSelector)
-            this.modalTextBtn = modalTextBtn;
+            this.image = image;
+            this.newsTitle = newsTitle;
+            this.text = text;
             this.parent = document.querySelector(parentSelector);
+            this.modalTextBtn = modalTextBtn;
         }
+
         render() {
             const elem = document.createElement('div');
             elem.classList.add('newsmodal-body');
 
-            /* const maxLength = 314;
-            const text = [this.text];
-
-            if (text[0].length > maxLength) {
-                const text2 = text[0].slice(314);
-                text[0].slice(0, 314);
-            } */
-
             elem.innerHTML = `
-                <div class="container__newsmodal">
-                        <div class="newsmodal__inner">
-                            <div class="close__newsmodal">
-                                <img src="img/icons/close.svg" alt="" class="close__btn">
-                            </div>
-                            <div class="newsmodal__img-container">
-                                <img src="${this.image}" alt="" 
-                            </div>
-                            <div class="newsmodal-title">
-                                <h2>${this.newsTitle}</h2>
-                            </div>
-                            <div class="newsmodal-text-container">
-                                <p class="newsmodal-text">
-                                    ${this.text}
-                                </p>
-                            </div>
-                            <div class="newsmodal-text-container2">
-                                <p class="newsmodal-text2">
-                                </p>
-                            </div>
-                            <div class="go__to-btn">
-                                <p class="go__to__btn-text">В раздел "${this.modalTextBtn}"</p>
-                            </div>
-                        </div>
+            <div class="container__newsmodal">
+                <div class="newsmodal__inner">
+                    <div class="close__newsmodal">
+                        <img src="img/icons/close.svg" alt=""   class="close__btn">
                     </div>
-            `
-            this.parent.append(elem)
+                    <div class="newsmodal__img-container">
+                        <img src="${this.image}" alt="" class="newsmodal-img">
+                    </div>
+                    <div class="newsmodal-title">
+                        <h2>
+                        ${this.newsTitle}
+                        </h2>
+                    </div>
+                    <div class="newsmodal-text-container">
+                        <p class="newsmodal-text">
+                        ${this.text}
+                        </p>
+                    </div>
+                    <div class="newsmodal-text-container2">
+                        <p class="newsmodal-text2">
+                    
+                        </p>
+                    </div>
+                    <div class="go__to-btn">
+                        <p class="go__to__btn-text">
+                        ${this.modalTextBtn}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            `;
+
+            this.parent.append(elem);
         }
     }
 
-    new CreateNewsModal(
+    new NewsModalWindow(
         'img/news/img_3.jpg',
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sunt?',
-        ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloribus aliquid. Aliquid modi quibusdam voluptas enim voluptatibus ipsa assumenda debitis commodi officiis doloribus consectetur, quidem dicta unde deleniti culpa iusto, porro inventore amet ea facere nobis atque! Nemo hic illo quasi sint ipsum similique iste enim, iure vero quo repudiandae, perferendis molestiae, assumenda aperiam itaque saepe corrupti mollitia voluptatum tempore id ratione dolorum sapiente? Aliquam impedit temporibus placeat dicta dolorum illo molestias et! Nobis recusandae magni illum optio atque, fugiat exercitationem aperiam laudantium accusantium eaque delectus labore rerum sequi, odit accusamus cupiditate voluptas enim pariatur nisi omnis? Aliquam incidunt saepe nesciunt similique esse molestias harum numquam qui consequatur, sequi ullam suscipit a ducimus! Tempore sapiente explicabo non dolores architecto eius magni amet consequuntur odio quas! Dolores saepe deleniti quasi quaerat adipisci hic reprehenderit veritatis animi! Aut quaerat earum dolor suscipit minus itaque reprehenderit alias quia laborum id dicta sunt nulla deserunt, debitis et ducimus veritatis quibusdam, iure accusantium! Quam laboriosam natus eum sint. Numquam deleniti recusandae, praesentium ipsam debitis cumque ipsum sapiente pariatur mollitia fugit obcaecati exercitationem libero saepe veniam provident. Maiores cum harum ipsa quae quidem, hic quisquam natus dolores et deleniti quod sequi deserunt. Architecto sit tempora laborum.',
+        'Внимание! В сети секонд-хендов Мега-Бренд Мегарозыгрыш',
+        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, нпокупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс на стать победителем! Подробности вы можете узнать в разделе розыгрыши либо перейти по ссылке ниже.Так же вы можете ознакомиться с условия розыгрыша в нашем <a href="" class="instagram">Instagram аккаунте.</a> Товары магазинов представлены такими брендами, как: George, D&G, H&M, Lacoste, Next, Yessica, New Look многими другими Размерный ряд от XS до XXXXL',
         '.all__newsmodal',
-        'Lorem ipsum'
+        'Это кнопка'
     ).render();
 
-    const muster = ['Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, на покупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени.Не упустите свой шанс на стать победителем! Подробности вы можете узнать в разделе розыгрыши либо перейти по ссылке ниже.Так же вы можете ознакомиться с условия розыгрыша в нашем Instagram аккаунте.Товары магазинов представлены такими брендами, как: George, D&G, H&M, Lacoste, Next, Yessica, New Look и многими другими Размерный ряд от XS до XXXXL'];
+    new NewsModalWindow(
+        'img/news/img_3.jpg',
+        'Это заголовок',
+        'Это текст',
+        '.all__newsmodal',
+        'Это кнопка'
+    ).render();
 
-    console.log(muster[0].length);
-    const muster2 = [muster[0].slice(0, 314)];
-    console.log(muster2[0].length);
-    const muster3 = [muster[0].slice(314)];
-    console.log(muster3);
+    new NewsModalWindow(
+        'img/news/img_3.jpg',
+        'Это заголовок',
+        'Это текст',
+        '.all__newsmodal',
+        'Это кнопка'
+    ).render();
+
+    new NewsModalWindow(
+        'img/news/img_3.jpg',
+        'Это заголовок',
+        'Это текст',
+        '.all__newsmodal',
+        'Это кнопка'
+    ).render();
+
+    new NewsModalWindow(
+        'img/news/img_3.jpg',
+        'Это заголовок',
+        'Это текст',
+        '.all__newsmodal',
+        'Это кнопка'
+    ).render();
+
 
     class NewsMenuItem {
         constructor(newsLatter, title, date, text, parentSelector, activeClass) {
@@ -425,7 +449,9 @@ window.addEventListener('DOMContentLoaded', () => {
         'Розыгрыш',
         'Instagram розыгрыш! ура',
         'Стартовал розыгрыш в нашем Instagram. Главный приз сертификат на 10 000 рублей!',
-        '.tabcontainer'
+        '.tabcontainer',
+        'button text',
+        '.all__newsmodal'
 
     ).render();
 
@@ -443,7 +469,9 @@ window.addEventListener('DOMContentLoaded', () => {
         'Открытие',
         'Открылся новый магазин!',
         'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
-        '.tabcontainer'
+        '.tabcontainer',
+        'button text',
+        '.all__newsmodal'
 
     ).render();
 
@@ -453,8 +481,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '12.10.20',
         'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток".',
         '.container__news',
-        'tabheader__item_active',
-        'tabclick'
+        'tabheader__item_active'
     ).render();
 
     new NewsTab(
@@ -462,7 +489,9 @@ window.addEventListener('DOMContentLoaded', () => {
         'Часы работы',
         'Новый график на Ленина',
         'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
-        '.tabcontainer'
+        '.tabcontainer',
+        'button text',
+        '.all__newsmodal'
 
     ).render();
 
@@ -472,8 +501,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '12.10.20',
         'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
         '.container__news',
-        'tabheader__item_active',
-        'tabclick'
+        'tabheader__item_active'
     ).render();
 
     new NewsTab(
@@ -481,7 +509,9 @@ window.addEventListener('DOMContentLoaded', () => {
         'Открытие',
         'Новый отдел на Лыткина!',
         'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
-        '.tabcontainer'
+        '.tabcontainer',
+        'button text',
+        '.all__newsmodal'
 
     ).render();
 
@@ -491,8 +521,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '12.10.20',
         'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
         '.container__news',
-        'tabheader__item_active',
-        'tabclick'
+        'tabheader__item_active'
     ).render();
 
     new NewsTab(
@@ -511,14 +540,8 @@ window.addEventListener('DOMContentLoaded', () => {
         '12.10.20',
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
         '.container__news',
-        'tabheader__item_active',
-        'tabclick'
+        'tabheader__item_active'
     ).render();
-
-
-    const newsScroll = document.querySelector('.news__block-scroll'),
-        newsCointainer = document.querySelector('.container__news'),
-        itemBlock = document.querySelectorAll('.tabheader__item');
 
 
     function changeText(text, chooseMaxLength) {
@@ -619,6 +642,10 @@ window.addEventListener('DOMContentLoaded', () => {
     changeElemColor(2, '#FFB800');
     changeElemColor(3, '#0BBBEF');
     changeElemColor(4, '#2DB346');
+
+    const newsScroll = document.querySelector('.news__block-scroll'),
+        newsCointainer = document.querySelector('.container__news'),
+        itemBlock = document.querySelectorAll('.tabheader__item');
 
     addScroll(newsScroll, newsCointainer);
 
