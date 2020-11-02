@@ -321,22 +321,22 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     class CreateNewsModal extends NewsTab {
-        constructor(image, newsTitle, text, parentSelector, modalTextBtn, btnUrl) {
+        constructor(image, newsTitle, text, parentSelector, modalTextBtn) {
             super(image, newsTitle, text, parentSelector)
             this.modalTextBtn = modalTextBtn;
-            this.btnUrl = btnUrl;
+            this.parent = document.querySelector(parentSelector);
         }
         render() {
             const elem = document.createElement('div');
             elem.classList.add('newsmodal-body');
 
-            const maxLength = 314;
+            /* const maxLength = 314;
             const text = [this.text];
 
             if (text[0].length > maxLength) {
                 const text2 = text[0].slice(314);
                 text[0].slice(0, 314);
-            }
+            } */
 
             elem.innerHTML = `
                 <div class="container__newsmodal">
@@ -348,7 +348,7 @@ window.addEventListener('DOMContentLoaded', () => {
                                 <img src="${this.image}" alt="" 
                             </div>
                             <div class="newsmodal-title">
-                                <h2>Внимание! В сети секонд-хендов Мега-Бренд Мегарозыгрыш</h2>
+                                <h2>${this.newsTitle}</h2>
                             </div>
                             <div class="newsmodal-text-container">
                                 <p class="newsmodal-text">
@@ -357,7 +357,6 @@ window.addEventListener('DOMContentLoaded', () => {
                             </div>
                             <div class="newsmodal-text-container2">
                                 <p class="newsmodal-text2">
-                                ${text2}
                                 </p>
                             </div>
                             <div class="go__to-btn">
@@ -366,8 +365,17 @@ window.addEventListener('DOMContentLoaded', () => {
                         </div>
                     </div>
             `
+            this.parent.append(elem)
         }
     }
+
+    new CreateNewsModal(
+        'img/news/img_3.jpg',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, sunt?',
+        ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, doloribus aliquid. Aliquid modi quibusdam voluptas enim voluptatibus ipsa assumenda debitis commodi officiis doloribus consectetur, quidem dicta unde deleniti culpa iusto, porro inventore amet ea facere nobis atque! Nemo hic illo quasi sint ipsum similique iste enim, iure vero quo repudiandae, perferendis molestiae, assumenda aperiam itaque saepe corrupti mollitia voluptatum tempore id ratione dolorum sapiente? Aliquam impedit temporibus placeat dicta dolorum illo molestias et! Nobis recusandae magni illum optio atque, fugiat exercitationem aperiam laudantium accusantium eaque delectus labore rerum sequi, odit accusamus cupiditate voluptas enim pariatur nisi omnis? Aliquam incidunt saepe nesciunt similique esse molestias harum numquam qui consequatur, sequi ullam suscipit a ducimus! Tempore sapiente explicabo non dolores architecto eius magni amet consequuntur odio quas! Dolores saepe deleniti quasi quaerat adipisci hic reprehenderit veritatis animi! Aut quaerat earum dolor suscipit minus itaque reprehenderit alias quia laborum id dicta sunt nulla deserunt, debitis et ducimus veritatis quibusdam, iure accusantium! Quam laboriosam natus eum sint. Numquam deleniti recusandae, praesentium ipsam debitis cumque ipsum sapiente pariatur mollitia fugit obcaecati exercitationem libero saepe veniam provident. Maiores cum harum ipsa quae quidem, hic quisquam natus dolores et deleniti quod sequi deserunt. Architecto sit tempora laborum.',
+        '.all__newsmodal',
+        'Lorem ipsum'
+    ).render();
 
     const muster = ['Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, на покупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени.Не упустите свой шанс на стать победителем! Подробности вы можете узнать в разделе розыгрыши либо перейти по ссылке ниже.Так же вы можете ознакомиться с условия розыгрыша в нашем Instagram аккаунте.Товары магазинов представлены такими брендами, как: George, D&G, H&M, Lacoste, Next, Yessica, New Look и многими другими Размерный ряд от XS до XXXXL'];
 
@@ -376,10 +384,6 @@ window.addEventListener('DOMContentLoaded', () => {
     console.log(muster2[0].length);
     const muster3 = [muster[0].slice(314)];
     console.log(muster3);
-
-
-
-
 
     class NewsMenuItem {
         constructor(newsLatter, title, date, text, parentSelector, activeClass) {
