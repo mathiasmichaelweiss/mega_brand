@@ -311,8 +311,8 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="news__text">
                             <p>${this.text}</p>
                         </div>
-                        <button class="more__about">Подробности</button>
                     </div>
+                    <button class="more__about">Подробности</button>
             `;
             this.parent.prepend(elem);
         }
@@ -350,11 +350,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         ${this.text}
                         </p>
                     </div>
-                    <div class="newsmodal-text-container2">
-                        <p class="newsmodal-text2">
-                    
-                        </p>
-                    </div>
+
                     <div class="go__to-btn">
                         <p class="go__to__btn-text">
                         ${this.modalTextBtn}
@@ -371,12 +367,12 @@ window.addEventListener('DOMContentLoaded', () => {
     new NewsModalWindow(
         'img/news/img_3.jpg',
         'Внимание! В сети секонд-хендов Мега-Бренд Мегарозыгрыш',
-        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, нпокупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс на стать победителем! Подробности вы можете узнать в разделе розыгрыши либо перейти по ссылке ниже.Так же вы можете ознакомиться с условия розыгрыша в нашем <a href="" class="instagram">Instagram аккаунте.</a> Товары магазинов представлены такими брендами, как: George, D&G, H&M, Lacoste, Next, Yessica, New Look многими другими Размерный ряд от XS до XXXXL',
+        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, нпокупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс стать победителем! <br><br> Подробности вы можете узнать в разделе розыгрыши либо перейти по ссылке ниже.Так же вы можете ознакомиться с условия розыгрыша в нашем<a href="https://www.instagram.com/" class="instagram">Instagram аккаунте.</a> <br> Товары магазинов представлены такими брендами, как:<br> George, D&G, H&M, Lacoste, Next, Yessica, New Look и многими другими <br><br>Размерный ряд от XS до XXXXL',
         '.all__newsmodal',
-        'Это кнопка'
+        'В раздел “Розыгрыши”'
     ).render();
 
-    new NewsModalWindow(
+    /* new NewsModalWindow(
         'img/news/img_3.jpg',
         'Это заголовок',
         'Это текст',
@@ -406,7 +402,7 @@ window.addEventListener('DOMContentLoaded', () => {
         'Это текст',
         '.all__newsmodal',
         'Это кнопка'
-    ).render();
+    ).render(); */
 
 
     class NewsMenuItem {
