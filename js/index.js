@@ -314,7 +314,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     </div>
                     <button class="more__about">Подробности</button>
             `;
-            this.parent.prepend(elem);
+            this.parent.append(elem);
         }
     }
 
@@ -364,47 +364,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    new NewsModalWindow(
-        'img/news/img_3.jpg',
-        'Внимание! В сети секонд-хендов Мега-Бренд Мегарозыгрыш',
-        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, нпокупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс стать победителем! <br><br> Подробности вы можете узнать в разделе розыгрыши либо перейти по ссылке ниже.Так же вы можете ознакомиться с условия розыгрыша в нашем<a href="https://www.instagram.com/" class="instagram">Instagram аккаунте.</a> <br> Товары магазинов представлены такими брендами, как:<br> George, D&G, H&M, Lacoste, Next, Yessica, New Look и многими другими <br><br>Размерный ряд от XS до XXXXL',
-        '.all__newsmodal',
-        'В раздел “Розыгрыши”'
-    ).render();
-
-    /* new NewsModalWindow(
-        'img/news/img_3.jpg',
-        'Это заголовок',
-        'Это текст',
-        '.all__newsmodal',
-        'Это кнопка'
-    ).render();
-
-    new NewsModalWindow(
-        'img/news/img_3.jpg',
-        'Это заголовок',
-        'Это текст',
-        '.all__newsmodal',
-        'Это кнопка'
-    ).render();
-
-    new NewsModalWindow(
-        'img/news/img_3.jpg',
-        'Это заголовок',
-        'Это текст',
-        '.all__newsmodal',
-        'Это кнопка'
-    ).render();
-
-    new NewsModalWindow(
-        'img/news/img_3.jpg',
-        'Это заголовок',
-        'Это текст',
-        '.all__newsmodal',
-        'Это кнопка'
-    ).render(); */
-
-
     class NewsMenuItem {
         constructor(newsLatter, title, date, text, parentSelector, activeClass) {
             this.newsLatter = newsLatter;
@@ -443,8 +402,8 @@ window.addEventListener('DOMContentLoaded', () => {
     new NewsTab(
         'img/news/img_3.jpg',
         'Розыгрыш',
-        'Instagram розыгрыш! ура',
-        'Стартовал розыгрыш в нашем Instagram. Главный приз сертификат на 10 000 рублей!',
+        'Внимание! В сети секонд-хендов Мега-Бренд Мегарозыгрыш',
+        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, на покупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс на стать победителем!',
         '.tabcontainer',
         'button text',
         '.all__newsmodal'
@@ -453,18 +412,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
     new NewsMenuItem(
         '',
-        'Розыгрыш',
+        'Мегарозыгрыш',
         '12.10.20',
         'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, на покупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс на стать победителем!',
         '.container__news',
         'tabheader__item_active',
     ).render();
 
+    new NewsModalWindow(
+        'img/news/img_3.jpg',
+        'Внимание! В сети секонд-хендов Мега-Бренд Мегарозыгрыш',
+        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, нпокупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс стать победителем! <br><br> Подробности вы можете узнать в разделе розыгрыши либо перейти по ссылке ниже.Так же вы можете ознакомиться с условия розыгрыша в нашем<a href="https://www.instagram.com/" class="instagram">Instagram аккаунте.</a> <br> Товары магазинов представлены такими брендами, как:<br> George, D&G, H&M, Lacoste, Next, Yessica, New Look и многими другими <br><br>Размерный ряд от XS до XXXXL',
+        '.all__newsmodal',
+        'В раздел “Розыгрыши”'
+    ).render();
+
     new NewsTab(
         'img/news/img_1.jpg',
         'Открытие',
         'Открылся новый магазин!',
-        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
+        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00. С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
         '.tabcontainer',
         'button text',
         '.all__newsmodal'
@@ -473,18 +440,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
     new NewsMenuItem(
         '',
-        'Открытие',
+        'Новый магазин',
         '12.10.20',
-        'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток".',
+        'В магазине по адресу, ул.Лыткина 3, открылся отдел товаров "Сток". С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
         '.container__news',
         'tabheader__item_active'
+    ).render();
+
+    new NewsModalWindow(
+        'img/news/img_1.jpg',
+        'Открылся новый магазин!',
+        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00. С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
+        '.all__newsmodal',
+        'Это кнопка'
     ).render();
 
     new NewsTab(
         'img/news/img_2.jpg',
         'Часы работы',
         'Новый график на Ленина',
-        'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
+        'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00 С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
         '.tabcontainer',
         'button text',
         '.all__newsmodal'
@@ -493,18 +468,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
     new NewsMenuItem(
         '',
-        'Часы работы',
+        'График на Ленина',
         '12.10.20',
-        'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00',
+        'Магазин по адресу, ул.Ленина 163а, теперь работает с 09:00 до 21:00 С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
         '.container__news',
         'tabheader__item_active'
+    ).render();
+
+    new NewsModalWindow(
+        'img/news/img_2.jpg',
+        'Новый график на Ленина',
+        'С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
+        '.all__newsmodal',
+        'Это кнопка'
     ).render();
 
     new NewsTab(
         'img/news/img_1.jpg',
         'Открытие',
         'Новый отдел на Лыткина!',
-        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
+        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00. С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
         '.tabcontainer',
         'button text',
         '.all__newsmodal'
@@ -513,18 +496,26 @@ window.addEventListener('DOMContentLoaded', () => {
 
     new NewsMenuItem(
         '',
-        'Открытие',
+        'Новый отдел на Лыткина!',
         '12.10.20',
-        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00.',
+        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00. С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
         '.container__news',
         'tabheader__item_active'
+    ).render();
+
+    new NewsModalWindow(
+        'img/news/img_2.jpg',
+        'Новый отдел на Лыткина!',
+        'С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
+        '.all__newsmodal',
+        'Это кнопка'
     ).render();
 
     new NewsTab(
         'img/news/img_3.jpg',
         'Розыгрыш',
-        'Внимание! В сети секонд-хендов Мега-Бренд Мегарозыгрыш',
-        'Дорогие друзья, в нашей сети магазинов стартовал Instagram розыгрышь. У вас есть возможность выйграть один из 10 сертификатов до 5 000 рублей, на покупку в наших магазинах. Для участия в розыгрыше необходимо выполнить ряд не сложных условий, это не займет много времени. Не упустите свой шанс на стать победителем!',
+        'Розыгрыш в Instagram',
+        'Равным образом начало повседневной работы по формированию позиции требуют определения и уточнения соответствующий условий активизации. Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке дальнейших направлений развития. Задача организации, в особенности же новая модель организационной деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий требуют определения и уточнения дальнейших направлений развития.',
         '.tabcontainer',
         'В раздел "Розыгрыши"'
 
@@ -532,11 +523,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
     new NewsMenuItem(
         '',
-        'Розыгрыш Instagram',
+        'Розыгрыш в Instagram',
         '12.10.20',
         'Стартовал розыгрыш в нашем аккаунте Instagram.',
         '.container__news',
         'tabheader__item_active'
+    ).render();
+
+    new NewsModalWindow(
+        'img/news/img_3.jpg',
+        'Внимание! Стартовал розыгрыш в Instagram',
+        'Равным образом начало повседневной работы по формированию позиции требуют определения и уточнения соответствующий условий активизации. Товарищи! консультация с широким активом позволяет выполнять важные задания по разработке дальнейших направлений развития. Задача организации, в особенности же новая модель организационной деятельности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий требуют определения и уточнения дальнейших направлений развития.',
+        '.all__newsmodal',
+        'Это кнопка'
     ).render();
 
 
@@ -553,43 +552,45 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
     // tab content
+
     let tabs = document.querySelectorAll('.tabheader__item'),
         tabsContent = document.querySelectorAll('.tabcontent'),
         prevNextContainer = document.querySelector('.prev__next-container');
 
+    function changeTabContent(intTabs, IntTabsContent) {
 
-    function hideTabContent() {
-
-        tabsContent.forEach(item => {
-            item.classList.add('hide');
-            item.classList.remove('show', 'fade');
-        });
-
-        tabs.forEach(item => {
-            item.classList.remove('tabheader__item_active');
-        });
-    }
-
-    function showTabContent(i = 0) {
-        tabsContent[i].classList.add('show', 'fade');
-        tabsContent[i].classList.remove('hide');
-        tabs[i].classList.add('tabheader__item_active');
-    }
-
-    hideTabContent();
-    showTabContent();
-
-    function changeTabOnClick(clickElem) {
-        clickElem.forEach((item, i) => {
-            item.addEventListener('click', (e) => {
-                hideTabContent();
-                showTabContent(i);
+        function hideTabContent() {
+            IntTabsContent.forEach(item => {
+                item.classList.add('hide');
+                item.classList.remove('show', 'fade');
             });
-        });
+            intTabs.forEach(item => {
+                item.classList.remove('tabheader__item_active');
+            });
+        }
+
+        function showTabContent(i = 0) {
+            IntTabsContent[i].classList.add('show', 'fade');
+            IntTabsContent[i].classList.remove('hide');
+            intTabs[i].classList.add('tabheader__item_active');
+        }
+
+        hideTabContent();
+        showTabContent();
+
+        function changeTabOnClick(clickElem) {
+            clickElem.forEach((item, i) => {
+                item.addEventListener('click', (e) => {
+                    hideTabContent();
+                    showTabContent(i);
+                });
+            });
+        }
+
+        changeTabOnClick(intTabs);
     }
 
-    changeTabOnClick(tabs);
-
+    changeTabContent(tabs, tabsContent);
 
     function showTabContentMobile(i = 0) {
         tabsContent[i].classList.add('show', 'fade');
@@ -597,6 +598,36 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     showTabContentMobile();
 
+    // news modal
+
+    const newsModalBody = document.querySelectorAll('.newsmodal-body'),
+        moreAboutNews = document.querySelectorAll('.more__about');
+
+    function closeNewsModal() {
+        newsModalBody.forEach(item => {
+            item.addEventListener('click', () => {
+                item.style.display = 'none';
+                document.querySelector('body').style.overflow = '';
+            })
+        });
+    }
+
+    function selectNewsModal(i = 0) {
+        newsModalBody[i].style.display = 'flex';
+        document.querySelector('body').style.overflow = 'hidden';
+    };
+
+    function openCloseModal() {
+        moreAboutNews.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+                newsModalBody[i].classList.add('fade2');
+                selectNewsModal(i);
+            })
+        });
+    }
+    openCloseModal();
+    closeNewsModal();
+    // end news modal
 
     function changeTabOnPrevNext() {
         let tabIndex = 0;
@@ -657,7 +688,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
     subColorIsCircleColor();
-
 
     // Project photos
     const photoScrall = document.querySelector('.photo__scrall'),
@@ -726,28 +756,6 @@ window.addEventListener('DOMContentLoaded', () => {
     openModal(regModal, openRegModal);
     closeModal(regModal, closeRegModal, regModalBody, regBtn);
     closeModal(enterModal, closeRegModal, enterModalBody, regBtn);
-
-    // news modal
-    const closeNewsModalBtn = document.querySelector('.close__newsmodal'),
-        newsModal = document.querySelector('.container__newsmodal'),
-        newsModalBody = document.querySelector('.newsmodal-body'),
-        moreAboutNews = document.querySelector('.more__about');
-
-    function closeNewsModal() {
-        closeNewsModalBtn.addEventListener('click', () => {
-            newsModalBody.style.display = 'none';
-            document.querySelector('body').style.overflow = '';
-        })
-    }
-
-    function openCloseModal() {
-        moreAboutNews.addEventListener('click', () => {
-            newsModalBody.style.display = 'flex';
-            document.querySelector('body').style.overflow = 'hidden';
-        })
-    }
-    openCloseModal();
-    closeNewsModal();
 
     // viewPassBtn passInput
     function viewPass(btn, input) {
