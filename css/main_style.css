@@ -129,6 +129,13 @@ h2 {
     margin-bottom: 13px;
 }
 
+.animate__btn-mousover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+}
+
+.go__to-btn:target {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.16);
+}
 
 .container {
     max-width: 1440px;
@@ -1444,7 +1451,7 @@ h2 {
     margin-left: 23px;
     margin-top: 23px;
 
-    background-color: rgba(255, 255, 255, 0.13);
+    background-color: #69BC82;
     border-radius: 10px;
     text-align: center;
 

@@ -2,6 +2,20 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    const closeBtn = document.querySelectorAll('.close__btn');
+
+    function animateBtn(btn, btnBody) {
+        btn.forEach((item, i) => {
+            console.log(item);
+            item.addEventListener('mouseover', () => {
+                btnBody.classList.add('animate__btn-mousover');
+            });
+            item.addEventListener('mouseout', () => {
+                btnBody.classList.remove('animate__btn-mousover');
+            });
+        });
+    }
+
     function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
         const burgerIcon = document.querySelector(icon),
             burgerLocation = document.querySelector(menuBurger),
@@ -335,7 +349,7 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class="container__newsmodal">
                 <div class="newsmodal__inner">
                     <div class="close__newsmodal">
-                        <img src="img/icons/close.svg" alt=""   class="close__btn">
+                        <img src="img/icons/close.svg" alt=""   class="close__btn  close__modal-btn">
                     </div>
                     <div class="newsmodal__img-container">
                         <img src="${this.image}" alt="" class="newsmodal-img">
@@ -601,12 +615,16 @@ window.addEventListener('DOMContentLoaded', () => {
     // news modal
 
     const newsModalBody = document.querySelectorAll('.newsmodal-body'),
-        moreAboutNews = document.querySelectorAll('.more__about');
+        moreAboutNews = document.querySelectorAll('.more__about'),
+        closeNewsModalBody = document.querySelector('.close__newsmodal'),
+        closeModalBtn = document.querySelectorAll('.close__modal-btn');
 
     function closeNewsModal() {
-        newsModalBody.forEach(item => {
+        closeModalBtn.forEach((item, i) => {
+            console.log(newsModalBody[i]);
             item.addEventListener('click', () => {
-                item.style.display = 'none';
+                console.log(item);
+                newsModalBody[i].style.display = 'none';
                 document.querySelector('body').style.overflow = '';
             })
         });
@@ -627,6 +645,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     openCloseModal();
     closeNewsModal();
+    animateBtn(closeModalBtn, closeNewsModalBody);
     // end news modal
 
     function changeTabOnPrevNext() {
@@ -701,6 +720,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const regModal = document.querySelector('.reg'),
         enterModal = document.querySelector('.enter__form'),
         closeRegModal = document.querySelectorAll('.close'),
+        closeRegModalBody = document.querySelector('.close__body'),
         openRegModal = document.querySelector('.personal__area'),
         regModalBody = document.querySelector('.reg__body'),
         enterModalBody = document.querySelector('.enter__body'),
@@ -756,6 +776,8 @@ window.addEventListener('DOMContentLoaded', () => {
     openModal(regModal, openRegModal);
     closeModal(regModal, closeRegModal, regModalBody, regBtn);
     closeModal(enterModal, closeRegModal, enterModalBody, regBtn);
+    animateBtn(closeBtn, closeRegModalBody);
+
 
     // viewPassBtn passInput
     function viewPass(btn, input) {
