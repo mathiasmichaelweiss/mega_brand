@@ -4,14 +4,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const closeBtn = document.querySelectorAll('.close__btn');
 
-    function animateBtn(btn, btnBody) {
-        btn.forEach((item, i) => {
+    function animateBtn(btn) {
+        btn.forEach((item) => {
             console.log(item);
+
             item.addEventListener('mouseover', () => {
-                btnBody.classList.add('animate__btn-mousover');
+                item.classList.add('animate__btn-mousover');
             });
             item.addEventListener('mouseout', () => {
-                btnBody.classList.remove('animate__btn-mousover');
+                item.classList.remove('animate__btn-mousover');
             });
         });
     }
@@ -349,7 +350,7 @@ window.addEventListener('DOMContentLoaded', () => {
             <div class="container__newsmodal">
                 <div class="newsmodal__inner">
                     <div class="close__newsmodal">
-                        <img src="img/icons/close.svg" alt=""   class="close__btn  close__modal-btn">
+                    <div class="close__btn   close__modal-btn"></div>
                     </div>
                     <div class="newsmodal__img-container">
                         <img src="${this.image}" alt="" class="newsmodal-img">
@@ -366,9 +367,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     </div>
 
                     <div class="go__to-btn">
-                        <p class="go__to__btn-text">
                         ${this.modalTextBtn}
-                        </p>
                     </div>
                 </div>
             </div>
@@ -617,7 +616,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const newsModalBody = document.querySelectorAll('.newsmodal-body'),
         moreAboutNews = document.querySelectorAll('.more__about'),
         closeNewsModalBody = document.querySelector('.close__newsmodal'),
-        closeModalBtn = document.querySelectorAll('.close__modal-btn');
+        closeModalBtn = document.querySelectorAll('.close__modal-btn'),
+        goToBtn = document.querySelectorAll('.go__to-btn');
 
     function closeNewsModal() {
         closeModalBtn.forEach((item, i) => {
@@ -645,7 +645,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     openCloseModal();
     closeNewsModal();
-    animateBtn(closeModalBtn, closeNewsModalBody);
+    animateBtn(closeModalBtn);
+    animateBtn(goToBtn);
     // end news modal
 
     function changeTabOnPrevNext() {

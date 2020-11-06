@@ -133,11 +133,15 @@ h2 {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
 }
 
-.go__to-btn:target {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.16);
+.close__btn:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
-.container {
+.go__to-btn:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+. .container {
     max-width: 1440px;
     height: auto;
     margin: 0 auto;
@@ -595,16 +599,20 @@ h2 {
 
 .close__newsmodal {
     display: flex;
-    justify-content: center;
-
-    background-color: #81CF90;
     width: 22px;
     height: 22px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    margin-bottom: 15px;
 }
 
 .close__btn {
+    width: 22px;
+    height: 22px;
+    background-image: url('/img/icons/close.svg');
+    background-repeat: no-repeat;
+    background-position: 3.57px 3.94px;
+
+    background-color: #81CF90;
+    border-radius: 10px;
     margin-left: 0.2px;
     margin-bottom: 5px;
 }
@@ -647,6 +655,8 @@ h2 {
 
 .go__to-btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
     right: 30px;
     bottom: 78px;
     background: #81CF90;
@@ -656,11 +666,6 @@ h2 {
     width: 200px;
     height: 40px;
     margin-top: 30px;
-}
-
-.go__to__btn-text {
-    margin: 0 auto;
-    align-self: center;
 }
 
 .instagram {
@@ -1457,11 +1462,11 @@ h2 {
 
 }
 
-.close__btn {
-    display: inline-block;
-    margin-top: 20%;
+.close__btn-form {
+    margin-top: 15px;
+    margin-left: 15px;
+    background-position: 3.75px;
 }
-
 
 .reg__left__title {
     text-align: center;
