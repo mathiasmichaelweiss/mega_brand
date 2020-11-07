@@ -314,19 +314,15 @@ window.addEventListener('DOMContentLoaded', () => {
             elem.classList.add('tabcontent');
 
             elem.innerHTML = `
-                    <div class="darkbg-container">
-                    <div class="darkbg"></div>
                     <img class="news-img" src="${this.image}">
-                    </div>
                     <div class="tabcontent__descr">
+                        <div class="news__title">${this.newsTitle}</div>
                         <div class="news__subtitle-container">
                             <p class="news__subtitle-text">${this.subTitle}</p>
                         </div>
-                        <div class="news__title">${this.newsTitle}</div>
                         <div class="news__text">
                             <p>${this.text}</p>
                         </div>
-                    </div>
                     <button class="more__about">Подробности</button>
             `;
             this.parent.append(elem);
