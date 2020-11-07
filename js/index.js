@@ -709,14 +709,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     subColorIsCircleColor();
 
-    // Project photos
-    const photoScrall = document.querySelector('.photo__scrall'),
-        projectsCatalog = document.querySelector('.project__catalog');
-
-
-    addScroll(photoScrall, projectsCatalog);
-
-
     // reg modal
     const regModal = document.querySelector('.reg'),
         enterModal = document.querySelector('.enter__form'),
@@ -851,9 +843,9 @@ window.addEventListener('DOMContentLoaded', () => {
     );
 
     const images = [
-        'rgba(45, 179, 70, 0.4) url(img/charity_slider_image/blago_1.jpg)',
-        'rgba(45, 179, 70, 0.4) url(img/charity_slider_image/blago_2.jpg)',
-        'rgba(45, 179, 70, 0.4) url(img/charity_slider_image/blago_3.jpg)'
+        'rgba(0, 0, 0, 0.2)  url(img/charity_slider_image/blago_1.jpg)',
+        'rgba(0, 0, 0, 0.2)  url(img/charity_slider_image/blago_2.jpg)',
+        'rgba(0, 0, 0, 0.2)  url(img/charity_slider_image/blago_3.jpg)'
     ];
 
     function changeBg(n, i, n2) {
