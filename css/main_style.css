@@ -732,71 +732,55 @@ h2 {
 }
 
 .news-tab {
-    height: 615px;
+    height: 587px;
     display: flex;
     margin-bottom: 80px;
 }
 
 .tabcontainer {
-    position: relative;
-    max-width: 981px;
-    height: 615px;
-    background: rgba(29, 29, 29, 0.7);
+    justify-content: start;
+    width: 65%;
+    height: 587px;
     background-blend-mode: darken;
     border-radius: 10px;
-    margin-bottom: 81px;
-    color: #fff;
-    max-width: 981px;
+    margin-right: 1%;
+    color: #1d1d1d;
     overflow: hidden;
-
 }
 
 .tabcontent {
-    height: 615px;
-    max-width: 981px;
-    position: relative;
+    border-radius: 10px;
 }
 
 .darkbg-container {
-    position: relative;
     width: 100%;
     height: 100%;
-    background-color: #000000;
+    /*     background-color: #000000; */
 }
 
 .darkbg {
-    z-index: 1;
-    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    /*     background-color: rgba(0, 0, 0, 0.3); */
 }
 
 .tabcontent img {
-    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover
+    height: 110%;
+    object-fit: cover;
 }
 
 .tabcontent__descr {
-    position: absolute;
-    z-index: 2;
-    top: 210px;
-    left: 50px;
     width: 640.99px;
     height: 304px;
-    color: #fff;
 }
 
 .tabheader {
-    position: absolute;
-    margin-top: 14px;
-
-    margin-left: 685px;
+    margin-left: 1%;
     max-width: 280px;
     height: 587px;
     background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     color: #1d1d1d;
 }
@@ -1055,7 +1039,7 @@ h2 {
     justify-content: flex-end;
     width: 100%;
     height: 100%;
-    background: url(/img/project_main.jpg);
+    background: url(../img/project_main.jpg);
     background-blend-mode: soft-light;
     background-repeat: no-repeat;
 }
