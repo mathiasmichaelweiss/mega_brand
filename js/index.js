@@ -329,7 +329,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     <div class="tabcontent__descr">
                         <div class="news__title">${this.newsTitle}</div>
                         <div class="news__subtitle-container">
-                            <p class="news__subtitle-text">${this.subTitle}</p>
+                            <div class="news__subtitle-text">${this.subTitle}</div>
                         </div>
                         <div class="news__text">
                             <p>${this.text}</p>

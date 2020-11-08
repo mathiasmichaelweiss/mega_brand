@@ -858,6 +858,7 @@ h2 {
     width: 105px;
     height: 27px;
     background: #0BBBEF;
+    margin-left: 2.5%;
     border-radius: 5px;
     margin-top: 20px;
     margin-bottom: 25px;
@@ -881,7 +882,6 @@ h2 {
     font-weight: 800;
     font-size: 36px;
     margin-top: 20px;
-    margin-right: 16px;
 
     width: 80%;
     height: auto;
