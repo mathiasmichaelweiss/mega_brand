@@ -110,6 +110,9 @@ window.addEventListener('DOMContentLoaded', () => {
             slide.id = elem.id;
 
             slide.innerHTML = `
+            <div class="about-btn-container">
+            <a href="https://www.figma.com/proto/CBcwTwYtUe8UbA9hZGetri/more-about-shop?scaling=scale-down-width&node-id=2%3A2" class="more-about-btn" target="_blank">Подробнее о магазине</a>
+            </div>
             <img src="${this.slideImage}" alt="">
             `;
 
@@ -190,6 +193,10 @@ window.addEventListener('DOMContentLoaded', () => {
         '.slider__inner'
     ).render();
 
+    console.log(document.querySelectorAll('.more-about-btn'));
+    console.log(document.querySelectorAll('.slide'));
+
+
 
     // Activate shops und scroll
     const activeShop = document.querySelectorAll('.current__shop'),
@@ -241,7 +248,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         wrapper.style.overflow = 'hidden';
 
-        // Устанавливат всем слайдерам одинаковую ширину
+        // Устанавливаeт всем слайдерам одинаковую ширину
         slides.forEach(slide => {
             slide.style.width = width;
         });
@@ -256,22 +263,23 @@ window.addEventListener('DOMContentLoaded', () => {
         addDataAtribute(street);
         addDataAtribute(sale);
 
-        function removeNumbers(str) {
-            return +str.replace(/\D/g, '');
-        }
-
         currentShop.forEach(shop => {
             shop.addEventListener('click', (e) => {
                 e.preventDefault();
                 const slideTo = e.target.getAttribute('data-slide-to');
 
                 slideIndex = slideTo;
-                offset = removeNumbers(width) * (slideTo - 1);
+                offset = +width.replace('px', '') * (slideTo - 1);
                 slideGround.style.transform = `translateX(-${offset}px)`;
             });
         });
     }
     mainSlider();
+
+    const sliderBtnMoreAboutShop = document.querySelectorAll('.more-about-btn ');
+
+    animateBtn(sliderBtnMoreAboutShop);
+
 
     // Tiny slider
 

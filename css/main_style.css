@@ -375,7 +375,33 @@ h2 {
     height: 440px;
 }
 
+.slider__inner {}
+
+.about-btn-container {
+    display: flex;
+    margin-top: 10px;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+}
+
+.more-about-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 306px;
+    height: 32px;
+    background: rgba(86, 193, 106, 0.66);
+    color: #fff;
+    border-radius: 10px;
+}
+
+.more-about-btn:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.07);
+}
+
 .slide {
+    position: relative;
     height: 440px;
 }
 
