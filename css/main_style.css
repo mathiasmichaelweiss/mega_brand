@@ -793,12 +793,13 @@ h2 {
 
 .tabcontent__descr {
     padding-top: 30px;
-    padding-left: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
     position: absolute;
     display: flex;
     flex-wrap: wrap;
     top: 314px;
-    width: 100%;
+    width: 98.5%;
     height: 244px;
     border: 1px solid #EEF0F7;
     border-radius: 10px;
