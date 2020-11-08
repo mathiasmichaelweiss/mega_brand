@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <title>Project_mega-brand</title>
@@ -373,7 +374,7 @@
                         </div>
                         <div class="sub__block">
                         </div>
-                     </div>
+                    </div>
                     <div class="news__sub">Подписаться на рассылку</div>
                 </div>
             </div>
@@ -417,9 +418,7 @@
                 <img src="img/partner_line.png" alt="" class="partner__line">
             </div>
             <div class="partners-body">
-                <div class="partners">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                <div class="my-slider  partners" id="fixedWidth">
                     <div class="partners__item">
                         <img src="img/partner_01.jpg" alt="" class="partner">
                     </div>
@@ -441,110 +440,6 @@
                 </div>
             </div>
         </div>
-
-
-        <!-- <div class="contaiter" id="parproj">
-        <div class="bg__partners__projects">
-            <div class="small__container">
-                <div class="project__partners-inner">
-                    <div class="projects__block">
-                        <div class="projects__title">Наши проекты</div>
-                        <div class="projects__subtitle">МЫ ПОМОГАЕМ СДЕЛАТЬ ГОРОД ЛУЧШЕ!</div>
-                        <div class="projects__description"><img src="img/line_projects_mob.svg" alt=""
-                                class="topline__projects-mob"> Предлагаем Вам подробнее ознакомиться с тем,
-                            чем мы занимаемся.
-                            <img src="img/line_projects_mob.svg" alt="" class="bottonline__projects-mob">
-                        </div>
-                        <div class="project__list">
-                            <ul class="projects">
-                                <li class="project__item">Благоустройство
-                                    парка по адресу, ул.Усова 1
-                                    <div class="project__photo">
-                                        <p class="project__photo-text">фото проекта</p>
-                                        <img src="img/project_photo_icon.svg" alt="" class="project__photo-icon">
-                                    </div>
-                                </li>
-                                <li class="project__item">Строительство волейбольной
-                                    площадки по адресу:
-                                    ул. 5ой армии, 4
-                                    <div class="project__photo">
-                                        <p class="project__photo-text">фото проекта</p>
-                                        <img src="img/project_photo_icon.svg" alt="" class="project__photo-icon">
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="more__projects">
-                                <p class="more__project-text">
-                                    Больше проектов
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="partners__block">
-                        <div class="partners__block-inner">
-                            <div class="partners__title">Наши партнёры</div>
-                            <div class="partners__list">
-                                <p class="partner">
-                                    <img src="img/elipse_partner.svg" alt="" class="cp-img">Волонтёрскоё
-                                    движение "Общий Дом"
-                                </p>
-                                <p class="partner">
-                                    <img src="img/elipse_partner.svg" alt="" class="cp-img"> Департамент
-                                    развития доступно среды г.Томска
-                                </p>
-                                <p class="partner">
-                                    <img src="img/elipse_partner.svg" alt="" class="cp-img">Компания
-                                    "Вторичной переработки"
-                                </p>
-                                <p class="partner">
-                                    <img src="img/elipse_partner.svg" alt="" class="cp-img"> Компания
-                                    "Разумное потребление"
-                                </p>
-                            </div>
-                            <div class="more__partners">
-                                <p class="more__partners-text">
-                                    Больше партнёров
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-        <!-- Project photos -->
-        <!-- <div class="small__container" id="project__catalog">
-        <div class="photo__scrall">
-            <div class="project__catalog">
-
-                <div class="project__item-container">
-                    <img src="img/project_catalog_image/catalog_img_01.jpg" alt="" class="project__catalog-item">
-                </div>
-
-                <div class="project__item-container">
-                    <img src="img/project_catalog_image/catalog_img_02.jpg" alt="" class="project__catalog-item">
-                </div>
-
-                <div class="project__item-container">
-                    <img src="img/project_catalog_image/catalog_img_03.jpg" alt="" class="project__catalog-item">
-                </div>
-
-                <div class="project__item-container">
-                    <img src="img/project_catalog_image/catalog_img_04.jpg" alt="" class="project__catalog-item">
-                </div>
-
-                <div class="project__item-container">
-                    <img src="img/project_catalog_image/catalog_img_02.jpg" alt="" class="project__catalog-item">
-                </div>
-
-                <div class="project__item-container">
-                    <img src="img/project_catalog_image/catalog_img_05.jpg" alt="" class="project__catalog-item">
-                </div>
-
-            </div>
-        </div>
-    </div> -->
 
         <!-- charity -->
         <div class="container" id="charity">
@@ -1089,17 +984,8 @@
             </div>
         </div>
 
-        <div class="scrallbar">
-            <div class="content">
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-                <div class="item"></div>
-            </div>
-        </div>
-
-
         <script src="js/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 </body>
 
 </html>

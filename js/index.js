@@ -280,6 +280,19 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     mainSlider();
 
+    // Tiny slider
+
+    var slider = tns({
+        container: '#fixedWidth',
+        "fixedWidth": 200,
+        "swipeAngle": false,
+        "speed": 400,
+        autoplayButtonOutput: false,
+        autoplay: true,
+        controls: false
+    });
+
+
     // calendar
     const calendarItem = document.querySelectorAll('.calendar__item');
 
