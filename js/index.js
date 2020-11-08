@@ -680,11 +680,11 @@ window.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.item__cirlce')[index].style.backgroundColor = color;
     }
 
-    changeElemColor(0, '#E30613');
-    changeElemColor(1, '#E25011');
-    changeElemColor(2, '#FFB800');
-    changeElemColor(3, '#0BBBEF');
-    changeElemColor(4, '#2DB346');
+    changeElemColor(0, 'rgba(227, 6, 19, 0.25)');
+    changeElemColor(1, 'rgba(226, 80, 17, 0.25)');
+    changeElemColor(2, 'rgba(255, 184, 0, 0.25');
+    changeElemColor(3, 'rgba(11, 187, 239, 0.25');
+    changeElemColor(4, 'rgba(45, 179, 70, 0.25');
 
     const newsScroll = document.querySelector('.news__block-scroll'),
         newsCointainer = document.querySelector('.container__news'),
@@ -695,15 +695,29 @@ window.addEventListener('DOMContentLoaded', () => {
     activateElem(itemBlock, 'container__news__item-active');
 
     const newsSubtitle = document.querySelectorAll('.news__subtitle-container'),
-        newsCircle = document.querySelectorAll('.item__cirlce');
+        newsCircle = document.querySelectorAll('.item__cirlce'),
+        newsLetter = document.querySelectorAll('.news__latter'),
+        newsSubtitleText = document.querySelectorAll('.news__subtitle-text');
 
 
     function subColorIsCircleColor() {
-        for (let j = 0; j < newsCircle.length; j++) {
-            newsSubtitle[j].style.backgroundColor = newsCircle[j].style.backgroundColor;
+        for (let i = 0; i < newsCircle.length; i++) {
+            newsSubtitle[i].style.backgroundColor = newsCircle[i].style.backgroundColor;
         }
     }
     subColorIsCircleColor();
+
+    function makeTextInStrongCircleColor(text) {
+        for (let i = 0; i < newsCircle.length; i++) {
+            text[i].style.color = newsCircle[i].style.backgroundColor.replace('0.25', '1');
+        }
+    }
+    makeTextInStrongCircleColor(newsSubtitleText);
+    makeTextInStrongCircleColor(newsLetter);
+
+
+
+
 
     // reg modal
     const regModal = document.querySelector('.reg'),

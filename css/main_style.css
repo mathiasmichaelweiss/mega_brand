@@ -760,6 +760,11 @@ h2 {
     object-fit: cover;
 }
 
+.news-img {
+    width: 100%;
+}
+
+
 .tabcontent__descr {
     padding-top: 30px;
     padding-left: 15px;
@@ -1752,33 +1757,35 @@ input[type="checkbox"]:checked+label::before {
 
 
     /* news */
-    .tabheader {
-        margin-left: 424px;
-    }
-
-    .darkbg-container {
-        width: 140%;
-    }
-
-    .news-img {}
+    .tabheader {}
 
     .tabcontent__descr {
-        width: 360px;
+        width: 96%;
     }
 
     .news__title {
-        width: 360px;
-        font-size: 35px;
+        font-size: 22px;
+        margin-bottom: 74px;
     }
 
     .news__text {
-        width: 360px;
+        width: 80%;
         font-size: 13px;
     }
 
     .project__item-container {
         width: 324px;
         height: 306px;
+    }
+
+    .news__subtitle-container {
+        width: 17%;
+    }
+
+    .more__about {
+        width: 100%;
+        text-align: right;
+        right: 13px;
     }
 
 
