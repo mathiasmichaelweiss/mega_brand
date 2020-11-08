@@ -607,7 +607,7 @@ h2 {
 .close__btn {
     width: 22px;
     height: 22px;
-    background-image: url('/img/icons/close.svg');
+    background-image: url('../img/icons/close.svg');
     background-repeat: no-repeat;
     background-position: 3.57px 3.94px;
 
