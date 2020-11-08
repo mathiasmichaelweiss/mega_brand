@@ -6,11 +6,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function animateBtn(btn) {
         btn.forEach((item) => {
-            console.log(item);
-
             item.addEventListener('mouseover', () => {
                 item.classList.add('animate__btn-mousover');
             });
+
             item.addEventListener('mouseout', () => {
                 item.classList.remove('animate__btn-mousover');
             });
@@ -22,7 +21,6 @@ window.addEventListener('DOMContentLoaded', () => {
             burgerLocation = document.querySelector(menuBurger),
             nav = document.querySelectorAll(navMouse),
             navActivate = document.querySelector(navActive);
-
 
         burgerLocation.addEventListener('click', () => {
             burgerIcon.classList.toggle('burger__icon-active');
@@ -49,8 +47,6 @@ window.addEventListener('DOMContentLoaded', () => {
     animateMenuBurger('.burger__icon', '.menu__burger', '.nav-mouse', '.nav');
     animateMenuBurger('.burger__icon-mobile', '.menu__burger-mobile', '.nav-mouse-mobile', '.nav-mobile');
 
-
-
     // fixed menu
     if (document.body.clientWidth >= 913) {
         window.onscroll = function showMenu() {
@@ -67,15 +63,12 @@ window.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-
     // anchors
     const anchors = document.querySelectorAll('a[href*="#"]');
-
 
     for (let anchor of anchors) {
         anchor.addEventListener('click', (e) => {
             e.preventDefault();
-
             const blockID = anchor.getAttribute('href').substr(1);
 
             document.getElementById(blockID).scrollIntoView({
@@ -248,7 +241,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
         wrapper.style.overflow = 'hidden';
 
-        // Устанавливаем всем слайдерам одинаковую ширину
+        // Устанавливат всем слайдерам одинаковую ширину
         slides.forEach(slide => {
             slide.style.width = width;
         });
@@ -292,13 +285,10 @@ window.addEventListener('DOMContentLoaded', () => {
         controls: false
     });
 
-
     // calendar
     const calendarItem = document.querySelectorAll('.calendar__item');
 
-
     calendarItem.forEach(item => {
-
         item.addEventListener('mouseover', (e) => {
             if (e.target.classList.contains('percent')) {
                 e.target.style.color = '#1D1D1D';
@@ -338,6 +328,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         </div>
                     <button class="more__about">Подробности</button>
             `;
+
             this.parent.append(elem);
         }
     }
@@ -353,13 +344,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
         render() {
             const elem = document.createElement('div');
+
             elem.classList.add('newsmodal-body');
 
             elem.innerHTML = `
             <div class="container__newsmodal">
                 <div class="newsmodal__inner">
                     <div class="close__newsmodal">
-                    <div class="close__btn   close__modal-btn"></div>
+                        <div class="close__btn   close__modal-btn"></div>
                     </div>
                     <div class="newsmodal__img-container">
                         <img src="${this.image}" alt="" class="newsmodal-img">
@@ -374,7 +366,6 @@ window.addEventListener('DOMContentLoaded', () => {
                         ${this.text}
                         </p>
                     </div>
-
                     <div class="go__to-btn">
                         ${this.modalTextBtn}
                     </div>
@@ -569,9 +560,9 @@ window.addEventListener('DOMContentLoaded', () => {
             document.getElementsByClassName(text)[i].innerHTML = str.slice(0, maxLength) + '...';
         }
     }
+
     changeText('news__item-text', 44);
     changeText('news__text', 147);
-
 
     // tab content
 
@@ -586,6 +577,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 item.classList.add('hide');
                 item.classList.remove('show', 'fade');
             });
+
             intTabs.forEach(item => {
                 item.classList.remove('tabheader__item_active');
             });
@@ -624,15 +616,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const newsModalBody = document.querySelectorAll('.newsmodal-body'),
         moreAboutNews = document.querySelectorAll('.more__about'),
-        closeNewsModalBody = document.querySelector('.close__newsmodal'),
         closeModalBtn = document.querySelectorAll('.close__modal-btn'),
         goToBtn = document.querySelectorAll('.go__to-btn');
 
     function closeNewsModal() {
         closeModalBtn.forEach((item, i) => {
-            console.log(newsModalBody[i]);
             item.addEventListener('click', () => {
-                console.log(item);
                 newsModalBody[i].style.display = 'none';
                 document.querySelector('body').style.overflow = '';
             })
@@ -671,7 +660,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 tabsContent[tabIndex].classList.remove('hide');
                 tabsContent[tabIndex].classList.add('fade');
                 tabsContent[tabIndex].style.display = 'flex';
-
             } else if (e.target.classList.contains('prevnews-mobile') || e.target.classList.contains('prevtbtn-mobile') && tabIndex >= 1) {
                 tabIndex--;
                 tabsContent[tabIndex + 1].style.display = 'none';
@@ -682,8 +670,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 tabsContent[tabIndex].classList.add('fade');
                 tabsContent[tabIndex].style.display = 'flex';
             }
-            console.log(tabIndex);
-            console.log(tabsContent[tabIndex]);
         });
     }
 
@@ -704,7 +690,6 @@ window.addEventListener('DOMContentLoaded', () => {
         itemBlock = document.querySelectorAll('.tabheader__item');
 
     addScroll(newsScroll, newsCointainer);
-
     activateElem(itemBlock, 'container__news__item-active');
 
     const newsSubtitle = document.querySelectorAll('.news__subtitle-container'),
@@ -718,6 +703,7 @@ window.addEventListener('DOMContentLoaded', () => {
             newsSubtitle[i].style.backgroundColor = newsCircle[i].style.backgroundColor;
         }
     }
+
     subColorIsCircleColor();
 
     function makeTextInStrongCircleColor(text) {
@@ -725,9 +711,9 @@ window.addEventListener('DOMContentLoaded', () => {
             text[i].style.color = newsCircle[i].style.backgroundColor.replace('0.25', '1');
         }
     }
+
     makeTextInStrongCircleColor(newsSubtitleText);
     makeTextInStrongCircleColor(newsLetter);
-
 
     // reg modal
     const regModal = document.querySelector('.reg'),
@@ -847,7 +833,6 @@ window.addEventListener('DOMContentLoaded', () => {
     const doingItem = document.querySelectorAll('.doing__item'),
         dot = document.querySelectorAll('.slider__dot'),
         charityBg = document.querySelector('.bg__charity');
-
 
     // Функция предзагрузки изображений
     function preloadImages() {
