@@ -716,9 +716,6 @@ window.addEventListener('DOMContentLoaded', () => {
     makeTextInStrongCircleColor(newsLetter);
 
 
-
-
-
     // reg modal
     const regModal = document.querySelector('.reg'),
         enterModal = document.querySelector('.enter__form'),

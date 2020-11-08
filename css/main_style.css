@@ -536,7 +536,7 @@ h2 {
 
 .day {
     font-weight: bold;
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 9px;
 
     color: #2DB346;
@@ -553,7 +553,7 @@ h2 {
 .percent {
     font-family: Fjalla One;
     font-weight: normal;
-    font-size: 63px;
+    font-size: 48px;
     margin-bottom: 9px;
 
     color: rgba(29, 29, 29, 0.7);
