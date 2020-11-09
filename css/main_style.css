@@ -119,6 +119,10 @@ a {
     margin-left: 17.66px;
 }
 
+.blue__link {
+    color: #069;
+}
+
 a:first-child {
     margin-left: 0;
 }
