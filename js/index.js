@@ -276,7 +276,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     mainSlider();
 
-    const sliderBtnMoreAboutShop = document.querySelectorAll('.more-about-btn ');
+    const sliderBtnMoreAboutShop = document.querySelectorAll('.more-about-btn');
 
     animateBtn(sliderBtnMoreAboutShop);
 
