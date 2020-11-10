@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
             slide.innerHTML = `
             <div class="about-btn-container">
-            <a href="https://www.figma.com/proto/CBcwTwYtUe8UbA9hZGetri/more-about-shop?scaling=scale-down-width&node-id=2%3A2" class="more-about-btn" target="_blank">Подробнее о магазине</a>
+            <a href="more_about_shop.html" class="more-about-btn" >Подробнее о магазине</a>
             </div>
             <img src="${this.slideImage}" alt="">
             `;
