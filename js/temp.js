@@ -10,7 +10,11 @@ window.addEventListener('DOMContentLoaded', () => {
         "speed": 400,
         autoplayButtonOutput: false,
         autoplay: true,
-        controls: false
+        controls: true,
+        controlsText: ['', ''],
+        controlsContainer: document.querySelector('.prev-next-container'),
+        prevButton: document.querySelector('.prev__btn'),
+        nextButton: document.querySelector('.next__btn'),
     });
 
     function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
