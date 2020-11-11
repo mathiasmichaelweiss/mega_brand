@@ -2,6 +2,17 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    var slider = tns({
+        container: '#fixedWidth',
+        "fixedWidth": 200,
+        "gutter": 90,
+        "swipeAngle": false,
+        "speed": 400,
+        autoplayButtonOutput: false,
+        autoplay: true,
+        controls: false
+    });
+
     function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
         const burgerIcon = document.querySelector(icon),
             burgerLocation = document.querySelector(menuBurger),

@@ -184,7 +184,6 @@ h2 {
     width: 100%;
     justify-content: flex-end;
     align-items: flex-end;
-    cursor: pointer;
     height: 18px;
 }
 
@@ -197,6 +196,10 @@ h2 {
     width: 15px;
     height: 15px;
     margin-right: 9px;
+}
+
+.persarea {
+    cursor: pointer;
 }
 
 .city__container {

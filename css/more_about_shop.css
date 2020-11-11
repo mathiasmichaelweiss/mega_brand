@@ -42,23 +42,21 @@
     margin-bottom: 68px;
 }
 
-.gallery {
+.gallery-ground {
+    position: relative;
     width: 100%;
+    overflow: hidden;
+}
+
+.gallery {
     display: flex;
 }
 
 .gallery-img-container {
     width: 25%;
-    margin-left: 30px;
 }
 
-.gallery-img-container:first-child {
-    margin-left: 0px;
-}
-
-.gallery_img {
-    width: 100%;
-}
+.gallery_img {}
 
 #remove-margin-bottom {
     margin-bottom: 0;
