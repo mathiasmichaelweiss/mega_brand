@@ -285,21 +285,20 @@ h2 {
 
 .nav__position {
     position: relative;
-    left: -110%;
-    opacity: 0;
-    transition: left 1s linear, opacity 0.7s;
-}
-
-.nav__position-active {
-    position: relative;
     left: 0%;
     opacity: 1;
     transition: left 1s linear, opacity 0.7s;
 }
 
+.nav__position-active {
+    position: relative;
+    left: -110%;
+    opacity: 0;
+    transition: left 1s linear, opacity 0.7s;
+}
+
 .menu__burger {
     margin-right: 20px;
-    /* padding-left: 15px; */
     cursor: pointer;
 }
 
