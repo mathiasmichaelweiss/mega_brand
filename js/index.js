@@ -278,11 +278,16 @@ window.addEventListener('DOMContentLoaded', () => {
         addDataAtribute(currentShop);
         addDataAtribute(street);
         addDataAtribute(sale);
+        addDataAtribute(sliderBtnMoreAboutShop);
+        console.log(sliderBtnMoreAboutShop);
 
         currentShop.forEach(shop => {
             shop.addEventListener('click', (e) => {
                 e.preventDefault();
                 const slideTo = e.target.getAttribute('data-slide-to');
+                /* sliderBtnMoreAboutShop[slideIndex - 1].style.opacity = '0.1';
+                sliderBtnMoreAboutShop[slideIndex].style.opacity = '1';
+                sliderBtnMoreAboutShop[slideIndex].style.transition = 'all 2s'; */
 
                 slideIndex = slideTo;
                 offset = +width.replace('px', '') * (slideTo - 1);
@@ -486,7 +491,7 @@ window.addEventListener('DOMContentLoaded', () => {
     new NewsModalWindow(
         'img/news/img_1.jpg',
         'Открылся новый магазин!',
-        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00. С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
+        'Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00. С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00. С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.Открылся новый магазин по адресу, ул.Крылова 6а, часы работы с 10:00 до 20:00. С другой стороны реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа систем массового участия. Товарищи! укрепление и развитие структуры в значительной степени обуславливает создание новых предложений.',
         '.all__newsmodal',
         'Это кнопка'
     ).render();
@@ -640,7 +645,16 @@ window.addEventListener('DOMContentLoaded', () => {
     const newsModalBody = document.querySelectorAll('.newsmodal-body'),
         moreAboutNews = document.querySelectorAll('.more__about'),
         closeModalBtn = document.querySelectorAll('.close__modal-btn'),
-        goToBtn = document.querySelectorAll('.go__to-btn');
+        goToBtn = document.querySelectorAll('.go__to-btn'),
+        newsModalTextContainer = document.querySelectorAll('.newsmodal-text-container'),
+        newsModalText = document.querySelectorAll('.newsmodal-text');
+
+    newsModalTextContainer.forEach(container => {
+        newsModalText.forEach(text => {
+            console.log(container);
+            addScroll(container, text);
+        });
+    });
 
     function closeNewsModal() {
         closeModalBtn.forEach((item, i) => {

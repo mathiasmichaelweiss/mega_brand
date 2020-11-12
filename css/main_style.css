@@ -370,6 +370,16 @@ h2 {
 
 
 /* Slider and shops menu */
+
+.hidden__slider__btn {
+    opacity: 0;
+}
+
+.show__slider__btn {
+    opacity: 1;
+    transition: all 1s;
+}
+
 .container__slider {
     margin-top: 30px;
     display: flex;
@@ -676,6 +686,7 @@ h2 {
 
 .newsmodal-text-container {
     width: 800px;
+    height: 200px;
 }
 
 .newsmodal-text {
