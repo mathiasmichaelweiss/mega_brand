@@ -163,7 +163,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '.slider__inner'
     ).render();
 
-    new Shop(
+    /* new Shop(
         'Ул. Иркутский тракт, 155',
         '10%',
         '4',
@@ -206,7 +206,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '.current__shops-container',
         'img/slider_img/slide_8.jpg',
         '.slider__inner'
-    ).render();
+    ).render(); */
 
     console.log(document.querySelectorAll('.more-about-btn'));
     console.log(document.querySelectorAll('.slide'));
@@ -251,7 +251,8 @@ window.addEventListener('DOMContentLoaded', () => {
             slides = document.querySelectorAll('.slide'),
             width = window.getComputedStyle(wrapper).width,
             street = document.querySelectorAll('.street'),
-            sale = document.querySelectorAll('.current__sale');
+            sale = document.querySelectorAll('.current__sale'),
+            sliderBtnMoreAboutShop = document.querySelectorAll('.more-about-btn');
 
 
         let slideIndex = 1,
@@ -288,12 +289,11 @@ window.addEventListener('DOMContentLoaded', () => {
                 slideGround.style.transform = `translateX(-${offset}px)`;
             });
         });
+        animateBtn(sliderBtnMoreAboutShop);
     }
     mainSlider();
 
-    const sliderBtnMoreAboutShop = document.querySelectorAll('.more-about-btn');
 
-    animateBtn(sliderBtnMoreAboutShop);
 
 
     // Tiny slider

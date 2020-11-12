@@ -239,7 +239,7 @@ h2 {
 /* Menu */
 .container__menu {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     height: 40px;
 }
 
