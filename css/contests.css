@@ -1,5 +1,9 @@
 /* drawing/conditions/prizes title */
 
+.blue__link {
+    color: #069;
+}
+
 .main-title-container-about-shop {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -82,7 +86,7 @@
     padding-right: 5%;
     padding-bottom: 30px;
     margin-top: 16px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .prizes-items-container {

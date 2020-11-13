@@ -67,7 +67,6 @@ window.addEventListener('DOMContentLoaded', () => {
                 containerNav.classList.add('horison-nav-container');
                 navMouse.forEach(item => {
                     item.classList.add('nav-mouse-horison');
-                    item.classList.remove('nav-mouse');
                 });
             } else {
                 document.querySelector('.burger__icon').classList.add('burger__icon-active');
@@ -80,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     item.classList.add('nav-mouse');
                 });
                 navMouseHorison.forEach(item => {
-                    item.classList.add('nav-mouse');
+                    item.classList.remove('nav-mouse-horison');
                 });
             }
 
