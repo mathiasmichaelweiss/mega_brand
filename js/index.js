@@ -86,7 +86,6 @@ window.addEventListener('DOMContentLoaded', () => {
             } else {
                 menu.classList.remove('container__menu-fixed');
                 nav.classList.remove('nav__position-active-fixed');
-
             }
         };
     }

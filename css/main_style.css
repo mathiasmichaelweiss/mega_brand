@@ -1762,12 +1762,6 @@ input[type="checkbox"]:checked+label::before {
 =============== */
 @media (max-width: 1191px) {
 
-    /* body */
-    body {
-        font-size: 10px;
-    }
-
-
     /* Container */
     .container {
         max-width: 1191px;
@@ -1823,9 +1817,9 @@ input[type="checkbox"]:checked+label::before {
         /* padding-right: 15px; */
     }
 
-    .nav-mouse {
+    /*   .nav-mouse {
         margin-left: 12.5px;
-    }
+    } */
 
     .menu__burger {
         /* margin-right: 20px; */
@@ -1924,9 +1918,9 @@ input[type="checkbox"]:checked+label::before {
         padding-bottom: 0;
     }
 
-    h2 {
+    /*  h2 {
         font-size: 20px;
-    }
+    } */
 
 
     /* footer */
