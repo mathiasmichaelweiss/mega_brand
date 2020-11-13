@@ -266,6 +266,10 @@ h2 {
     margin-top: 10px;
 }
 
+.nav-mouse {
+    margin-left: 52px;
+}
+
 .nav-mouse-horison {
     display: inline-block;
     margin-left: 0px;
