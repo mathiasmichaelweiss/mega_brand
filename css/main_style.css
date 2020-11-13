@@ -1817,9 +1817,9 @@ input[type="checkbox"]:checked+label::before {
         /* padding-right: 15px; */
     }
 
-    /*   .nav-mouse {
+    .nav-mouse {
         margin-left: 12.5px;
-    } */
+    }
 
     .menu__burger {
         /* margin-right: 20px; */
