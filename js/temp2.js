@@ -41,7 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
             const menu = document.querySelector('.container__menu'),
                 nav = document.querySelector('.nav__position-active'),
                 containerNav = document.querySelector('.container__nav'),
-                navMouse = document.querySelectorAll('.nav-mouse');
+                navMouse = document.querySelectorAll('.nav-mouse'),
+                navMouseHorison = document.querySelectorAll('.nav-mouse-horison');
 
             if (window.pageYOffset > 138) {
                 document.querySelector('.burger__icon').classList.remove('burger__icon-active');
@@ -51,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 containerNav.classList.add('horison-nav-container');
                 navMouse.forEach(item => {
                     item.classList.add('nav-mouse-horison');
+                    item.classList.remove('nav-mouse');
                 });
             } else {
                 document.querySelector('.burger__icon').classList.add('burger__icon-active');
@@ -60,6 +62,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 containerNav.classList.remove('horison-nav-container');
                 navMouse.forEach(item => {
                     item.classList.remove('nav-mouse-horison');
+                    item.classList.add('nav-mouse');
+                });
+                navMouseHorison.forEach(item => {
+                    item.classList.add('nav-mouse');
                 });
             }
 
@@ -70,7 +76,6 @@ window.addEventListener('DOMContentLoaded', () => {
             } else {
                 menu.classList.remove('container__menu-fixed');
                 nav.classList.remove('nav__position-active-fixed');
-
             }
         };
     }
