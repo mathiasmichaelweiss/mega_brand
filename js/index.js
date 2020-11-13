@@ -24,6 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
         burgerIcon.classList.add('burger__icon-active');
 
+
+
         burgerLocation.addEventListener('click', () => {
             burgerIcon.classList.toggle('burger__icon-active');
             if (navActivate.classList.contains('nav__position')) {
@@ -49,21 +51,32 @@ window.addEventListener('DOMContentLoaded', () => {
     animateMenuBurger('.burger__icon', '.menu__burger', '.nav-mouse', '.nav');
     animateMenuBurger('.burger__icon-mobile', '.menu__burger-mobile', '.nav-mouse-mobile', '.nav-mobile');
 
-    console.log(window.pageYOffset);
     // fixed menu
     if (document.body.clientWidth >= 913) {
         window.onscroll = function showMenu() {
             const menu = document.querySelector('.container__menu'),
-                nav = document.querySelector('.nav__position-active');
+                nav = document.querySelector('.nav__position-active'),
+                containerNav = document.querySelector('.container__nav'),
+                navMouse = document.querySelectorAll('.nav-mouse');
 
-            if (window.pageYOffset >= 138) {
+            if (window.pageYOffset > 138) {
                 document.querySelector('.burger__icon').classList.remove('burger__icon-active');
-                document.querySelector('.nav').classList.remove('nav__position')
-                document.querySelector('.nav').classList.add('nav__position-active')
+                document.querySelector('.nav').classList.remove('nav__position');
+                document.querySelector('.nav').classList.add('nav__position-active');
+                menu.classList.add('horison-container');
+                containerNav.classList.add('horison-nav-container');
+                navMouse.forEach(item => {
+                    item.classList.add('nav-mouse-horison');
+                });
             } else {
                 document.querySelector('.burger__icon').classList.add('burger__icon-active');
-                document.querySelector('.nav').classList.remove('nav__position-active')
-                document.querySelector('.nav').classList.add('nav__position')
+                document.querySelector('.nav').classList.remove('nav__position-active');
+                document.querySelector('.nav').classList.add('nav__position');
+                menu.classList.remove('horison-container');
+                containerNav.classList.remove('horison-nav-container');
+                navMouse.forEach(item => {
+                    item.classList.remove('nav-mouse-horison');
+                });
             }
 
             if (window.pageYOffset > 140) {
@@ -651,7 +664,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     newsModalTextContainer.forEach(container => {
         newsModalText.forEach(text => {
-            console.log(container);
             addScroll(container, text);
         });
     });
