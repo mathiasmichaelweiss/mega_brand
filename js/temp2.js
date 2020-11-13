@@ -39,16 +39,28 @@ window.addEventListener('DOMContentLoaded', () => {
     if (document.body.clientWidth >= 913) {
         window.onscroll = function showMenu() {
             const menu = document.querySelector('.container__menu'),
-                nav = document.querySelector('.nav__position-active');
+                nav = document.querySelector('.nav__position-active'),
+                containerNav = document.querySelector('.container__nav'),
+                navMouse = document.querySelectorAll('.nav-mouse');
 
-            if (window.pageYOffset >= 138) {
+            if (window.pageYOffset > 138) {
                 document.querySelector('.burger__icon').classList.remove('burger__icon-active');
-                document.querySelector('.nav').classList.remove('nav__position')
-                document.querySelector('.nav').classList.add('nav__position-active')
+                document.querySelector('.nav').classList.remove('nav__position');
+                document.querySelector('.nav').classList.add('nav__position-active');
+                menu.classList.add('horison-container');
+                containerNav.classList.add('horison-nav-container');
+                navMouse.forEach(item => {
+                    item.classList.add('nav-mouse-horison');
+                });
             } else {
                 document.querySelector('.burger__icon').classList.add('burger__icon-active');
-                document.querySelector('.nav').classList.remove('nav__position-active')
-                document.querySelector('.nav').classList.add('nav__position')
+                document.querySelector('.nav').classList.remove('nav__position-active');
+                document.querySelector('.nav').classList.add('nav__position');
+                menu.classList.remove('horison-container');
+                containerNav.classList.remove('horison-nav-container');
+                navMouse.forEach(item => {
+                    item.classList.remove('nav-mouse-horison');
+                });
             }
 
             if (window.pageYOffset > 140) {
