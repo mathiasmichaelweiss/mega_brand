@@ -1854,6 +1854,10 @@ input[type="checkbox"]:checked+label::before {
         width: 17%;
     }
 
+    .news__subtitle-text {
+        font-size: 10px;
+    }
+
     .more__about {
         width: 100%;
         text-align: right;
