@@ -52,18 +52,17 @@ window.addEventListener('DOMContentLoaded', () => {
                 containerNav.classList.add('horison-nav-container');
                 navMouse.forEach(item => {
                     item.classList.add('nav-mouse-horison');
+                    item.classList.remove('nav-mouse');
                 });
+
             } else {
                 document.querySelector('.burger__icon').classList.add('burger__icon-active');
                 document.querySelector('.nav').classList.remove('nav__position-active');
                 document.querySelector('.nav').classList.add('nav__position');
                 menu.classList.remove('horison-container');
                 containerNav.classList.remove('horison-nav-container');
-                navMouse.forEach(item => {
-                    item.classList.remove('nav-mouse-horison');
-                    item.classList.add('nav-mouse');
-                });
                 navMouseHorison.forEach(item => {
+                    item.classList.add('nav-mouse');
                     item.classList.remove('nav-mouse-horison');
                 });
             }
