@@ -256,7 +256,7 @@
     background-image: url(../img/more_about_shop_img/prev.png);
     background-color: rgba(255, 255, 255, 0.2);
     background-repeat: no-repeat;
-    background-position: 2.4em 12em;
+    background-position: 2.4em 9em;
 }
 
 .next__btn {
@@ -266,5 +266,5 @@
     background-image: url(../img/more_about_shop_img/next.png);
     background-color: rgba(255, 255, 255, 0.2);
     background-repeat: no-repeat;
-    background-position: 2.4em 12em;
+    background-position: 2.4em 9em;
 }

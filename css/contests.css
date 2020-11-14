@@ -58,11 +58,12 @@
 
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 1s;
+    transition: box-shadow 1s, transform 1s;
 }
 
 .condition-item:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.01);
     transition: all 0.3s;
 }
 
@@ -104,7 +105,7 @@
 
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 1s;
+    transition: box-shadow 1s, transform 1s;
 }
 
 .prizes__img {
@@ -123,6 +124,7 @@
 
 .prizes-item:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    transform: scale(1.01);
     transition: all 0.3s;
 }
 
@@ -155,4 +157,28 @@
 
 #remove-margin-bottom {
     margin-bottom: 0;
+}
+
+@media (max-width: 1191px) {
+
+    .condition-item {
+        width: 21.6%;
+    }
+
+    .prizes-item {
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 739px) {
+
+    .condition-item {
+        width: 21.59%;
+    }
+
+    .prizes-item {
+        width: 30%;
+    }
+
 }

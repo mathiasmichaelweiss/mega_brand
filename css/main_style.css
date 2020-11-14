@@ -160,6 +160,7 @@ h2 {
 
 /* header */
 .header__inner {
+    position: relative;
     display: flex;
     padding: 40px 0px 39px 0px;
 }
@@ -171,11 +172,14 @@ h2 {
 }
 
 .m-logo {
+    position: absolute;
+    left: 40%;
+    display: flex;
     background-image: url(../img/logo_single.png);
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    width: 34px;
-    height: 45px;
+    background-position: 100% 50%;
+    width: 10%;
+    height: 3.5em;
 }
 
 .personal__area {
@@ -219,6 +223,7 @@ h2 {
 .city {
     display: flex;
     justify-content: left;
+    width: 100%;
     /* text-align: center; */
 }
 
@@ -1766,6 +1771,7 @@ input[type="checkbox"]:checked+label::before {
 =============== */
 @media (max-width: 1191px) {
 
+
     /* Container */
     .container {
         max-width: 1191px;
@@ -1822,7 +1828,7 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .nav-mouse {
-        margin-left: 12.5px;
+        margin-left: 14px;
     }
 
     .menu__burger {
