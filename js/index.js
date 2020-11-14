@@ -664,8 +664,8 @@ window.addEventListener('DOMContentLoaded', () => {
         newsModalTextContainer = document.querySelectorAll('.newsmodal-text-container'),
         newsModalText = document.querySelectorAll('.newsmodal-text');
 
-    newsModalTextContainer[0].style.height = '11em';
-    
+    newsModalTextContainer[0].style.height = '10.8em';
+
     newsModalTextContainer.forEach(container => {
         newsModalText.forEach(text => {
             addScroll(container, text);
