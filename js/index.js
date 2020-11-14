@@ -92,6 +92,8 @@ window.addEventListener('DOMContentLoaded', () => {
                 nav.classList.remove('nav__position-active-fixed');
             }
         };
+    } else {
+        document.querySelector('.burger__icon-mobile').classList.remove('burger__icon-active');
     }
 
     // anchors
