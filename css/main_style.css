@@ -1766,6 +1766,15 @@ input[type="checkbox"]:checked+label::before {
     cursor: pointer;
 }
 
+/* Media
+=============== */
+@media (max-width: 990px) {
+
+    .container__menu-fixed {
+        margin-left: -110px;
+    }
+
+}
 
 /* Media
 =============== */
