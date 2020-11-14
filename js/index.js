@@ -226,9 +226,6 @@ window.addEventListener('DOMContentLoaded', () => {
         '.slider__inner'
     ).render(); */
 
-    console.log(document.querySelectorAll('.more-about-btn'));
-    console.log(document.querySelectorAll('.slide'));
-
 
 
     // Activate shops und scroll
@@ -299,13 +296,13 @@ window.addEventListener('DOMContentLoaded', () => {
         addDataAtribute(sliderBtnMoreAboutShop);
         console.log(sliderBtnMoreAboutShop);
 
+
+
         currentShop.forEach(shop => {
             shop.addEventListener('click', (e) => {
                 e.preventDefault();
                 const slideTo = e.target.getAttribute('data-slide-to');
-                /* sliderBtnMoreAboutShop[slideIndex - 1].style.opacity = '0.1';
-                sliderBtnMoreAboutShop[slideIndex].style.opacity = '1';
-                sliderBtnMoreAboutShop[slideIndex].style.transition = 'all 2s'; */
+
 
                 slideIndex = slideTo;
                 offset = +width.replace('px', '') * (slideTo - 1);
@@ -666,6 +663,8 @@ window.addEventListener('DOMContentLoaded', () => {
         goToBtn = document.querySelectorAll('.go__to-btn'),
         newsModalTextContainer = document.querySelectorAll('.newsmodal-text-container'),
         newsModalText = document.querySelectorAll('.newsmodal-text');
+    console.log(newsModalText);
+    /* newsModalText[0].style. */
 
     newsModalTextContainer.forEach(container => {
         newsModalText.forEach(text => {
