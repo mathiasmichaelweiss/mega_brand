@@ -663,9 +663,9 @@ window.addEventListener('DOMContentLoaded', () => {
         goToBtn = document.querySelectorAll('.go__to-btn'),
         newsModalTextContainer = document.querySelectorAll('.newsmodal-text-container'),
         newsModalText = document.querySelectorAll('.newsmodal-text');
-    console.log(newsModalText);
-    /* newsModalText[0].style. */
 
+    newsModalTextContainer[0].style.height = '11em';
+    
     newsModalTextContainer.forEach(container => {
         newsModalText.forEach(text => {
             addScroll(container, text);
@@ -688,7 +688,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function openCloseModal() {
         moreAboutNews.forEach((btn, i) => {
-            btn.addEventListener('click', () => {
+            btn.addEventListener('click', (e) => {
                 newsModalBody[i].classList.add('fade2');
                 selectNewsModal(i);
             })
