@@ -1,0 +1,65 @@
+.container-feedback-description {
+    margin-top: 81px;
+    background-image: url(../img/contacts/feedback_bg.jpg);
+    height: 28.7em;
+    padding: 26px 36px;
+    font-size: 18px;
+    color: white;
+}
+
+.container-feedback {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.feedback-titles {
+    width: 100%;
+}
+
+.titles-container {}
+
+.hr-title {}
+
+.title__line {}
+
+.remove__mb__line {}
+
+.feedback-form {}
+
+.feedback-item {
+    margin-bottom: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#your__name {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#your__email {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#select-feedback-thema {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.enter__data-feedback {
+    width: 100%;
+}
+
+.feedback-item-question {
+    display: flex;
+}
+
+.thema-title {
+    width: 50%;
+}
+
+.thema {
+    width: 50%;
+}
+
+.container-description {}
+
+.feedback__description {}
