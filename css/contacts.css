@@ -25,6 +25,7 @@
 
 .hr-title:nth-child(2) {
     color: #1d1d1d;
+    padding-left: 1em;
 }
 
 .feedback-form-container {
