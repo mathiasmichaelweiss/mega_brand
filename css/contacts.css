@@ -3,6 +3,8 @@
     display: flex;
     margin-top: 3rem;
     background-image: url(../img/contacts/feedback_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 28.7em;
     padding: 26px 36px;
     font-size: 18px;
@@ -29,7 +31,7 @@
 }
 
 .feedback-form-container {
-    width: 39.6%;
+    width: 50%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -71,20 +73,21 @@
 }
 
 #select-feedback-thema {
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0);
-    width: 30%;
+    width: 15%;
+    margin-left: 5%;
     margin-bottom: 0.08em;
-    justify-self: flex-end;
-    align-content: end;
+    text-align: right;
 }
 
 #your__question {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
-    width: 16.2rem;
+    width: 97.5%;
     height: 9em;
     color: #fff;
-    padding: 1em;
+    padding: 1%;
     margin-bottom: 2.1rem;
 }
 
@@ -96,11 +99,12 @@
 }
 
 .feedback-item-question {
-    width: 18.3rem;
+    width: 100%;
 }
 
 .thema-container {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 0.7em;
@@ -108,7 +112,7 @@
 
 .thema-title {
     display: flex;
-    width: 70%;
+    width: 80%;
     font-size: 0.65em;
     margin-bottom: 0em;
 }
@@ -135,7 +139,7 @@
 }
 
 .feedback__description {
-    padding-left: 4rem;
+    padding-left: 6rem;
 }
 
 .contacts-container {}
