@@ -1,10 +1,12 @@
 .container-feedback-description {
+    position: relative;
+    display: flex;
     margin-top: 81px;
     background-image: url(../img/contacts/feedback_bg.jpg);
     height: 28.7em;
     padding: 26px 36px;
     font-size: 18px;
-    color: white;
+    color: #fff;
 }
 
 .container-feedback {
@@ -14,9 +16,14 @@
 
 .feedback-titles {
     width: 100%;
+    height: 10%;
 }
 
 .titles-container {}
+
+.hr-title:nth-child(2) {
+    color: #1d1d1d;
+}
 
 .hr-title {}
 
@@ -24,42 +31,109 @@
 
 .remove__mb__line {}
 
-.feedback-form {}
-
-.feedback-item {
-    margin-bottom: 14px;
+.feedback-form {
+    height: 78.5%;
+    width: 53%;
     display: flex;
     flex-wrap: wrap;
 }
 
+.feedback-item {
+    width: 100%;
+    margin-bottom: 1.5em;
+    ;
+}
+
 #your__name {
     background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    padding-bottom: 0.5em;
+}
+
+#your__name::placeholder {
+    color: #fff;
 }
 
 #your__email {
     background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid #ffffff;
+    width: 100%;
+    padding-bottom: 0.5em;
+}
+
+#your__email::placeholder {
+    color: #fff;
 }
 
 #select-feedback-thema {
     background-color: rgba(0, 0, 0, 0);
+    width: 30%;
+    margin-bottom: 0.08em;
+    justify-self: flex-end;
+    align-content: end;
+}
+
+#your__question {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #fff;
+    width: 18rem;
+    height: 9em;
+}
+
+#your__question::placeholder {
+    color: #fff;
+    padding: 1em;
 }
 
 .enter__data-feedback {
+    display: flex;
     width: 100%;
+    margin-bottom: 0.5em;
+    padding-top: 20px;
 }
 
 .feedback-item-question {
+    width: 100%;
+}
+
+.thema-container {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 0.7em;
 }
 
 .thema-title {
-    width: 50%;
+    display: flex;
+    width: 70%;
+    font-size: 0.65em;
+    margin-bottom: 0em;
 }
 
 .thema {
-    width: 50%;
+    margin-left: 0.4em;
+    color: #1d1d1d;
 }
 
-.container-description {}
+.question__btn {
+    margin-top: 1em;
+    width: 6em;
+    height: 2em;
+    color: #81CF90;
+
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+
+.container-description {
+    position: absolute;
+    right: 36px;
+    bottom: 26px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 35%;
+    color: #1d1d1d;
+}
 
 .feedback__description {}

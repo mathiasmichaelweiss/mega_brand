@@ -123,17 +123,21 @@
 
                         <div class="feedback-item-question">
                             <label for="" class="enter__data-feedback">Задайте свой вопрос</label>
-                            <div class="thema-title">Тема письма: <p class="thema">вопрос</p>
+                            <div class="thema-container">
+                                <div class="thema-title">Тема письма: <p class="thema">вопрос</p>
+                                </div>
+
+                                <select name="" id="select-feedback-thema">
+                                    <option value="question">вопрос</option>
+                                    <option value="complaint">жалоба</option>
+                                    <option value="advice">совет</option>
+                                    <option value="question__about__job">вопрос по трудоустройству</option>
+                                </select>
                             </div>
 
-                            <select name="" id="select-feedback-thema">
-                                <option value="question">вопрос</option>
-                                <option value="complaint">жалоба</option>
-                                <option value="advice">совет</option>
-                                <option value="question__about__job">вопрос по трудоустройству</option>
-                            </select>
                             <input type="text" id="your__question"
                                 placeholder="Где я могу оставить положительный отзыв?:)">
+                            <button class="question__btn">Отправить</button>
                         </div>
                     </form>
                 </div>
