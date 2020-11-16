@@ -1,18 +1,19 @@
 .container-feedback-description {
     position: relative;
     display: flex;
-    margin-top: 81px;
+    margin-top: 3rem;
     background-image: url(../img/contacts/feedback_bg.jpg);
     height: 28.7em;
     padding: 26px 36px;
     font-size: 18px;
     color: #fff;
-    margin-bottom: 3em;
+    margin-bottom: 3rem;
 }
 
 .container-feedback {
     display: flex;
     flex-wrap: wrap;
+    height: auto;
 }
 
 .feedback-titles {
@@ -26,30 +27,29 @@
     color: #1d1d1d;
 }
 
-.hr-title {}
-
-.title__line {}
-
-.remove__mb__line {}
+.feedback-form-container {
+    width: 39.6%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .feedback-form {
-    height: 78.5%;
-    width: 53%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
 .feedback-item {
     width: 100%;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.5rem;
     ;
 }
 
 #your__name {
     background-color: rgba(0, 0, 0, 0);
     border-bottom: 1px solid #ffffff;
-    width: 100%;
-    padding-bottom: 0.5em;
+    width: 18.3rem;
+    padding-bottom: 0.5rem;
     color: #fff;
 }
 
@@ -60,8 +60,8 @@
 #your__email {
     background-color: rgba(0, 0, 0, 0);
     border-bottom: 1px solid #ffffff;
-    width: 100%;
-    padding-bottom: 0.5em;
+    width: 18.3rem;
+    padding-bottom: 0.5rem;
     color: #fff;
 }
 
@@ -80,23 +80,22 @@
 #your__question {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
-    width: 16.8rem;
+    width: 16.2rem;
     height: 9em;
     color: #fff;
-    padding: 0.7em;
+    padding: 1em;
+    margin-bottom: 2.1rem;
 }
-
-
 
 .enter__data-feedback {
     display: flex;
     width: 100%;
-    margin-bottom: 0.5em;
-    padding-top: 0.72em;
+    margin-bottom: 0.5rem;
+    padding-top: 0.72rem;
 }
 
 .feedback-item-question {
-    width: 100%;
+    width: 18.3rem;
 }
 
 .thema-container {
@@ -119,11 +118,9 @@
 }
 
 .question__btn {
-    margin-top: 1em;
     width: 6em;
     height: 2em;
     color: #81CF90;
-
     background: #FFFFFF;
     border-radius: 10px;
 }
@@ -132,8 +129,6 @@
     position: absolute;
     right: 36px;
     bottom: 26px;
-    align-items: flex-end;
-    justify-content: flex-end;
     width: 35%;
     color: #1d1d1d;
 }
