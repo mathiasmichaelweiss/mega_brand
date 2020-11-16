@@ -79,18 +79,17 @@
     border: 1px solid #fff;
     width: 18rem;
     height: 9em;
+    color: #fff;
+    padding: 0.7em;
 }
 
-#your__question::placeholder {
-    color: #fff;
-    padding: 1em;
-}
+
 
 .enter__data-feedback {
     display: flex;
     width: 100%;
     margin-bottom: 0.5em;
-    padding-top: 20px;
+    padding-top: 0.72em;
 }
 
 .feedback-item-question {
