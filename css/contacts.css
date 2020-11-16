@@ -133,7 +133,9 @@
     color: #1d1d1d;
 }
 
-.feedback__description {}
+.feedback__description {
+    padding-left: 4rem;
+}
 
 .contacts-container {}
 
