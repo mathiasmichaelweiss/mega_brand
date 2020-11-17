@@ -22,7 +22,6 @@ let select = function () {
             currentText = select.querySelector('.select__current');
         currentText.innerText = text;
         select.classList.remove('is-active');
-
     }
 
 };
