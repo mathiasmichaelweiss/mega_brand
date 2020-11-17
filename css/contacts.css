@@ -76,15 +76,6 @@ textarea {
     color: #fff;
 }
 
-#select-feedback-thema {
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0);
-    width: 15%;
-    margin-left: 5%;
-    margin-bottom: 0.08em;
-    text-align: right;
-}
-
 #your__question {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #fff;
@@ -111,7 +102,7 @@ textarea {
     width: 100%;
     flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.5em;
 }
 
 .thema-title {
@@ -204,4 +195,71 @@ textarea {
 .email__item {
     width: 100%;
     margin-bottom: 1em;
+}
+
+/* Custom  select */
+
+.select {
+    position: relative;
+    width: 20%;
+    color: #81CF90;
+}
+
+.select.is-active .select__body {
+    display: block;
+}
+
+.select__header {
+    background-color: #fff;
+    border-radius: 1em;
+    cursor: pointer;
+    display: flex;
+    height: 18px;
+
+}
+
+.select__current {
+    position: relative;
+    z-index: 1000;
+    font-size: 0.7em;
+    line-height: 1.2em;
+    padding-right: 0.5em;
+    overflow: hidden;
+}
+
+.select__icon {
+    align-items: center;
+    background-image: url(../img/contacts/open.svg);
+    background-repeat: no-repeat;
+    background-position: 0.3em 0.16em;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    text-align: center;
+    width: 0.8em;
+    padding-left: 0.3em;
+}
+
+.select__body {
+    background-color: #fff;
+    border-radius: 10px 0 10px 10px;
+    display: none;
+    left: -70px;
+    position: absolute;
+    right: 0;
+    top: 70%;
+    overflow: hidden;
+    padding: 0 0.2rem 0 0.2rem;
+}
+
+.select__item {
+    cursor: pointer;
+    font-size: 0.7em;
+    line-height: 24px;
+    padding: 0.3rem;
+    border-bottom: 0.01em solid #d6d6d6;
+}
+
+.select__item:hover {
+    /* background-color: #f2f2f2; */
 }
