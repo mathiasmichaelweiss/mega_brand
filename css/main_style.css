@@ -269,8 +269,8 @@ h2 {
 
 .nav-mouse-horison {
     display: inline-block;
-    margin-left: 0px;
-    margin-bottom: 7px;
+    margin-left: 0rem;
+    margin-bottom: 0.2rem;
 }
 
 .nav-mouse-horison:nth-child(6) {
@@ -279,6 +279,10 @@ h2 {
 
 .nav-mouse-horison:nth-child(7) {
     width: 36.5%;
+}
+
+.nav-mouse-horison:nth-child(8) {
+    width: 65%;
 }
 
 .container__menu-fixed {
