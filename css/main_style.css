@@ -178,6 +178,7 @@ h2 {
     background-image: ;
     background-repeat: no-repeat;
     background-position: 50% 0;
+    background-size: contain;
     width: 23.5%;
     height: 3.5em;
 }
