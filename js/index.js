@@ -2,6 +2,12 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
+
+    window.onload = function () {
+        const logo = document.querySelector('.m-logo');
+        logo.style.backgroundImage = "url(./img/logo_mega_once.gif)";
+    }
+
     const closeBtn = document.querySelectorAll('.close__btn');
 
     function animateBtn(btn) {
@@ -897,14 +903,8 @@ window.addEventListener('DOMContentLoaded', () => {
     preloadImages(
         'img/charity_slider_image/blago_1.jpg',
         'img/charity_slider_image/blago_2.jpg',
-        'img/charity_slider_image/blago_3.jpg',
-        'img/logo_mega_once.gif'
+        'img/charity_slider_image/blago_3.jpg'
     );
-
-    window.onload = function () {
-        const logo = document.querySelector('.m-logo');
-        logo.style.backgroundImage = "url(../img/logo_mega_once.gif)";
-    }
 
     const images = [
         'rgba(0, 0, 0, 0.2)  url(img/charity_slider_image/blago_1.jpg)',

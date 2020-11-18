@@ -2,7 +2,7 @@
 
 window.onload = function () {
     const logo = document.querySelector('.m-logo');
-    logo.style.backgroundImage = "url(../img/logo_mega_once.gif)";
+    logo.style.backgroundImage = "url(./img/logo_mega_once.gif)";
 }
 
 let select = function () {
