@@ -245,7 +245,7 @@ h2 {
     flex-direction: column;
     justify-content: flex-start;
     width: 110px;
-    height: 200px;
+    height: 350px;
     position: fixed;
     margin-left: -75px;
     z-index: 1010;
@@ -259,7 +259,7 @@ h2 {
     flex-direction: column;
     flex-wrap: wrap;
     width: 110px;
-    height: 200px;
+    height: 350px;
     margin-top: 10px;
 }
 
@@ -270,7 +270,7 @@ h2 {
 .nav-mouse-horison {
     display: inline-block;
     margin-left: 0rem;
-    margin-bottom: 0.2rem;
+    margin-bottom: 1rem;
 }
 
 .nav-mouse-horison:nth-child(6) {
