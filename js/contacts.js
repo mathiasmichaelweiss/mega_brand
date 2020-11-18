@@ -1,5 +1,10 @@
 'use strict';
 
+window.onload = function () {
+    const logo = document.querySelector('.m-logo');
+    logo.style.backgroundImage = "url(../img/logo_mega_once.gif)";
+}
+
 let select = function () {
     const selectHeader = document.querySelectorAll('.select__header');
     const selectItem = document.querySelectorAll('.select__item');

@@ -173,12 +173,12 @@ h2 {
 
 .m-logo {
     position: absolute;
-    left: 40%;
+    left: 38%;
     display: flex;
-    background-image: url(../img/logo_single.png);
+    background-image: ;
     background-repeat: no-repeat;
-    background-position: 100% 50%;
-    width: 10%;
+    background-position: 50% 0;
+    width: 23.5%;
     height: 3.5em;
 }
 
