@@ -1796,13 +1796,12 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .news__title {
-        font-size: 22px;
-        margin-bottom: 74px;
+        font-size: 1.5em;
     }
 
     .news__text {
         width: 80%;
-        font-size: 13px;
+        font-size: 1em;
     }
 
     .project__item-container {
