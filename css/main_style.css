@@ -580,16 +580,17 @@ h2 {
 
 .calendar__column-first {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .calendar__column-second {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-bottom: 80px;
 }
 
 .calendar__item {
-    margin-right: 4.4rem;
+    margin-right: 3.8rem;
     cursor: default;
     margin-top: 20px;
 }
@@ -1770,41 +1771,6 @@ input[type="checkbox"]:checked+label::before {
         height: auto;
         margin: 0 auto;
     }
-
-
-    /* Calendar */
-    .calendar__text {
-        font-size: 13px;
-    }
-
-    .calendar__column-second {
-        max-width: 716px;
-    }
-
-    .day {
-        font-size: 2em;
-    }
-
-    .day__line {
-        width: 78px;
-    }
-
-    .percent {
-        font-size: 3em;
-    }
-
-    .new__delivery {
-        font-size: 13px;
-    }
-
-    .calendar__column-second .calendar__item {
-        margin-right: 34px;
-    }
-
-    .calendar__column-second .calendar__item:nth-child(6) {
-        margin-right: 0;
-    }
-
 
     /* menu */
     .container__menu {
