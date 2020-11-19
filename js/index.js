@@ -187,7 +187,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '.slider__inner'
     ).render();
 
-    /* new Shop(
+    new Shop(
         'Ул. Иркутский тракт, 155',
         '10%',
         '4',
@@ -230,7 +230,7 @@ window.addEventListener('DOMContentLoaded', () => {
         '.current__shops-container',
         'img/slider_img/slide_8.jpg',
         '.slider__inner'
-    ).render(); */
+    ).render();
 
 
 

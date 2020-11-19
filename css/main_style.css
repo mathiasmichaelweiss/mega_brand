@@ -470,8 +470,9 @@ h2 {
     top: 461px;
     z-index: 1000;
     width: 310px;
-    height: 325px;
+    height: 200px;
     background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
@@ -500,7 +501,7 @@ h2 {
 
 .current__shops-container {
     width: 306px;
-    height: 257px;
+    height: 132px;
 }
 
 .current__shop {
@@ -518,7 +519,7 @@ h2 {
 }
 
 .current__shop-active {
-    width: 100%;
+    width: 98.6%;
     color: #fff;
     background: rgba(45, 179, 70, 0.8);
     box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.02);
@@ -542,19 +543,15 @@ h2 {
 .current__calendar {
     font-weight: bold;
     font-size: 18px;
-    margin-left: 21px;
+
 }
 
-.text__column-container {
-    display: flex;
-}
+.text__column-container {}
 
-.calendar__inner {
-    width: 280px;
-}
+.calendar__inner {}
 
 .calendar__title {
-    margin-top: 238px;
+    margin-top: 140px;
 }
 
 .title__line {
@@ -562,14 +559,13 @@ h2 {
 }
 
 .calendar__text {
-    max-width: 280px;
-    height: 170px;
-    margin-top: 20px;
+    display: flex;
+    font-size: 1.3em;
 }
 
 .calendar__green-text {
     font-weight: bold;
-    font-size: 18px;
+    margin-right: 0.3rem;
     color: #2DB346;
     margin-bottom: 16px;
 }
@@ -587,39 +583,20 @@ h2 {
 }
 
 .calendar__column-second {
-    max-width: 981px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-bottom: 80px;
-    margin-top: 20px;
-}
-
-.calendar__column-third {
-    display: flex;
-    margin-bottom: 81px;
 }
 
 .calendar__item {
-    margin-right: 21px;
+    margin-right: 4.4rem;
     cursor: default;
     margin-top: 20px;
 }
 
-.minus__margin {
-    margin-right: 0px;
-}
-
-.correct__calendar-item {
-    margin-right: 27px;
-}
-
-.calendar__item:last-child {
-    margin-right: 0;
-}
-
 .day {
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2em;
     margin-bottom: 9px;
 
     color: #2DB346;
@@ -630,13 +607,14 @@ h2 {
 }
 
 .day__line {
-    margin-bottom: 14px;
+    margin-bottom: 1em;
+    width: 6.2rem;
 }
 
 .percent {
     font-family: Fjalla One;
     font-weight: normal;
-    font-size: 48px;
+    font-size: 3em;
     margin-bottom: 9px;
 
     color: rgba(29, 29, 29, 0.7);
@@ -644,7 +622,7 @@ h2 {
 
 .new__delivery {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1em;
 }
 
 /* news modal */
@@ -856,7 +834,7 @@ h2 {
     flex-wrap: wrap;
     top: 314px;
     width: 98.5%;
-    height: 244px;
+    height: 200px;
     border: 1px solid #EEF0F7;
     border-radius: 10px;
 }
@@ -864,7 +842,7 @@ h2 {
 .tabheader {
     margin-left: 3%;
     max-width: 280px;
-    height: 587px;
+    height: 542px;
     background: #FFFFFF;
     border: 1px solid #EEF0F7;
     border-radius: 10px;
@@ -936,7 +914,7 @@ h2 {
 .news__title {
     font-style: normal;
     font-weight: 800;
-    font-size: 36px;
+    font-size: 1.75em;
     margin-top: 20px;
 
     width: 80%;
@@ -969,8 +947,8 @@ h2 {
 .news__block-title {
     text-align: center;
     width: 100%;
-    height: 50px;
-    margin-top: 7%;
+    padding-bottom: 3%;
+    padding-top: 3%;
     border-bottom: 1px solid #EEF0F7;
     font-style: normal;
     font-weight: bold;
@@ -1074,7 +1052,7 @@ h2 {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
-    height: 52px;
+    padding-top: 2.7%;
     border-top: 1px solid rgba(29, 29, 29, 0.2);
 
     color: #616161;
@@ -1804,15 +1782,15 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .day {
-        font-size: 35px;
+        font-size: 2em;
     }
 
     .day__line {
-        width: 90px;
+        width: 78px;
     }
 
     .percent {
-        font-size: 46px;
+        font-size: 3em;
     }
 
     .new__delivery {
