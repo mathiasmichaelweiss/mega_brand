@@ -1,0 +1,42 @@
+.description-container {
+    display: flex;
+    margin-top: 55px;
+    margin-bottom: 55px;
+}
+
+.description-inner {}
+
+.vacanc-descr-text-block {
+    width: 50%;
+}
+
+.vacanc__title {
+    font-weight: 800;
+    font-size: 1em;
+    margin-bottom: 3rem;
+    line-height: 34px;
+    color: #81CF90;
+}
+
+.vacanc__description {}
+
+.descr-text {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+.descr-text:last-child {
+    margin-bottom: 0px;
+}
+
+.vacanc-descr-image-block {
+    width: 50%;
+}
+
+.vacanc_descr_image {
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    background-image: url(../img/vacancies/vacancies_img.jpg);
+    background-size: cover;
+}
