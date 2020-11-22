@@ -51,7 +51,7 @@
 
 .vacan-item-container {
     width: 100%;
-    overflow: hidden;
+    background-color: #81CF90;
 }
 
 .vacancies-item {
@@ -72,6 +72,10 @@
     position: relative;
     z-index: 101;
     transition: box-shadow 0.2s;
+}
+
+.vac__shadow {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .vacan__name {
@@ -103,13 +107,17 @@
 }
 
 .full-vacan {
-    position: absolute;
-    top: -430px;
-    width: 100%;
-    background-color: #81CF90;
+    border-top: 4px solid #fff;
     font-size: 0.7em;
     display: flex;
     line-height: 1.3rem;
+    margin-top: -31rem;
+    display: none;
+}
+
+.vac__opened {
+    margin-top: 0;
+    display: flex;
 }
 
 .requirement {
@@ -155,4 +163,5 @@
 .white__vacan {
     background-color: #fff;
     color: #81CF90;
+    border-top: 4px solid #81CF90;
 }
