@@ -1068,7 +1068,7 @@ h2 {
     flex-direction: row;
     margin-bottom: 55px;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.2em;
 }
 
 .projects-article {
@@ -1110,7 +1110,7 @@ h2 {
 }
 
 .projects__visual__subtitle {
-    width: 192px;
+    width: 13rem;
     text-align: right;
     color: #FFFFFF;
     margin-bottom: 12px;
@@ -1348,7 +1348,6 @@ h2 {
 .footer__container {
     display: flex;
     height: 98px;
-
 }
 
 .first__block__footer {
@@ -1404,7 +1403,7 @@ h2 {
 
 .social__media__icon {
     position: relative;
-    margin-left: 17px;
+    margin-left: 1rem;
 }
 
 .social-link {
@@ -1416,7 +1415,7 @@ h2 {
 }
 
 .vk {
-    margin-left: 58px;
+    margin-left: 5rem;
 }
 
 
@@ -2907,7 +2906,6 @@ input[type="checkbox"]:checked+label::before {
         height: 560px;
         align-items: center;
         text-align: center;
-
     }
 
     .desktop {
