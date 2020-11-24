@@ -2,7 +2,6 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
-
     window.onload = function () {
         const logo = document.querySelector('.m-logo');
         logo.style.backgroundImage = "url(./img/logo_mega_once.gif)";
@@ -415,7 +414,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         ${this.text}
                         </p>
                     </div>
-                    <div class="go__to-btn">
+                    <div class="go__to-btn" id="go-to-contests">
                         ${this.modalTextBtn}
                     </div>
                 </div>
@@ -447,12 +446,14 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="item__cirlce">
                             <p class="news__latter">${this.newsLatter}</p>
                         </div>
+                        <div class="news-content-block">
                         <div class="news__content-title__date">
                             <div class="news__item-title">${this.title}</div>
                             <div class="news__date">${this.date}</div>
                         </div>
                         <div class="news__content-text">
                             <p class="news__item-text">${this.text}</p>
+                        </div>
                         </div>
                     </div>    
             `;
@@ -670,6 +671,7 @@ window.addEventListener('DOMContentLoaded', () => {
         newsModalTextContainer = document.querySelectorAll('.newsmodal-text-container'),
         newsModalText = document.querySelectorAll('.newsmodal-text');
 
+
     newsModalTextContainer[0].style.height = '10.8em';
 
     newsModalTextContainer.forEach(container => {
@@ -678,14 +680,44 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function closeNewsModal() {
-        closeModalBtn.forEach((item, i) => {
+    function closeNewsModal(whereToClose) {
+        whereToClose.forEach((item, i) => {
             item.addEventListener('click', () => {
                 newsModalBody[i].style.display = 'none';
                 document.querySelector('body').style.overflow = '';
             })
         });
     }
+
+    function closeNewsModalOnBody() {
+        newsModalBody.forEach((item, i) => {
+            item.addEventListener('click', (e) => {
+                console.log(e.target.classList);
+                if (e.target.classList.contains('newsmodal-body')) {
+                    newsModalBody[i].style.display = 'none';
+                    document.querySelector('body').style.overflow = '';
+                }
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.code === 'Escape') {
+                    newsModalBody[i].style.display = 'none';
+                    document.querySelector('body').style.overflow = '';
+                }
+            });
+        });
+    }
+    closeNewsModalOnBody();
+
+    function goToLinkOnClick(currentBtn, link) {
+        let btn = document.getElementById(currentBtn);
+        btn.addEventListener('click', () => {
+            location.href = link;
+        });
+    }
+
+    goToLinkOnClick('go-to-contests', 'contests.html');
+
+
 
     function selectNewsModal(i = 0) {
         newsModalBody[i].style.display = 'flex';
@@ -701,9 +733,11 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
     openCloseModal();
-    closeNewsModal();
+    closeNewsModal(closeModalBtn);
     animateBtn(closeModalBtn);
     animateBtn(goToBtn);
+
+
     // end news modal
 
     function changeTabOnPrevNext() {
