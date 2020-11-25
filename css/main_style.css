@@ -627,6 +627,11 @@ h2 {
 }
 
 /* news modal */
+.news-anchor{
+    width: 10px;
+    height: 100px;
+
+}
 
 .newsmodal-body {
     position: fixed;
