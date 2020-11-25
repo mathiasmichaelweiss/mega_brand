@@ -215,7 +215,8 @@ textarea {
     cursor: pointer;
     display: flex;
     height: 18px;
-
+    overflow: hidden;
+    padding-right: 0.5em;
 }
 
 .select__current {
@@ -224,6 +225,7 @@ textarea {
     font-size: 0.7em;
     line-height: 1.2em;
     margin-right: 0.5em;
+    padding-right: 0.2rem;
 }
 
 .select__icon {

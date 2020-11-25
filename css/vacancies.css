@@ -58,7 +58,7 @@
 .vacan-item-container {
     width: 100%;
     background-color: #81CF90;
-    max-height: 100px;
+    max-height: 7.1rem;
     overflow: hidden;
     transition: max-height 0.5s ease-in;
 }
@@ -119,15 +119,11 @@
     font-size: 0.7em;
     display: flex;
     line-height: 1.3rem;
-    /*     margin-top: -31rem; */
-    /* display: none; */
 }
 
 .vac__opened {
     max-height: 38rem;
     transition: max-height 0.5s ease-in;
-    /* margin-top: 0;
-    display: flex; */
 }
 
 .requirement {
