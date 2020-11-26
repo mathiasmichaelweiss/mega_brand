@@ -160,7 +160,6 @@ h2 {
 
 /* header */
 .header__inner {
-    position: relative;
     display: flex;
     padding: 40px 0px 39px 0px;
 }
@@ -247,7 +246,6 @@ h2 {
     height: 350px;
     position: fixed;
     margin-left: -75px;
-    z-index: 1010;
     top: 40px;
     animation-name: show_menu;
     animation-duration: 1s;
@@ -419,7 +417,8 @@ h2 {
 }
 
 .container__slider {
-    margin-top: 30px;
+    position: relative;
+    margin-top: 0px;
     display: flex;
     justify-content: center;
 }
@@ -465,7 +464,7 @@ h2 {
 
 .shops__window {
     position: absolute;
-    top: 461px;
+    top: 335px;
     z-index: 1000;
     width: 310px;
     height: 200px;
@@ -1938,6 +1937,8 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .header__inner {
+        position: relative;
+        z-index: 1000;
         justify-content: center;
         align-items: center;
     }
@@ -1946,7 +1947,9 @@ input[type="checkbox"]:checked+label::before {
         display: none;
     }
 
-
+    #shops {
+        margin-top: 0rem;
+    }
 
     .city__container {
         display: flex;
@@ -2006,11 +2009,11 @@ input[type="checkbox"]:checked+label::before {
 
     .container__nav-mobile {
         position: absolute;
+        z-index: 1000;
         margin-top: 45px;
         top: 198px;
         margin-left: 88%;
         left: -220px;
-        z-index: 1200;
         top: 30px;
         right: 50px;
         width: 200px;
@@ -2020,12 +2023,20 @@ input[type="checkbox"]:checked+label::before {
     .nav-mobile {
         display: flex;
         flex-direction: row;
+        position: relative;
+        z-index: 1000;
         flex-wrap: wrap;
         width: 200px;
-        height: 300px;
+        height: auto;
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0px 4px 20px rgba(223, 223, 223, 0.25);
         padding: 10px;
+        border: 1px solid black;
+    }
+
+    .nav-mouse {
+        margin-left: 0;
+        margin-bottom: 0.7em;
     }
 
     a {
@@ -2041,20 +2052,38 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .nav__position {
-        position: relative;
         left: 0%;
         opacity: 0;
         transition: left 1s linear, opacity 0.7s;
+        position: relative;
+        z-index: 1000;
     }
 
     .nav__position-active {
-        position: relative;
         left: 0%;
         opacity: 1;
         transition: left 1s linear, opacity 0.7s;
+        position: relative;
+        z-index: 1000;
+    }
+
+    #shops {}
+
+    #toback {}
+
+    .container__nav {
+        overflow: visible;
+    }
+
+    .container__menu {
+        display: none;
+        width: 0;
     }
 
     .menu__burger-mobile {
+        position: absolute;
+        right: 0.8rem;
+        top: 4rem;
         width: 35px;
         height: 30px;
         margin-right: 0px;
@@ -2126,7 +2155,7 @@ input[type="checkbox"]:checked+label::before {
 
 
     .shops__window {
-        top: 373px;
+        top: 218px;
     }
 
     .calendar__title {
@@ -2216,7 +2245,6 @@ input[type="checkbox"]:checked+label::before {
     .tabheader {
         position: relative;
         z-index: 1002;
-        top: -10.4rem;
         height: 8rem;
         overflow: hidden;
         margin-left: 0;
@@ -2256,7 +2284,7 @@ input[type="checkbox"]:checked+label::before {
         display: block;
         position: relative;
         z-index: 1300;
-        bottom: 27.2rem;
+        bottom: 0.4rem;
         right: 0.15rem;
         width: 255px;
         height: 35px;
@@ -2289,6 +2317,8 @@ input[type="checkbox"]:checked+label::before {
     .news-tab {
         width: 100%;
         flex-wrap: wrap;
+        position: relative;
+        height: 15rem;
     }
 
     .tabcontainer {
@@ -2436,27 +2466,52 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .projects__title {
-        font-size: 36px;
-        margin-bottom: 44px;
+        margin-bottom: 1rem;
+        font-size: 1.4em;
         text-align: center;
-        margin-top: 39px;
+        margin-top: 0px;
+    }
+
+    .projects-article {
+        margin-right: 0;
+        width: 50%;
+    }
+
+    .projects-background {
+        width: 100%;
+        height: 100%;
+        background: url(../img/project_main.jpg);
+        background-blend-mode: soft-light;
+        background-position: -13rem 0;
+        background-repeat: no-repeat;
+    }
+
+    .projects-visual {
+        width: 50%;
+    }
+
+    .projects__visual__subtitle {
+        width: 8rem;
+    }
+
+    .projects__visual__btn {
+        font-weight: 800;
+        font-size: 0.5em;
+        width: 8rem;
+        background: rgb(0, 194, 33, .5);
     }
 
     .projects__subtitle {
         display: flex;
         margin: 0 auto;
-        margin-bottom: 40px;
+        margin-bottom: 1.5em;
+        font-size: 1em;
         max-width: 64%;
         text-align: center;
     }
 
-    .projects__description {
-        max-width: 50%;
-        height: 65px;
-        text-align: center;
-        line-height: 22px;
-        margin: 0 auto;
-        margin-bottom: 80px;
+    .projects__text {
+        font-size: 0.9em;
     }
 
     .bottonline__projects-mob {
@@ -2476,9 +2531,7 @@ input[type="checkbox"]:checked+label::before {
         margin: 0 auto;
     }
 
-    .project__list {
-        font-size: 14px;
-    }
+    .project__list {}
 
     .project__item {
         margin-bottom: 15px;
@@ -2494,7 +2547,6 @@ input[type="checkbox"]:checked+label::before {
     .project__photo-text {
         color: #80FF8C;
         font-weight: 500;
-        font-size: 14px;
         margin-right: 13px;
     }
 
@@ -2512,7 +2564,6 @@ input[type="checkbox"]:checked+label::before {
 
     .more__project-text {
         margin-top: 3%;
-        font-size: 14px;
     }
 
     .partners__block {
