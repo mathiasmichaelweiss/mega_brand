@@ -2082,6 +2082,7 @@ input[type="checkbox"]:checked+label::before {
 
     .menu__burger-mobile {
         position: absolute;
+        z-index: 2000;
         right: 0.8rem;
         top: 4rem;
         width: 35px;
