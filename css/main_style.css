@@ -1983,6 +1983,19 @@ input[type="checkbox"]:checked+label::before {
         justify-content: start;
     }
 
+    .m-logo {
+        position: absolute;
+        left: 30%;
+        top: 3.2rem;
+        display: flex;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: contain;
+        width: 40%;
+        height: 3.5em;
+    }
+
+
     /*  Menu */
 
     .container__menu {
