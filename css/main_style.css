@@ -2051,6 +2051,7 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .nav-mouse {
+        display: none;
         margin-left: 0;
         margin-bottom: 0.7em;
     }

@@ -97,15 +97,24 @@ window.addEventListener('DOMContentLoaded', () => {
             burgerIcon.classList.remove('burger__icon-active');
         }
 
-
         burgerLocation.addEventListener('click', () => {
             burgerIcon.classList.toggle('burger__icon-active');
             if (navActivate.classList.contains('nav__position')) {
                 navActivate.classList.remove('nav__position');
                 navActivate.classList.add('nav__position-active');
+                document.querySelectorAll('.nav-mouse').forEach(item => {
+                    item.style.display = 'inline-block';
+                    document.querySelector('.container__nav-mobile').style.display = 'block';
+                });
             } else {
                 navActivate.classList.add('nav__position');
                 navActivate.classList.remove('nav__position-active');
+                document.querySelectorAll('.nav-mouse').forEach(item => {
+                    window.setTimeout(() => {
+                        item.style.display = 'none';
+                        document.querySelector('.container__nav-mobile').style.display = 'none';
+                    }, 500);
+                });
             }
         });
 
