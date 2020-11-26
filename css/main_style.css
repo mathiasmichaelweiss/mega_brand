@@ -1981,7 +1981,6 @@ input[type="checkbox"]:checked+label::before {
     .logo_header {
         display: flex;
         justify-content: start;
-        width: 100%;
     }
 
     /*  Menu */
@@ -2083,10 +2082,10 @@ input[type="checkbox"]:checked+label::before {
     .menu__burger-mobile {
         position: absolute;
         z-index: 2000;
-        right: 0.8rem;
+        right: 0rem;
         top: 4rem;
-        width: 35px;
-        height: 30px;
+        width: 50px;
+        height: 55px;
         margin-right: 0px;
         /* padding-left: 15px; */
         cursor: pointer;
