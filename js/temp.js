@@ -103,7 +103,11 @@ window.addEventListener('DOMContentLoaded', () => {
             nav = document.querySelectorAll(navMouse),
             navActivate = document.querySelector(navActive);
 
-        burgerIcon.classList.add('burger__icon-active');
+        if (document.querySelector('.container').clientWidth > 421) {
+            burgerIcon.classList.add('burger__icon-active');
+        } else {
+            burgerIcon.classList.remove('burger__icon-active');
+        }
 
         burgerLocation.addEventListener('click', () => {
             burgerIcon.classList.toggle('burger__icon-active');

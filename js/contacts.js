@@ -1,5 +1,10 @@
 'use strict';
 
+window.onload = function () {
+    const logo = document.querySelector('.m-logo');
+    logo.style.backgroundImage = "url(./img/logo_mega_once.gif)";
+}
+
 function animateBtn(btn) {
     btn.forEach((item) => {
         item.addEventListener('mouseover', () => {
@@ -116,7 +121,11 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
         nav = document.querySelectorAll(navMouse),
         navActivate = document.querySelector(navActive);
 
-    burgerIcon.classList.add('burger__icon-active');
+    if (document.querySelector('.container').clientWidth > 421) {
+        burgerIcon.classList.add('burger__icon-active');
+    } else {
+        burgerIcon.classList.remove('burger__icon-active');
+    }
 
     burgerLocation.addEventListener('click', () => {
         burgerIcon.classList.toggle('burger__icon-active');
