@@ -2,6 +2,12 @@
 
 window.addEventListener('DOMContentLoaded', () => {
 
+    const newsSubMob = document.getElementById('news__sub-mobile');
+    console.log(newsSubMob);
+    newsSubMob.addEventListener('click', (e) => {
+        console.log(e.target)
+    });
+
     window.onload = function () {
         const logo = document.querySelector('.m-logo');
         logo.style.backgroundImage = "url(./img/logo_mega_once.gif)";
@@ -780,10 +786,19 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const newsScroll = document.querySelector('.news__block-scroll'),
         newsCointainer = document.querySelector('.container__news'),
-        itemBlock = document.querySelectorAll('.tabheader__item');
+        itemBlock = document.querySelectorAll('.tabheader__item'),
+        tabContainerDescr = document.querySelector('.tabcontent__descr'),
+        tabHeader = document.querySelector('.tabheader');
+
+    const pageContainer = document.querySelector('.container');
+    console.log(pageContainer.clientWidth);
+    if (pageContainer.clientWidth <= 420) {
+        tabHeader.style.width = tabContainerDescr.clientWidth + 'px';
+    }
 
     addScroll(newsScroll, newsCointainer);
     activateElem(itemBlock, 'container__news__item-active');
+
 
     const newsSubtitle = document.querySelectorAll('.news__subtitle-container'),
         newsCircle = document.querySelectorAll('.item__cirlce'),
