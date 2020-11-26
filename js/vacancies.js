@@ -1,5 +1,40 @@
 'use strict';
 
+function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
+    const burgerIcon = document.querySelector(icon),
+        burgerLocation = document.querySelector(menuBurger),
+        nav = document.querySelectorAll(navMouse),
+        navActivate = document.querySelector(navActive);
+
+    burgerIcon.classList.add('burger__icon-active');
+
+
+
+    burgerLocation.addEventListener('click', () => {
+        burgerIcon.classList.toggle('burger__icon-active');
+        if (navActivate.classList.contains('nav__position')) {
+            navActivate.classList.remove('nav__position');
+            navActivate.classList.add('nav__position-active');
+        } else {
+            navActivate.classList.add('nav__position');
+            navActivate.classList.remove('nav__position-active');
+        }
+    });
+
+    nav.forEach(item => {
+        item.addEventListener('mouseover', () => {
+            item.classList.add('nav__mouseover');
+        });
+
+        item.addEventListener('mouseout', () => {
+            item.classList.remove('nav__mouseover');
+        });
+    });
+}
+
+animateMenuBurger('.burger__icon', '.menu__burger', '.nav-mouse', '.nav');
+animateMenuBurger('.burger__icon-mobile', '.menu__burger-mobile', '.nav-mouse-mobile', '.nav-mobile');
+
 function animateBtn(btn) {
     btn.forEach((item) => {
         item.addEventListener('mouseover', () => {
