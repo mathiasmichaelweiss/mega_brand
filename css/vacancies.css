@@ -264,4 +264,17 @@
         max-height: 50rem;
     }
 
+    footer {
+        padding-top: 5rem;
+        background-color: #6AC97C;
+    }
+
+    .color__text__white {
+        color: #fff;
+    }
+
+    .mbf:last-child {
+        margin-bottom: 2rem;
+    }
+
 }

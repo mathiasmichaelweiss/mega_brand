@@ -829,10 +829,7 @@ window.addEventListener('DOMContentLoaded', () => {
         tabHeader = document.querySelector('.tabheader');
 
     const pageContainer = document.querySelector('.container');
-    console.log(pageContainer.clientWidth);
-    if (pageContainer.clientWidth <= 420) {
-        tabHeader.style.width = tabContainerDescr.clientWidth + 'px';
-    }
+ 
 
     addScroll(newsScroll, newsCointainer);
     activateElem(itemBlock, 'container__news__item-active');
