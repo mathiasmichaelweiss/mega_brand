@@ -136,15 +136,15 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
     function displayNoneOnTIme() {
         if (document.querySelector('.container').clientWidth < 421) {
             document.querySelectorAll('.nav-mouse').forEach(item => {
-                window.setTimeout(() => {
-                    item.style.display = 'none';
-                    document.querySelector('.container__nav-mobile').style.display = 'none';
-                }, 300);
+                /* window.setTimeout(() => { */
+                item.style.display = 'none';
+                document.querySelector('.container__nav-mobile').style.display = 'none';
+                /* }, 300); */
             });
         }
     }
 
-    function displayNone() {
+    function displayBlock() {
         if (document.querySelector('.container').clientWidth < 421) {
             document.querySelectorAll('.nav-mouse').forEach(item => {
                 item.style.display = 'inline-block';
@@ -156,14 +156,19 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
     burgerLocation.addEventListener('click', () => {
         burgerIcon.classList.toggle('burger__icon-active');
         if (navActivate.classList.contains('nav__position')) {
-            navActivate.classList.remove('nav__position');
-            navActivate.classList.add('nav__position-active');
-            burgerIconMobile.classList.add('burger__icon-mobile-white');
-            displayNone();
+            window.setTimeout(() => {
+                navActivate.classList.remove('nav__position');
+                navActivate.classList.add('nav__position-active');
+                burgerIconMobile.classList.add('burger__icon-mobile-white');
+            }, 300);
+
+            displayBlock();
         } else {
+            window.setTimeout(() => {
+                navActivate.classList.add('nav__position');
+                navActivate.classList.remove('nav__position-active');
+            }, 300);
             burgerIconMobile.classList.remove('burger__icon-mobile-white');
-            navActivate.classList.add('nav__position');
-            navActivate.classList.remove('nav__position-active');
             displayNoneOnTIme();
         }
     });
