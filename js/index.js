@@ -30,11 +30,15 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
     function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
         const burgerIcon = document.querySelector(icon),
             burgerLocation = document.querySelector(menuBurger),
             nav = document.querySelectorAll(navMouse),
-            navActivate = document.querySelector(navActive);
+            navActivate = document.querySelector(navActive),
+            burgerIconMobile = document.querySelector('.burger__icon-mobile');
+
+
 
         if (document.querySelector('.container').clientWidth > 421) {
             burgerIcon.classList.add('burger__icon-active');
@@ -47,18 +51,20 @@ window.addEventListener('DOMContentLoaded', () => {
             if (navActivate.classList.contains('nav__position')) {
                 navActivate.classList.remove('nav__position');
                 navActivate.classList.add('nav__position-active');
+                burgerIconMobile.classList.add('burger__icon-mobile-white');
                 document.querySelectorAll('.nav-mouse').forEach(item => {
                     item.style.display = 'inline-block';
                     document.querySelector('.container__nav-mobile').style.display = 'block';
                 });
             } else {
+                burgerIconMobile.classList.remove('burger__icon-mobile-white');
                 navActivate.classList.add('nav__position');
                 navActivate.classList.remove('nav__position-active');
                 document.querySelectorAll('.nav-mouse').forEach(item => {
                     window.setTimeout(() => {
                         item.style.display = 'none';
                         document.querySelector('.container__nav-mobile').style.display = 'none';
-                    }, 500);
+                    }, 1000);
                 });
             }
         });
