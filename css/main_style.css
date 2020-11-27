@@ -2960,6 +2960,10 @@ input[type="checkbox"]:checked+label::before {
         background-color: #6AC97C;
     }
 
+    .tel {
+        color: #fff;
+    }
+
     .color__text__white {
         color: #fff;
     }
