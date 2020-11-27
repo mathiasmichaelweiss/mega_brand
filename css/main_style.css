@@ -2304,7 +2304,7 @@ input[type="checkbox"]:checked+label::before {
     .tabheader {
         position: relative;
         z-index: 1002;
-        height: 9rem;
+        height: 12rem;
         overflow: hidden;
         margin-left: 0;
         max-width: 100%;
@@ -2343,7 +2343,7 @@ input[type="checkbox"]:checked+label::before {
         display: block;
         position: relative;
         z-index: 1300;
-        bottom: -0.5rem;
+        bottom: -3.7rem;
         right: 0.15rem;
         width: 255px;
         height: 35px;
@@ -2444,7 +2444,7 @@ input[type="checkbox"]:checked+label::before {
     .tabheader__items {
         position: relative;
         z-index: 1000;
-        height: 9rem;
+        height: 12rem;
     }
 
     .news__block-scroll {
