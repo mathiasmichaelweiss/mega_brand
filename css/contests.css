@@ -182,3 +182,50 @@
     }
 
 }
+
+@media (max-width: 745px) {
+    .main-title-container-about-shop {
+        margin-top: 0;
+    }
+
+    .main-title-about-shop {
+        font-size: 2em;
+    }
+
+    .big__line__about__shop {
+        width: 19.6rem;
+    }
+
+    .codition-items-container {
+        margin-bottom: 2rem;
+    }
+
+    .condition-item {
+        width: 31.5%;
+        font-size: 1em;
+        height: 28rem;
+        margin-left: 2%;
+    }
+
+    .condition-item:nth-child(4) {
+        margin-left: 0;
+    }
+
+    .condition-item:nth-child(5) {
+        margin-left: 2%;
+    }
+
+    .condition-item:nth-child(7) {
+        margin-left: 0;
+    }
+
+    .blue__link {
+        font-size: 0.8em;
+    }
+
+    .prizes-item {
+        width: 100%;
+        margin-left: 0;
+    }
+
+}

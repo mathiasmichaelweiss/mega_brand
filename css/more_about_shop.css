@@ -1,6 +1,14 @@
+.header__inner {
+    padding-bottom: 1rem;
+}
+
 .full-screen-container {
     width: 100%;
     background-color: #81CF90;
+}
+
+.mobile {
+    display: none;
 }
 
 .change__footer__text__color__white {
@@ -79,15 +87,16 @@
     flex-direction: row;
 }
 
-.title__line {}
-
 .hr-title {
     width: 50%;
 }
 
+
 .hr-title:nth-child(2) {
     text-align: right;
 }
+
+
 
 .reviews__line {
     transform: scale(-1, 1)
@@ -95,6 +104,10 @@
 
 .remove__mb__line {
     margin-bottom: 38px;
+}
+
+.hr-title-mobile {
+    display: none;
 }
 
 .hours-container {
@@ -190,8 +203,15 @@
     display: flex;
 }
 
+.hr-title-mobile {
+    display: block;
+}
 
-.tel {
+.remove-in-mobile {
+    display: block;
+}
+
+.tel2 {
     display: flex;
     align-items: center;
     height: 26px;
@@ -267,4 +287,84 @@
     background-color: rgba(255, 255, 255, 0.2);
     background-repeat: no-repeat;
     background-position: 2.4em 9em;
+}
+
+.hr-title-mobile {
+    display: none;
+}
+
+@media (max-width: 745px) {
+
+    .shop-and-map {
+        flex-wrap: wrap;
+        margin-bottom: 25rem;
+    }
+
+    .shop__photo {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .shop__map {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .tel-and-review-function {
+        margin-bottom: 8rem;
+    }
+
+    .reviews-container {
+        width: 100%;
+    }
+
+    .review-contant {
+        width: 80%;
+    }
+
+    .hours-reviews-container {
+        flex-wrap: wrap;
+    }
+
+    .hours-container {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+
+    .reviews-container {
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+
+    .tel2 {
+        position: absolute;
+        z-index: 1000;
+        top: 107.5rem;
+    }
+
+    .bottom__line {
+        display: none;
+    }
+
+    .deletemb {
+        margin-bottom: 0;
+    }
+
+    .add-review-container {
+        margin-left: 9rem;
+    }
+
+    .tel-and-review-function {
+        margin-bottom: 6rem;
+    }
+
+    .remove-in-mobile {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+
 }
