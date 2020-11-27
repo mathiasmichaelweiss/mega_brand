@@ -311,6 +311,7 @@
     }
 
     .tel-and-review-function {
+        width: 100%;
         margin-bottom: 8rem;
     }
 
@@ -337,6 +338,7 @@
     }
 
     .tel2 {
+        width: 50%;
         font-size: 1em;
         position: absolute;
         z-index: 1000;
