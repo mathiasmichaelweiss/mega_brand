@@ -156,18 +156,18 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
     burgerLocation.addEventListener('click', () => {
         burgerIcon.classList.toggle('burger__icon-active');
         if (navActivate.classList.contains('nav__position')) {
-            window.setTimeout(() => {
-                navActivate.classList.remove('nav__position');
-                navActivate.classList.add('nav__position-active');
-                burgerIconMobile.classList.add('burger__icon-mobile-white');
-            }, 300);
+            /* window.setTimeout(() => { */
+            navActivate.classList.remove('nav__position');
+            navActivate.classList.add('nav__position-active');
+            burgerIconMobile.classList.add('burger__icon-mobile-white');
+            /* }, 300); */
 
             displayBlock();
         } else {
-            window.setTimeout(() => {
-                navActivate.classList.add('nav__position');
-                navActivate.classList.remove('nav__position-active');
-            }, 300);
+            /* window.setTimeout(() => { */
+            navActivate.classList.add('nav__position');
+            navActivate.classList.remove('nav__position-active');
+            /*  }, 300); */
             burgerIconMobile.classList.remove('burger__icon-mobile-white');
             displayNoneOnTIme();
         }
