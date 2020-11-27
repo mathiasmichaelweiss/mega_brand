@@ -12,12 +12,35 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
     const burgerIcon = document.querySelector(icon),
         burgerLocation = document.querySelector(menuBurger),
         nav = document.querySelectorAll(navMouse),
-        navActivate = document.querySelector(navActive);
+        navActivate = document.querySelector(navActive),
+        burgerIconMobile = document.querySelector('.burger__icon-mobile');
 
-    if (document.querySelector('.container').clientWidth > 421) {
+    if (document.querySelector('.container').clientWidth < 421) {
         burgerIcon.classList.add('burger__icon-active');
+        document.querySelector('.container__nav-mobile').style.display = 'none';
     } else {
         burgerIcon.classList.remove('burger__icon-active');
+        document.querySelector('.container__nav-mobile').style.display = 'block';
+    }
+
+    function displayNoneOnTIme() {
+        if (document.querySelector('.container').clientWidth < 421) {
+            document.querySelectorAll('.nav-mouse').forEach(item => {
+                window.setTimeout(() => {
+                    item.style.display = 'none';
+                    document.querySelector('.container__nav-mobile').style.display = 'none';
+                }, 300);
+            });
+        }
+    }
+
+    function displayNone() {
+        if (document.querySelector('.container').clientWidth < 421) {
+            document.querySelectorAll('.nav-mouse').forEach(item => {
+                item.style.display = 'inline-block';
+                document.querySelector('.container__nav-mobile').style.display = 'block';
+            });
+        }
     }
 
     burgerLocation.addEventListener('click', () => {
@@ -25,19 +48,13 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
         if (navActivate.classList.contains('nav__position')) {
             navActivate.classList.remove('nav__position');
             navActivate.classList.add('nav__position-active');
-            document.querySelectorAll('.nav-mouse').forEach(item => {
-                item.style.display = 'inline-block';
-                document.querySelector('.container__nav-mobile').style.display = 'block';
-            });
+            burgerIconMobile.classList.add('burger__icon-mobile-white');
+            displayNone();
         } else {
+            burgerIconMobile.classList.remove('burger__icon-mobile-white');
             navActivate.classList.add('nav__position');
             navActivate.classList.remove('nav__position-active');
-            document.querySelectorAll('.nav-mouse').forEach(item => {
-                window.setTimeout(() => {
-                    item.style.display = 'none';
-                    document.querySelector('.container__nav-mobile').style.display = 'none';
-                }, 500);
-            });
+            displayNoneOnTIme();
         }
     });
 
