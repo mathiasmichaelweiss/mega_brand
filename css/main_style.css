@@ -2078,9 +2078,9 @@ input[type="checkbox"]:checked+label::before {
     }
 
     .nav__position {
-        left: 130%;
+        left: 40%;
         opacity: 0;
-        transition: left .3s linear, opacity 0.9s;
+        transition: left .3s linear, opacity .5s;
         position: relative;
         z-index: 1000;
     }

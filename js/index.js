@@ -74,13 +74,13 @@ window.addEventListener('DOMContentLoaded', () => {
                     navActivate.classList.add('nav__position-active');
                     burgerIconMobile.classList.add('burger__icon-mobile-white');
                 }, 300);
+
                 displayBlock();
             } else {
                 window.setTimeout(() => {
                     navActivate.classList.add('nav__position');
                     navActivate.classList.remove('nav__position-active');
                 }, 300);
-                navActivate.classList.remove('nav__position-active');
                 burgerIconMobile.classList.remove('burger__icon-mobile-white');
                 displayNoneOnTIme();
             }
