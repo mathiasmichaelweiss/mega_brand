@@ -261,6 +261,107 @@ textarea {
     border-bottom: 0.01em solid #d6d6d6;
 }
 
+.hr-title-mob {
+    display: none;
+}
+
 .select__item:hover {
     /* background-color: #f2f2f2; */
+}
+
+@media (max-width: 745px) {
+
+    .hr-title-mob {
+        display: block;
+    }
+
+    .container-feedback {
+        display: block;
+    }
+
+    h2 {
+        font-size: 1.169em;
+    }
+
+    .title__line {
+        margin-bottom: 0;
+    }
+
+    .enter__data-feedback {
+        font-size: 0.8em;
+    }
+
+    .feedback-item {
+        margin-bottom: 0;
+    }
+
+    .feedback-form-container {
+        width: 100%;
+    }
+
+    .container-description {
+        width: 100%;
+    }
+
+    .hr-title:nth-child(2) {
+        display: none;
+    }
+
+    .container-description {
+        position: block;
+        width: 100%;
+        color: #1d1d1d;
+    }
+
+    .hr-title-mob {
+        padding-left: 5.2rem;
+        padding-bottom: 2rem;
+    }
+
+    .feedback__description {
+        padding-left: 5.3rem;
+    }
+
+    #your__question {
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid #fff;
+        width: 97.5%;
+        height: 3em;
+        color: #fff;
+        padding: 1%;
+        margin-bottom: 1rem;
+    }
+
+    .changefz {
+        font-size: 1.24em;
+    }
+
+    .contacts-container {
+        font-size: 0.9em;
+    }
+
+    .store-addresses {
+        width: 40%;
+    }
+
+    .telephones {
+        width: 25%;
+        padding-left: 2em;
+    }
+
+    .emails {
+        width: 35%;
+        padding-left: 2em;
+    }
+
+    .mobile {
+        margin-top: 3.5rem;
+    }
+
+    .footer__container {
+        color: #fff;
+        background-color: green;
+    }
+
+
 }
