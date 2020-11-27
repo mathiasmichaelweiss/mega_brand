@@ -337,9 +337,10 @@
     }
 
     .tel2 {
+        font-size: 1em;
         position: absolute;
         z-index: 1000;
-        top: 107.5rem;
+        top: 106rem;
     }
 
     .bottom__line {
