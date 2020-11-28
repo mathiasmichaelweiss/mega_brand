@@ -190,10 +190,11 @@
 
     .main-title-about-shop {
         font-size: 2em;
+        width: 90%;
     }
 
     .big__line__about__shop {
-        width: 19.6rem;
+        width: 100%;
     }
 
     .codition-items-container {

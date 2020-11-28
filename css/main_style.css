@@ -1947,7 +1947,7 @@ input[type="checkbox"]:checked+label::before {
         z-index: 1000;
         justify-content: center;
         align-items: center;
-        padding: 2rem 0px 2rem 0px;
+        padding: 2rem 0px 3rem 0px;
     }
 
     .personal__area {
@@ -1997,7 +1997,7 @@ input[type="checkbox"]:checked+label::before {
     .m-logo {
         position: absolute;
         left: 30%;
-        top: 3.2rem;
+        top: 2.5rem;
         display: flex;
         background-repeat: no-repeat;
         background-position: 50% 0;

@@ -311,6 +311,7 @@ textarea {
         position: block;
         width: 100%;
         color: #1d1d1d;
+        bottom: 2.5rem;
     }
 
     .hr-title-mob {
