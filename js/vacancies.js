@@ -15,7 +15,7 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
         navActivate = document.querySelector(navActive),
         burgerIconMobile = document.querySelector('.burger__icon-mobile');
 
-    if (document.querySelector('.container').clientWidth < 421) {
+    if (document.querySelector('.container').clientWidth < 750) {
         burgerIcon.classList.add('burger__icon-active');
         document.querySelector('.container__nav-mobile').style.display = 'none';
     } else {
@@ -24,7 +24,7 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
     }
 
     function displayNoneOnTIme() {
-        if (document.querySelector('.container').clientWidth < 421) {
+        if (document.querySelector('.container').clientWidth < 750) {
             document.querySelectorAll('.nav-mouse').forEach(item => {
                 /* window.setTimeout(() => { */
                 item.style.display = 'none';
@@ -35,7 +35,7 @@ function animateMenuBurger(icon, menuBurger, navMouse, navActive) {
     }
 
     function displayBlock() {
-        if (document.querySelector('.container').clientWidth < 421) {
+        if (document.querySelector('.container').clientWidth < 750) {
             document.querySelectorAll('.nav-mouse').forEach(item => {
                 item.style.display = 'inline-block';
                 document.querySelector('.container__nav-mobile').style.display = 'block';
