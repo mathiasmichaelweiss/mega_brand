@@ -295,6 +295,10 @@
 
 @media (max-width: 745px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     .shop-and-map {
         flex-wrap: wrap;
         margin-bottom: 25rem;
@@ -303,6 +307,10 @@
     .shop__photo {
         width: 100%;
         margin-bottom: 1rem;
+    }
+
+    .shop__photo__img {
+        width: 100%;
     }
 
     .shop__map {

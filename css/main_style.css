@@ -1935,6 +1935,11 @@ input[type="checkbox"]:checked+label::before {
 
 /* Mobile */
 @media (max-width: 745px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
     .container {}
 
     .header__inner {
@@ -2376,6 +2381,7 @@ input[type="checkbox"]:checked+label::before {
     .news-tab {
         width: 100%;
         flex-wrap: wrap;
+        display: block;
         position: relative;
         height: 15rem;
     }
@@ -2437,11 +2443,12 @@ input[type="checkbox"]:checked+label::before {
         height: auto;
         width: auto;
         font-size: 0.9em;
-        right: 8rem;
+        right: 30rem;
         top: 11.6rem;
     }
 
     .tabheader__items {
+        width: 100%;
         position: relative;
         z-index: 1000;
         height: 12rem;
@@ -2471,7 +2478,7 @@ input[type="checkbox"]:checked+label::before {
     .news__item-title {}
 
     .news__date {
-        margin-left: 5.29rem;
+        margin-left: 8.3rem;
     }
 
     .news__item-text {}
@@ -2700,6 +2707,8 @@ input[type="checkbox"]:checked+label::before {
         margin-bottom: 72px;
         background: rgba(45, 179, 70, 0.4) url(../img/charity_mobile_1.jpg);
         background-blend-mode: soft-light;
+        background-repeat: no-repeat;
+        background-size: 53rem;
 
         font-style: normal;
         font-weight: bold;
@@ -2974,6 +2983,189 @@ input[type="checkbox"]:checked+label::before {
 
     .newscontainer {}
 
+}
+
+@media (max-width: 420px) {
+
+    /* news */
+    .tabheader {
+        position: relative;
+        z-index: 1002;
+        height: 12rem;
+        overflow: hidden;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .news__block-title {
+        display: none;
+    }
+
+    .ch-height {}
+
+    .mobilenews__title-container {
+        width: 100%;
+        display: flex;
+    }
+
+    .mobilenews__sub-container {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .mobilenews-title {
+        display: flex;
+        height: 29px;
+        justify-content: center;
+        align-items: center;
+        background: #61B22F;
+        box-shadow: 4px 0px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 10px 10px 0px 0;
+        font-size: 18px;
+        width: 13rem;
+        color: #fff;
+    }
+
+    .mobilenews-sub {
+        display: block;
+        position: relative;
+        z-index: 1300;
+        bottom: -3.7rem;
+        right: 0.15rem;
+        width: 255px;
+        height: 35px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        border-radius: 0px 0px 10px 10px;
+        font-size: 14px;
+        color: #616161;
+    }
+
+    #news__title-mobile {}
+
+    #news__sub-mobile {
+        position: relative;
+        z-index: 1300;
+        margin-top: 1.05rem;
+    }
+
+    #news {}
+
+    .prev__next-container {}
+
+    .prevnews-mobile {}
+
+    .nextnews-mobile {}
+
+    .prevnext {}
+
+    .news-tab {
+        width: 100%;
+        flex-wrap: wrap;
+        position: relative;
+        height: 15rem;
+    }
+
+    .tabcontainer {
+        position: relative;
+        z-index: 1001;
+        width: 100%;
+        height: 13rem;
+        margin-right: 0;
+    }
+
+    .news-img {}
+
+    .tabcontent {
+        width: 100%;
+    }
+
+    .darkbg-container {}
+
+    .darkbg {}
+
+    .tabcontent img {
+        width: 13rem;
+        height: 13rem;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    .tabcontent__descr {
+        position: relative;
+        top: -13.1rem;
+        height: 13rem;
+        padding-top: 0;
+        width: 95.1%;
+    }
+
+    .news__subtitle-container {
+        display: none;
+    }
+
+    .news__subtitle-text {
+        display: none;
+    }
+
+    .news__title {
+        padding-left: 13rem;
+        font-size: 1.2em;
+        margin-top: 0.7rem;
+        margin-bottom: 1rem;
+    }
+
+    .news__text {
+        padding-left: 13rem;
+        font-size: 0.9em;
+        line-height: 1rem;
+    }
+
+    .more__about {
+        height: auto;
+        width: auto;
+        font-size: 0.9em;
+        right: 8rem;
+        top: 11.6rem;
+    }
+
+    .tabheader__items {
+        position: relative;
+        z-index: 1000;
+        height: 12rem;
+    }
+
+    .news__block-scroll {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container__news {
+        width: 100%;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+
+    .news__item {}
+
+    .item__cirlce {}
+
+    .news__latter {}
+
+    .news__content-title__date {}
+
+    .news__item-title {}
+
+    .news__date {
+        margin-left: 5.29rem;
+    }
+
+    .news__item-text {}
+
+    .news__sub {
+        display: none;
+    }
 }
 
 /* small mobile 320px */
