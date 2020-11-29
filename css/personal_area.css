@@ -1,0 +1,166 @@
+body {
+    font-size: 1.29em;
+}
+
+/* Header */
+
+header {
+    margin-bottom: 1.5em;
+}
+
+.small-container {}
+
+.go-to-home-page-container {
+    border-bottom: 1px solid #D6D6D6;
+    padding: 1rem 0 1rem 0;
+}
+
+.go-to-home-page {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home__page {
+    padding-top: 0.4rem;
+}
+
+.home__icon {
+    padding-right: 0.4rem;
+}
+
+/* Personal data  */
+.personal-data-container {
+    display: flex;
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #D6D6D6;
+}
+
+.pd-itm {
+    margin-bottom: 1rem;
+}
+
+/* Personal contacts */
+.pd-ttl {
+    margin-bottom: 2rem;
+}
+
+.personal-contacts {
+    width: 33.333%;
+}
+
+.top__line {
+    overflow: hidden;
+    width: 115%;
+}
+
+.llb {}
+
+.personal-contacts-inner {
+    margin: 6rem 0 6rem 0;
+}
+
+.pc__title {}
+
+.pc__item {}
+
+.personal-email {}
+
+.personal-tel {}
+
+.bottom__line {}
+
+.lls {}
+
+/* Personal  Photo */
+.personal-photo-container {
+    position: relative;
+    width: 33.333%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.personal__photo {
+    width: 70%;
+    border-radius: 5rem;
+}
+
+.personal__photo__decoration {
+    position: absolute;
+    width: 16rem;
+    height: 23rem;
+    top: -1.7rem;
+
+    border: 26px solid rgba(45, 179, 70, 0.27);
+    box-sizing: border-box;
+    border-radius: 6rem;
+    transform: rotate(20deg);
+}
+
+.pesonal-name {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.first__name {
+    width: 100%;
+}
+
+.p-name {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.second__name {
+    width: 100%;
+}
+
+.third__name {}
+
+/* Personal info */
+.personal-info {
+    position: relative;
+}
+
+.top__line__right {
+    position: absolute;
+    left: -3.6rem;
+}
+
+.llb {}
+
+.personal-info-inner {
+    margin: 4.55rem 0 4.55rem 0;
+}
+
+.personal-status-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.personal__status {
+    margin-right: 1rem;
+}
+
+.personal-raiting {}
+
+.stars {}
+
+.pi__item {}
+
+.pd-itm {}
+
+.personal-bonus-nummer {}
+
+.personal-current-sale {}
+
+.personal-bonus-points {}
+
+.personal-—Бharity {}
+
+.bottom__line {}
+
+.lls {}
