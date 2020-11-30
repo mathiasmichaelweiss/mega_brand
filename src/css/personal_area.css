@@ -92,7 +92,7 @@ header {
     height: 23rem;
     top: -1.7rem;
 
-    border: 26px solid rgba(45, 179, 70, 0.27);
+    border: 20px solid rgba(45, 179, 70, 0.27);
     box-sizing: border-box;
     border-radius: 6rem;
     transform: rotate(20deg);
@@ -155,12 +155,47 @@ header {
 
 .personal-bonus-nummer {}
 
-.personal-current-sale {}
+.personal-current-sale {
+    color: #2DB346;
+}
 
-.personal-bonus-points {}
+.personal-bonus-points {
+    color: #2DB346;
+}
 
-.personal-—Бharity {}
+.personal-сharity {
+    color: #2DB346;
+}
 
 .bottom__line {}
 
 .lls {}
+
+/* news item */
+.all__newsmodal {
+    margin-top: 4rem;
+}
+
+.newsmodal-title {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 1.35em;
+}
+
+.tabcontent {
+    width: 20%;
+}
+
+.news-img {}
+
+.tabcontent__descr {}
+
+.news__title {}
+
+.news__subtitle-container {}
+
+.news__subtitle-text {}
+
+.news__text {}
+
+.more__about {}

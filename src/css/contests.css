@@ -12,7 +12,7 @@
     justify-content: center;
     width: 100%;
     height: 312px;
-    background: rgba(60, 179, 70, 0.8) url(../img/news/img_3.jpg);
+    background: rgba(60, 179, 70, 0.8) url(/src/img/news/img_3.jpg);
     background-blend-mode: soft-light;
 }
 
