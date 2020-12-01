@@ -1,7 +1,19 @@
+.header__inner {
+    margin-bottom: 1rem;
+}
+
 .description-container {
     display: flex;
     margin-top: 55px;
     margin-bottom: 55px;
+}
+
+.desktop {
+    display: none;
+}
+
+.minus__margin {
+    display: block;
 }
 
 .description-inner {}
@@ -275,6 +287,10 @@
 
     .mbf:last-child {
         margin-bottom: 2rem;
+    }
+
+    .desktop {
+        display: none;
     }
 
 }

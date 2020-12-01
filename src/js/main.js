@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     window.onload = function () {
         const logo = document.querySelector('.m-logo');
-        logo.style.backgroundImage = "url(/src/img/logo_mega_once.gif)";
+        logo.style.backgroundImage = "url(src/img/logo_mega_once.gif)";
         document.querySelectorAll('.burger__icon-mobile').forEach(item => {
             item.classList.remove('burger__icon-active')
         });
@@ -926,7 +926,7 @@ window.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => {
             if (input.getAttribute('type') == 'password') {
                 input.setAttribute('type', 'text');
-                btn.style.backgroundImage = 'url(img/icons/view2.svg)';
+                btn.style.backgroundImage = 'url(src/img/icons/view2.svg)';
                 btn.style.opacity = '1';
             } else {
                 input.setAttribute('type', 'password');
@@ -991,9 +991,9 @@ window.addEventListener('DOMContentLoaded', () => {
     );
 
     const images = [
-        'rgba(0, 0, 0, 0.2)  url(img/charity_slider_image/blago_1.jpg)',
-        'rgba(0, 0, 0, 0.2)  url(img/charity_slider_image/blago_2.jpg)',
-        'rgba(0, 0, 0, 0.2)  url(img/charity_slider_image/blago_3.jpg)'
+        'rgba(0, 0, 0, 0.2)  url(src/img/charity_slider_image/blago_1.jpg)',
+        'rgba(0, 0, 0, 0.2)  url(src/img/charity_slider_image/blago_2.jpg)',
+        'rgba(0, 0, 0, 0.2)  url(src/img/charity_slider_image/blago_3.jpg)'
     ];
 
     function changeBg(n, i, n2) {

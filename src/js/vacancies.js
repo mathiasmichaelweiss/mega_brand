@@ -2,7 +2,7 @@
 
 window.onload = function () {
     const logo = document.querySelector('.m-logo');
-    logo.style.backgroundImage = "url(./img/logo_mega_once.gif)";
+    logo.style.backgroundImage = "url(src/img/logo_mega_once.gif)";
     document.querySelectorAll('.burger__icon-mobile').forEach(item => {
         item.classList.remove('burger__icon-active')
     });

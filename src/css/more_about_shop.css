@@ -273,7 +273,7 @@
 .prev__btn {
     width: 80px;
     height: 257px;
-    background-image: url(/src/img/more_about_shop_img/prev.png);
+    background-image: url(../img/more_about_shop_img/prev.png);
     background-color: rgba(255, 255, 255, 0.2);
     background-repeat: no-repeat;
     background-position: 2.4em 9em;
@@ -283,7 +283,7 @@
     margin-left: 60em;
     width: 80px;
     height: 257px;
-    background-image: url(/src/img/more_about_shop_img/next.png);
+    background-image: url(../img/more_about_shop_img/next.png);
     background-color: rgba(255, 255, 255, 0.2);
     background-repeat: no-repeat;
     background-position: 2.4em 9em;
