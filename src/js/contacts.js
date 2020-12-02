@@ -246,6 +246,6 @@ function addScroll(firstContainer, secondContainer) {
     }
 }
 
-const reviewScrall = document.querySelector('.reviews-scrall'),
+const reviewScroll = document.querySelector('.reviews-scrall'),
     reviewContainer = document.querySelector('.reviews-container');
-addScroll(reviewContainer, reviewScrall);
+addScroll(reviewContainer, reviewScroll);
