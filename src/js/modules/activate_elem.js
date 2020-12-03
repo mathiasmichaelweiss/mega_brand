@@ -22,4 +22,4 @@ function activateCurrentElem() {
     activateElem(activeShop, 'current__shop-active');
 }
 
-module.exports = activateCurrentElem;
+export default activateCurrentElem;

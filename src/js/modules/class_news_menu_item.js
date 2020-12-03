@@ -84,4 +84,4 @@ function classNewsMenuItem() {
     ).render();
 }
 
-module.exports = classNewsMenuItem;
+export default classNewsMenuItem;

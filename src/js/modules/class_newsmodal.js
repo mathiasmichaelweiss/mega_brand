@@ -86,4 +86,4 @@ function classNewsModal() {
     ).render();
 }
 
-module.exports = classNewsModal;
+export default classNewsModal;

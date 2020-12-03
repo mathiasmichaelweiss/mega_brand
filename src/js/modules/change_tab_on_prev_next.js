@@ -30,4 +30,4 @@ function changeTabOnPN() {
     changeTabOnPrevNext();
 }
 
-module.exports = changeTabOnPN;
+export default changeTabOnPN;

@@ -10,4 +10,4 @@ function loadLogo() {
     }
 }
 
-module.exports = loadLogo;
+export default loadLogo;

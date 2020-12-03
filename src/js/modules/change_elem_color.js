@@ -12,4 +12,4 @@ function changeElColor() {
     changeElemColor(4, 'rgba(45, 179, 70, 0.25');
 }
 
-module.exports = changeElColor;
+export default changeElColor;

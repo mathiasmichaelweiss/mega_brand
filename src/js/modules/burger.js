@@ -71,4 +71,4 @@ function burger() {
     animateMenuBurger('.burger__icon-mobile', '.menu__burger-mobile', '.nav-mouse-mobile', '.nav-mobile');
 }
 
-module.exports = burger;
+export default burger;

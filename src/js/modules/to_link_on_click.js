@@ -11,4 +11,4 @@ function toLinkOnClick() {
     goToLinkOnClick('go-to-contests', 'contests.html');
 }
 
-module.exports = toLinkOnClick;
+export default toLinkOnClick;

@@ -68,4 +68,4 @@ function newsModal() {
     animateBtn(goToBtn);
 }
 
-module.exports = newsModal;
+export default newsModal;

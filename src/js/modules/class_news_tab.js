@@ -87,4 +87,4 @@ function classNewsTab() {
     ).render();
 }
 
-module.exports = classNewsTab;
+export default classNewsTab;

@@ -116,4 +116,4 @@ function shopClass() {
     ).render();
 }
 
-module.exports = shopClass;
+export default shopClass;

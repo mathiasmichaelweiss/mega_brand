@@ -16,4 +16,4 @@ function scroll() {
     addScroll(shopContainerInner, shopsContainer);
 }
 
-module.exports = scroll;
+export default scroll;

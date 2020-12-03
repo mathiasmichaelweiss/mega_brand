@@ -117,4 +117,4 @@ function regModal() {
     switchRegEnter(SwitchRegBtn, SwitchRegBtn2, enterModal, regModal);
 }
 
-module.exports = regModal;
+export default regModal;

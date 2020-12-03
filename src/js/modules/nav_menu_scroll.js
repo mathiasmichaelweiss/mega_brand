@@ -47,4 +47,4 @@ function menuScroll() {
     }
 }
 
-module.exports = menuScroll;
+export default menuScroll;

@@ -25,4 +25,4 @@ function sameColorAsTheCirlce() {
     makeTextInStrongCircleColor(newsLetter);
 }
 
-module.exports = sameColorAsTheCirlce;
+export default sameColorAsTheCirlce;

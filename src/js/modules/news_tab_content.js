@@ -48,4 +48,4 @@ function newsTabContent() {
     showTabContentMobile();
 }
 
-module.exports = newsTabContent;
+export default newsTabContent;

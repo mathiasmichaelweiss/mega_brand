@@ -14,4 +14,4 @@ function cutText() {
     changeText('news__text', 147);
 }
 
-module.exports = cutText;
+export default cutText;

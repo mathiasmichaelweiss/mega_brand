@@ -49,4 +49,4 @@ function charity() {
     changeBg(doingItem, 2, dot);
 }
 
-module.exports = charity;
+export default charity;

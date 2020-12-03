@@ -16,4 +16,4 @@ function anchors() {
     }
 }
 
-module.exports = anchors;
+export default anchors;

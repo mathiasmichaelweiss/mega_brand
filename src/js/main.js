@@ -1,37 +1,40 @@
 'use strict';
 
-window.addEventListener('DOMContentLoaded', () => {
-    const accordion = require('./modules/accordion'),
-        activateElem = require('./modules/activate_elem'),
-        addScroll = require('./modules/add_scroll'),
-        anchors = require('./modules/anchors'),
-        animationBtn = require('./modules/animation_btn'),
-        burger = require('./modules/burger'),
-        calendar = require('./modules/calendar'),
-        changeElemColor = require('./modules/change_elem_color'),
-        changeTabOnPrevNext = require('./modules/change_tab_on_prev_next'),
-        charity = require('./modules/charity'),
-        classNewsMenuItem = require('./modules/class_news_menu_item'),
-        classNewsTab = require('./modules/class_news_tab'),
-        classNewsmodal = require('./modules/class_newsmodal'),
-        cutText = require('./modules/cut_text'),
-        loadLogo = require('./modules/load_logo'),
-        mainSlider = require('./modules/main_slider'),
-        navMenuScroll = require('./modules/nav_menu_scroll'),
-        newsCircleText = require('./modules/news_circle_text.js'),
-        newsModal = require('./modules/news_modal'),
-        newsTabContent = require('./modules/news_tab_content'),
-        regModal = require('./modules/reg_modal'),
-        shopClass = require('./modules/shop_class'),
-        toLinkOnClick = require('./modules/to_link_on_click');
+import accordion from './modules/accordion';
+import activateElem from './modules/activate_elem';
+import addScroll from './modules/add_scroll';
+import anchors from './modules/anchors';
+import animateBtn from './modules/animation_btn';
+import burger from './modules/burger';
+import calendar from './modules/calendar';
+import changeElemColor from './modules/change_elem_color';
+import charity from './modules/charity';
+import classNewsMenuItem from './modules/class_news_menu_item';
+import classNewsTab from './modules/class_news_tab';
+import classNewsmodal from './modules/class_newsmodal';
+import cutText from './modules/cut_text';
+import loadLogo from './modules/load_logo';
+import mainSlider from './modules/main_slider';
+import navMenuScroll from './modules/nav_menu_scroll';
+import newsCircleText from './modules/news_circle_text.js';
+import newsModal from './modules/news_modal';
+import newsTabContent from './modules/news_tab_content';
+import regModal from './modules/reg_modal';
+import shopClass from './modules/shop_class';
+import toLinkOnClick from './modules/to_link_on_click';
 
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    loadLogo();
+    burger();
+    shopClass();
+    navMenuScroll();
+    mainSlider('.current__shop', '.wrapper', '.slider__inner', '.slide', '.street', '.current__sale', '.more-about-btn');
     accordion();
-    animationBtn();
-    mainSlider();
     activateElem();
     addScroll();
     anchors();
-    burger();
     calendar();
     charity();
     classNewsMenuItem();
@@ -39,13 +42,10 @@ window.addEventListener('DOMContentLoaded', () => {
     classNewsmodal();
     changeElemColor();
     cutText();
-    loadLogo();
-    navMenuScroll();
     newsCircleText();
     newsModal();
     newsTabContent();
     regModal();
-    shopClass();
     toLinkOnClick();
 
 

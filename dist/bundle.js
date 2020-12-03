@@ -1,15 +1,119 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/js/main.js":
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
+/*! namespace exports */
+/*! exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_accordion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js");
+/* harmony import */ var _modules_activate_elem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/activate_elem */ "./src/js/modules/activate_elem.js");
+/* harmony import */ var _modules_add_scroll__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/add_scroll */ "./src/js/modules/add_scroll.js");
+/* harmony import */ var _modules_anchors__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/anchors */ "./src/js/modules/anchors.js");
+/* harmony import */ var _modules_animation_btn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/animation_btn */ "./src/js/modules/animation_btn.js");
+/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/burger */ "./src/js/modules/burger.js");
+/* harmony import */ var _modules_calendar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/calendar */ "./src/js/modules/calendar.js");
+/* harmony import */ var _modules_change_elem_color__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/change_elem_color */ "./src/js/modules/change_elem_color.js");
+/* harmony import */ var _modules_charity__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/charity */ "./src/js/modules/charity.js");
+/* harmony import */ var _modules_class_news_menu_item__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/class_news_menu_item */ "./src/js/modules/class_news_menu_item.js");
+/* harmony import */ var _modules_class_news_tab__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/class_news_tab */ "./src/js/modules/class_news_tab.js");
+/* harmony import */ var _modules_class_newsmodal__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./modules/class_newsmodal */ "./src/js/modules/class_newsmodal.js");
+/* harmony import */ var _modules_cut_text__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./modules/cut_text */ "./src/js/modules/cut_text.js");
+/* harmony import */ var _modules_load_logo__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./modules/load_logo */ "./src/js/modules/load_logo.js");
+/* harmony import */ var _modules_main_slider__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./modules/main_slider */ "./src/js/modules/main_slider.js");
+/* harmony import */ var _modules_nav_menu_scroll__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./modules/nav_menu_scroll */ "./src/js/modules/nav_menu_scroll.js");
+/* harmony import */ var _modules_news_circle_text_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./modules/news_circle_text.js */ "./src/js/modules/news_circle_text.js.js");
+/* harmony import */ var _modules_news_modal__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./modules/news_modal */ "./src/js/modules/news_modal.js");
+/* harmony import */ var _modules_news_tab_content__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./modules/news_tab_content */ "./src/js/modules/news_tab_content.js");
+/* harmony import */ var _modules_reg_modal__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./modules/reg_modal */ "./src/js/modules/reg_modal.js");
+/* harmony import */ var _modules_shop_class__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./modules/shop_class */ "./src/js/modules/shop_class.js");
+/* harmony import */ var _modules_to_link_on_click__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./modules/to_link_on_click */ "./src/js/modules/to_link_on_click.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    (0,_modules_load_logo__WEBPACK_IMPORTED_MODULE_13__.default)();
+    (0,_modules_burger__WEBPACK_IMPORTED_MODULE_5__.default)();
+    (0,_modules_shop_class__WEBPACK_IMPORTED_MODULE_20__.default)();
+    (0,_modules_nav_menu_scroll__WEBPACK_IMPORTED_MODULE_15__.default)();
+    (0,_modules_main_slider__WEBPACK_IMPORTED_MODULE_14__.default)('.current__shop', '.wrapper', '.slider__inner', '.slide', '.street', '.current__sale', '.more-about-btn');
+    (0,_modules_accordion__WEBPACK_IMPORTED_MODULE_0__.default)();
+    (0,_modules_activate_elem__WEBPACK_IMPORTED_MODULE_1__.default)();
+    (0,_modules_add_scroll__WEBPACK_IMPORTED_MODULE_2__.default)();
+    (0,_modules_anchors__WEBPACK_IMPORTED_MODULE_3__.default)();
+    (0,_modules_calendar__WEBPACK_IMPORTED_MODULE_6__.default)();
+    (0,_modules_charity__WEBPACK_IMPORTED_MODULE_8__.default)();
+    (0,_modules_class_news_menu_item__WEBPACK_IMPORTED_MODULE_9__.default)();
+    (0,_modules_class_news_tab__WEBPACK_IMPORTED_MODULE_10__.default)();
+    (0,_modules_class_newsmodal__WEBPACK_IMPORTED_MODULE_11__.default)();
+    (0,_modules_change_elem_color__WEBPACK_IMPORTED_MODULE_7__.default)();
+    (0,_modules_cut_text__WEBPACK_IMPORTED_MODULE_12__.default)();
+    (0,_modules_news_circle_text_js__WEBPACK_IMPORTED_MODULE_16__.default)();
+    (0,_modules_news_modal__WEBPACK_IMPORTED_MODULE_17__.default)();
+    (0,_modules_news_tab_content__WEBPACK_IMPORTED_MODULE_18__.default)();
+    (0,_modules_reg_modal__WEBPACK_IMPORTED_MODULE_19__.default)();
+    (0,_modules_to_link_on_click__WEBPACK_IMPORTED_MODULE_21__.default)();
+
+
+    // Tiny slider
+    var slider = tns({
+        container: '#fixedWidth',
+        "fixedWidth": 200,
+        "swipeAngle": false,
+        "speed": 400,
+        autoplayButtonOutput: false,
+        autoplay: true,
+        controls: false
+    });
+
+});
+
+/***/ }),
 
 /***/ "./src/js/modules/accordion.js":
 /*!*************************************!*\
   !*** ./src/js/modules/accordion.js ***!
   \*************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function accordion() {
@@ -23,7 +127,7 @@ function accordion() {
     });
 }
 
-module.exports = accordion;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (accordion);
 
 /***/ }),
 
@@ -31,11 +135,16 @@ module.exports = accordion;
 /*!*****************************************!*\
   !*** ./src/js/modules/activate_elem.js ***!
   \*****************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function activateCurrentElem() {
@@ -60,7 +169,7 @@ function activateCurrentElem() {
     activateElem(activeShop, 'current__shop-active');
 }
 
-module.exports = activateCurrentElem;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (activateCurrentElem);
 
 /***/ }),
 
@@ -68,11 +177,16 @@ module.exports = activateCurrentElem;
 /*!**************************************!*\
   !*** ./src/js/modules/add_scroll.js ***!
   \**************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function scroll() {
@@ -91,7 +205,7 @@ function scroll() {
     addScroll(shopContainerInner, shopsContainer);
 }
 
-module.exports = scroll;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scroll);
 
 /***/ }),
 
@@ -99,11 +213,16 @@ module.exports = scroll;
 /*!***********************************!*\
   !*** ./src/js/modules/anchors.js ***!
   \***********************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function anchors() {
@@ -122,7 +241,7 @@ function anchors() {
     }
 }
 
-module.exports = anchors;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (anchors);
 
 /***/ }),
 
@@ -130,25 +249,30 @@ module.exports = anchors;
 /*!*****************************************!*\
   !*** ./src/js/modules/animation_btn.js ***!
   \*****************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-function animationBtn() {
-    function animateBtn(btn) {
-        btn.forEach((item) => {
-            item.addEventListener('mouseover', () => {
-                item.classList.add('animate__btn-mousover');
-            });
-
-            item.addEventListener('mouseout', () => {
-                item.classList.remove('animate__btn-mousover');
-            });
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+function animateBtn(btn) {
+    btn.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+            item.classList.add('animate__btn-mousover');
         });
-    }
+
+        item.addEventListener('mouseout', () => {
+            item.classList.remove('animate__btn-mousover');
+        });
+    });
 }
 
-module.exports = animationBtn;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (animateBtn);
 
 /***/ }),
 
@@ -156,11 +280,16 @@ module.exports = animationBtn;
 /*!**********************************!*\
   !*** ./src/js/modules/burger.js ***!
   \**********************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function burger() {
@@ -234,7 +363,7 @@ function burger() {
     animateMenuBurger('.burger__icon-mobile', '.menu__burger-mobile', '.nav-mouse-mobile', '.nav-mobile');
 }
 
-module.exports = burger;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (burger);
 
 /***/ }),
 
@@ -242,11 +371,16 @@ module.exports = burger;
 /*!************************************!*\
   !*** ./src/js/modules/calendar.js ***!
   \************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function calendar() {
@@ -268,7 +402,7 @@ function calendar() {
     });
 }
 
-module.exports = calendar;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (calendar);
 
 /***/ }),
 
@@ -276,11 +410,16 @@ module.exports = calendar;
 /*!*********************************************!*\
   !*** ./src/js/modules/change_elem_color.js ***!
   \*********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function changeElColor() {
@@ -295,52 +434,7 @@ function changeElColor() {
     changeElemColor(4, 'rgba(45, 179, 70, 0.25');
 }
 
-module.exports = changeElColor;
-
-/***/ }),
-
-/***/ "./src/js/modules/change_tab_on_prev_next.js":
-/*!***************************************************!*\
-  !*** ./src/js/modules/change_tab_on_prev_next.js ***!
-  \***************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
-
-"use strict";
-
-
-function changeTabOnPN() {
-    function changeTabOnPrevNext() {
-        let tabIndex = 0;
-        prevNextContainer.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (e.target.classList.contains('nextnews-mobile') || e.target.classList.contains('nextbtn-mobile') && tabIndex !== tabs.length - 1) {
-                tabIndex++;
-                tabsContent[tabIndex - 1].style.display = 'none';
-                tabsContent[tabIndex - 1].classList.remove('fade');
-                tabsContent[tabIndex - 1].classList.remove('show');
-
-                tabsContent[tabIndex].classList.remove('hide');
-                tabsContent[tabIndex].classList.add('fade');
-                tabsContent[tabIndex].style.display = 'flex';
-            } else if (e.target.classList.contains('prevnews-mobile') || e.target.classList.contains('prevtbtn-mobile') && tabIndex >= 1) {
-                tabIndex--;
-                tabsContent[tabIndex + 1].style.display = 'none';
-                tabsContent[tabIndex + 1].classList.remove('fade');
-                tabsContent[tabIndex + 1].classList.remove('show');
-
-                tabsContent[tabIndex].classList.remove('hide');
-                tabsContent[tabIndex].classList.add('fade');
-                tabsContent[tabIndex].style.display = 'flex';
-            }
-        });
-    }
-
-    changeTabOnPrevNext();
-}
-
-module.exports = changeTabOnPN;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (changeElColor);
 
 /***/ }),
 
@@ -348,11 +442,16 @@ module.exports = changeTabOnPN;
 /*!***********************************!*\
   !*** ./src/js/modules/charity.js ***!
   \***********************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function charity() {
@@ -404,7 +503,7 @@ function charity() {
     changeBg(doingItem, 2, dot);
 }
 
-module.exports = charity;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (charity);
 
 /***/ }),
 
@@ -412,11 +511,16 @@ module.exports = charity;
 /*!************************************************!*\
   !*** ./src/js/modules/class_news_menu_item.js ***!
   \************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function classNewsMenuItem() {
@@ -503,7 +607,7 @@ function classNewsMenuItem() {
     ).render();
 }
 
-module.exports = classNewsMenuItem;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (classNewsMenuItem);
 
 /***/ }),
 
@@ -511,11 +615,16 @@ module.exports = classNewsMenuItem;
 /*!******************************************!*\
   !*** ./src/js/modules/class_news_tab.js ***!
   \******************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function classNewsTab() {
@@ -605,7 +714,7 @@ function classNewsTab() {
     ).render();
 }
 
-module.exports = classNewsTab;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (classNewsTab);
 
 /***/ }),
 
@@ -613,11 +722,16 @@ module.exports = classNewsTab;
 /*!*******************************************!*\
   !*** ./src/js/modules/class_newsmodal.js ***!
   \*******************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function classNewsModal() {
@@ -706,7 +820,7 @@ function classNewsModal() {
     ).render();
 }
 
-module.exports = classNewsModal;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (classNewsModal);
 
 /***/ }),
 
@@ -714,11 +828,16 @@ module.exports = classNewsModal;
 /*!************************************!*\
   !*** ./src/js/modules/cut_text.js ***!
   \************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function cutText() {
@@ -735,7 +854,7 @@ function cutText() {
     changeText('news__text', 147);
 }
 
-module.exports = cutText;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (cutText);
 
 /***/ }),
 
@@ -743,11 +862,16 @@ module.exports = cutText;
 /*!*************************************!*\
   !*** ./src/js/modules/load_logo.js ***!
   \*************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function loadLogo() {
@@ -760,7 +884,7 @@ function loadLogo() {
     }
 }
 
-module.exports = loadLogo;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loadLogo);
 
 /***/ }),
 
@@ -768,71 +892,77 @@ module.exports = loadLogo;
 /*!***************************************!*\
   !*** ./src/js/modules/main_slider.js ***!
   \***************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
-
-
-function mainSlider() {
-    // slider
-    function mainSlider() {
-        const currentShop = document.querySelectorAll('.current__shop'),
-            wrapper = document.querySelector('.wrapper'),
-            slideGround = document.querySelector('.slider__inner'),
-            slides = document.querySelectorAll('.slide'),
-            width = window.getComputedStyle(wrapper).width,
-            street = document.querySelectorAll('.street'),
-            sale = document.querySelectorAll('.current__sale'),
-            sliderBtnMoreAboutShop = document.querySelectorAll('.more-about-btn');
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _animation_btn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./animation_btn */ "./src/js/modules/animation_btn.js");
 
 
-        let slideIndex = 1,
-            offset = 0;
 
-        slideGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
-        slideGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
-        slideGround.style.transition = '0.5s all'; // Плавное переключение слайдов
 
-        wrapper.style.overflow = 'hidden';
 
-        // Устанавливаeт всем слайдерам одинаковую ширину
-        slides.forEach(slide => {
-            slide.style.width = width;
-        });
+function mainSlider(argumentCurrentShop, argumentWrapper, argumentSlideGround, argumentSlides, argumentStreet, argumentSale, argumentSliderBtnMoreAboutShop) {
+    const currentShop = document.querySelectorAll(argumentCurrentShop),
+        wrapper = document.querySelector(argumentWrapper),
+        slideGround = document.querySelector(argumentSlideGround),
+        slides = document.querySelectorAll(argumentSlides),
+        width = window.getComputedStyle(wrapper).width,
+        street = document.querySelectorAll(argumentStreet),
+        sale = document.querySelectorAll(argumentSale),
+        sliderBtnMoreAboutShop = document.querySelectorAll(argumentSliderBtnMoreAboutShop);
 
-        function addDataAtribute(n) {
-            for (let i = 0; i < slides.length; i++) {
-                n[i].setAttribute('data-slide-to', i + 1);
-            }
+
+    let slideIndex = 1,
+        offset = 0;
+
+    slideGround.style.width = 100 * slides.length + '%'; // Размер ширины блока со всеми слайдами
+    slideGround.style.display = 'flex'; // Выстраивание всех слайдов по горизонтали
+    slideGround.style.transition = '0.5s all'; // Плавное переключение слайдов
+
+    wrapper.style.overflow = 'hidden';
+
+    // Устанавливаeт всем слайдерам одинаковую ширину
+    slides.forEach(slide => {
+        slide.style.width = width;
+    });
+
+    function addDataAtribute(n) {
+        for (let i = 0; i < slides.length; i++) {
+            n[i].setAttribute('data-slide-to', i + 1);
         }
-
-        addDataAtribute(currentShop);
-        addDataAtribute(street);
-        addDataAtribute(sale);
-        addDataAtribute(sliderBtnMoreAboutShop);
-        console.log(sliderBtnMoreAboutShop);
-
-
-
-        currentShop.forEach(shop => {
-            shop.addEventListener('click', (e) => {
-                e.preventDefault();
-                const slideTo = e.target.getAttribute('data-slide-to');
-
-
-                slideIndex = slideTo;
-                offset = +width.replace('px', '') * (slideTo - 1);
-                slideGround.style.transform = `translateX(-${offset}px)`;
-            });
-        });
-        animateBtn(sliderBtnMoreAboutShop);
     }
-    mainSlider();
-}
 
-module.exports = mainSlider;
+    addDataAtribute(currentShop);
+    addDataAtribute(street);
+    addDataAtribute(sale);
+    addDataAtribute(sliderBtnMoreAboutShop);
+    console.log(sliderBtnMoreAboutShop);
+
+
+
+    currentShop.forEach(shop => {
+        shop.addEventListener('click', (e) => {
+            e.preventDefault();
+            const slideTo = e.target.getAttribute('data-slide-to');
+
+
+            slideIndex = slideTo;
+            offset = +width.replace('px', '') * (slideTo - 1);
+            slideGround.style.transform = `translateX(-${offset}px)`;
+        });
+    });
+    (0,_animation_btn__WEBPACK_IMPORTED_MODULE_0__.animateBtn)(sliderBtnMoreAboutShop);
+}
+mainSlider();
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mainSlider);
 
 /***/ }),
 
@@ -840,11 +970,16 @@ module.exports = mainSlider;
 /*!*******************************************!*\
   !*** ./src/js/modules/nav_menu_scroll.js ***!
   \*******************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function menuScroll() {
@@ -894,7 +1029,7 @@ function menuScroll() {
     }
 }
 
-module.exports = menuScroll;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuScroll);
 
 /***/ }),
 
@@ -902,11 +1037,16 @@ module.exports = menuScroll;
 /*!***********************************************!*\
   !*** ./src/js/modules/news_circle_text.js.js ***!
   \***********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function sameColorAsTheCirlce() {
@@ -934,7 +1074,7 @@ function sameColorAsTheCirlce() {
     makeTextInStrongCircleColor(newsLetter);
 }
 
-module.exports = sameColorAsTheCirlce;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (sameColorAsTheCirlce);
 
 /***/ }),
 
@@ -942,11 +1082,16 @@ module.exports = sameColorAsTheCirlce;
 /*!**************************************!*\
   !*** ./src/js/modules/news_modal.js ***!
   \**************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function newsModal() {
@@ -1017,7 +1162,7 @@ function newsModal() {
     animateBtn(goToBtn);
 }
 
-module.exports = newsModal;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (newsModal);
 
 /***/ }),
 
@@ -1025,11 +1170,16 @@ module.exports = newsModal;
 /*!********************************************!*\
   !*** ./src/js/modules/news_tab_content.js ***!
   \********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function newsTabContent() {
@@ -1080,7 +1230,7 @@ function newsTabContent() {
     showTabContentMobile();
 }
 
-module.exports = newsTabContent;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (newsTabContent);
 
 /***/ }),
 
@@ -1088,11 +1238,16 @@ module.exports = newsTabContent;
 /*!*************************************!*\
   !*** ./src/js/modules/reg_modal.js ***!
   \*************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function regModal() {
@@ -1212,7 +1367,7 @@ function regModal() {
     switchRegEnter(SwitchRegBtn, SwitchRegBtn2, enterModal, regModal);
 }
 
-module.exports = regModal;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (regModal);
 
 /***/ }),
 
@@ -1220,11 +1375,16 @@ module.exports = regModal;
 /*!**************************************!*\
   !*** ./src/js/modules/shop_class.js ***!
   \**************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function shopClass() {
@@ -1343,7 +1503,7 @@ function shopClass() {
     ).render();
 }
 
-module.exports = shopClass;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (shopClass);
 
 /***/ }),
 
@@ -1351,11 +1511,16 @@ module.exports = shopClass;
 /*!********************************************!*\
   !*** ./src/js/modules/to_link_on_click.js ***!
   \********************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: module */
-/***/ ((module) => {
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
 
 
 function toLinkOnClick() {
@@ -1369,7 +1534,7 @@ function toLinkOnClick() {
     goToLinkOnClick('go-to-contests', 'contests.html');
 }
 
-module.exports = toLinkOnClick;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (toLinkOnClick);
 
 /***/ })
 
@@ -1399,78 +1564,39 @@ module.exports = toLinkOnClick;
 /******/ 	}
 /******/ 	
 /************************************************************************/
-(() => {
-"use strict";
-/*!************************!*\
-  !*** ./src/js/main.js ***!
-  \************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__ */
-
-
-window.addEventListener('DOMContentLoaded', () => {
-    const accordion = __webpack_require__(/*! ./modules/accordion */ "./src/js/modules/accordion.js"),
-        activateElem = __webpack_require__(/*! ./modules/activate_elem */ "./src/js/modules/activate_elem.js"),
-        addScroll = __webpack_require__(/*! ./modules/add_scroll */ "./src/js/modules/add_scroll.js"),
-        anchors = __webpack_require__(/*! ./modules/anchors */ "./src/js/modules/anchors.js"),
-        animationBtn = __webpack_require__(/*! ./modules/animation_btn */ "./src/js/modules/animation_btn.js"),
-        burger = __webpack_require__(/*! ./modules/burger */ "./src/js/modules/burger.js"),
-        calendar = __webpack_require__(/*! ./modules/calendar */ "./src/js/modules/calendar.js"),
-        changeElemColor = __webpack_require__(/*! ./modules/change_elem_color */ "./src/js/modules/change_elem_color.js"),
-        changeTabOnPrevNext = __webpack_require__(/*! ./modules/change_tab_on_prev_next */ "./src/js/modules/change_tab_on_prev_next.js"),
-        charity = __webpack_require__(/*! ./modules/charity */ "./src/js/modules/charity.js"),
-        classNewsMenuItem = __webpack_require__(/*! ./modules/class_news_menu_item */ "./src/js/modules/class_news_menu_item.js"),
-        classNewsTab = __webpack_require__(/*! ./modules/class_news_tab */ "./src/js/modules/class_news_tab.js"),
-        classNewsmodal = __webpack_require__(/*! ./modules/class_newsmodal */ "./src/js/modules/class_newsmodal.js"),
-        cutText = __webpack_require__(/*! ./modules/cut_text */ "./src/js/modules/cut_text.js"),
-        loadLogo = __webpack_require__(/*! ./modules/load_logo */ "./src/js/modules/load_logo.js"),
-        mainSlider = __webpack_require__(/*! ./modules/main_slider */ "./src/js/modules/main_slider.js"),
-        navMenuScroll = __webpack_require__(/*! ./modules/nav_menu_scroll */ "./src/js/modules/nav_menu_scroll.js"),
-        newsCircleText = __webpack_require__(/*! ./modules/news_circle_text.js */ "./src/js/modules/news_circle_text.js.js"),
-        newsModal = __webpack_require__(/*! ./modules/news_modal */ "./src/js/modules/news_modal.js"),
-        newsTabContent = __webpack_require__(/*! ./modules/news_tab_content */ "./src/js/modules/news_tab_content.js"),
-        regModal = __webpack_require__(/*! ./modules/reg_modal */ "./src/js/modules/reg_modal.js"),
-        shopClass = __webpack_require__(/*! ./modules/shop_class */ "./src/js/modules/shop_class.js"),
-        toLinkOnClick = __webpack_require__(/*! ./modules/to_link_on_click */ "./src/js/modules/to_link_on_click.js");
-
-    accordion();
-    animationBtn();
-    mainSlider();
-    activateElem();
-    addScroll();
-    anchors();
-    burger();
-    calendar();
-    charity();
-    classNewsMenuItem();
-    classNewsTab();
-    classNewsmodal();
-    changeElemColor();
-    cutText();
-    loadLogo();
-    navMenuScroll();
-    newsCircleText();
-    newsModal();
-    newsTabContent();
-    regModal();
-    shopClass();
-    toLinkOnClick();
-
-
-    // Tiny slider
-    var slider = tns({
-        container: '#fixedWidth',
-        "fixedWidth": 200,
-        "swipeAngle": false,
-        "speed": 400,
-        autoplayButtonOutput: false,
-        autoplay: true,
-        controls: false
-    });
-
-});
-})();
-
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	// startup
+/******/ 	// Load entry module
+/******/ 	__webpack_require__("./src/js/main.js");
+/******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
