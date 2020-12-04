@@ -33,7 +33,7 @@ function shopClass() {
 
             slide.innerHTML = `
             <div class="about-btn-container">
-            <a href="more_about_shop.html" class="more-about-btn" >Подробнее о магазине</a>
+            <a href="more_about_shop.html" class="more-about-btn" id="animate_btn">Подробнее о магазине</a>
             </div>
             <img src="${this.slideImage}" alt="">
             `;

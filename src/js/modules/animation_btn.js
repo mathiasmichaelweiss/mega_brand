@@ -1,5 +1,7 @@
 function animateBtn(btn) {
-    btn.forEach((item) => {
+    const currentBtn = document.querySelectorAll(btn);
+
+    currentBtn.forEach((item, i) => {
         item.addEventListener('mouseover', () => {
             item.classList.add('animate__btn-mousover');
         });

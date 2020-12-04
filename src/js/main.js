@@ -31,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     shopClass();
     navMenuScroll();
     mainSlider('.current__shop', '.wrapper', '.slider__inner', '.slide', '.street', '.current__sale', '.more-about-btn');
+    animateBtn('.more-about-btn');
     accordion();
     activateElem();
     addScroll();

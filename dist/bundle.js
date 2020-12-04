@@ -67,6 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_shop_class__WEBPACK_IMPORTED_MODULE_20__.default)();
     (0,_modules_nav_menu_scroll__WEBPACK_IMPORTED_MODULE_15__.default)();
     (0,_modules_main_slider__WEBPACK_IMPORTED_MODULE_14__.default)('.current__shop', '.wrapper', '.slider__inner', '.slide', '.street', '.current__sale', '.more-about-btn');
+    (0,_modules_animation_btn__WEBPACK_IMPORTED_MODULE_4__.default)('.more-about-btn');
     (0,_modules_accordion__WEBPACK_IMPORTED_MODULE_0__.default)();
     (0,_modules_activate_elem__WEBPACK_IMPORTED_MODULE_1__.default)();
     (0,_modules_add_scroll__WEBPACK_IMPORTED_MODULE_2__.default)();
@@ -260,7 +261,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 function animateBtn(btn) {
-    btn.forEach((item) => {
+    const currentBtn = document.querySelectorAll(btn);
+
+    currentBtn.forEach((item, i) => {
         item.addEventListener('mouseover', () => {
             item.classList.add('animate__btn-mousover');
         });
@@ -902,7 +905,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var _animation_btn__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./animation_btn */ "./src/js/modules/animation_btn.js");
+/* harmony import */ var _animation_btn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./animation_btn.js */ "./src/js/modules/animation_btn.js");
 
 
 
@@ -958,9 +961,8 @@ function mainSlider(argumentCurrentShop, argumentWrapper, argumentSlideGround, a
             slideGround.style.transform = `translateX(-${offset}px)`;
         });
     });
-    (0,_animation_btn__WEBPACK_IMPORTED_MODULE_0__.animateBtn)(sliderBtnMoreAboutShop);
+    (0,_animation_btn_js__WEBPACK_IMPORTED_MODULE_0__.default)(sliderBtnMoreAboutShop);
 }
-mainSlider();
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (mainSlider);
 
@@ -1420,7 +1422,7 @@ function shopClass() {
 
             slide.innerHTML = `
             <div class="about-btn-container">
-            <a href="more_about_shop.html" class="more-about-btn" >Подробнее о магазине</a>
+            <a href="more_about_shop.html" class="more-about-btn" id="animate_btn">Подробнее о магазине</a>
             </div>
             <img src="${this.slideImage}" alt="">
             `;

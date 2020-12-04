@@ -1,8 +1,6 @@
 'use strict';
 
-import {
-    animateBtn
-} from './animation_btn';
+import animateBtn from './animation_btn.js';
 
 
 function mainSlider(argumentCurrentShop, argumentWrapper, argumentSlideGround, argumentSlides, argumentStreet, argumentSale, argumentSliderBtnMoreAboutShop) {
@@ -57,6 +55,5 @@ function mainSlider(argumentCurrentShop, argumentWrapper, argumentSlideGround, a
     });
     animateBtn(sliderBtnMoreAboutShop);
 }
-mainSlider();
 
 export default mainSlider;
